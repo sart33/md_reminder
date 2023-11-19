@@ -1,0 +1,262 @@
+<resources>
+    <declare-styleable name="AppWidgetAttrs">
+        <attr name="appWidgetPadding" format="dimension" />
+        <attr name="appWidgetInnerRadius" format="dimension" />
+        <attr name="appWidgetRadius" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="UiGradientFrameLayout">
+        <attr name="gradientFrameLayout_startColor" format="color" />
+        <attr name="gradientFrameLayout_centerColor" format="color" />
+        <attr name="gradientFrameLayout_endColor" format="color" />
+        <attr name="gradientFrameLayout_colors" format="reference" />
+        <attr name="gradientFrameLayout_orientation" format="enum">
+            <enum name="TOP_BOTTOM" value="0" />
+            <enum name="TR_BL" value="1" />
+            <enum name="RIGHT_LEFT" value="2" />
+            <enum name="BR_TL" value="3" />
+            <enum name="BOTTOM_TOP" value="4" />
+            <enum name="BL_TR" value="5" />
+            <enum name="LEFT_RIGHT" value="6" />
+            <enum name="TL_BR" value="7" />
+        </attr>
+        <attr name="gradientFrameLayout_animate" format="boolean" />
+        <attr name="gradientFrameLayout_animationEnterDuration" format="integer" />
+        <attr name="gradientFrameLayout_animationExitDuration" format="integer" />
+        <attr name="gradientFrameLayout_cornerRadius" format="dimension" />
+        <attr format="reference" name="showMotionSpec"/>
+        <attr format="reference" name="sideSheetDialogTheme"/>
+        <attr format="reference" name="sideSheetModalStyle"/>
+        <attr format="boolean" name="singleSelection"/>
+        <attr format="reference" name="sliderStyle"/>
+        <attr format="boolean" name="state_with_icon"/>
+        <attr format="color" name="strokeColor"/>
+        <attr format="dimension" name="strokeWidth"/>
+        <attr format="reference" name="tabSecondaryStyle"/>
+        <attr format="reference" name="tabStyle"/>
+        <attr format="reference" name="textAppearanceBody1"/>
+        <attr format="reference" name="textAppearanceBody2"/>
+        <attr format="reference" name="textAppearanceBodyLarge"/>
+        <attr format="reference" name="textAppearanceBodyMedium"/>
+        <attr format="reference" name="textAppearanceBodySmall"/>
+        <attr format="reference" name="textAppearanceButton"/>
+        <attr format="reference" name="textAppearanceCaption"/>
+        <attr format="reference" name="textAppearanceDisplayLarge"/>
+        <attr format="reference" name="textAppearanceDisplayMedium"/>
+        <attr format="reference" name="textAppearanceDisplaySmall"/>
+        <attr format="reference" name="textAppearanceHeadline1"/>
+        <attr format="reference" name="textAppearanceHeadline2"/>
+        <attr format="reference" name="textAppearanceHeadline3"/>
+        <attr format="reference" name="textAppearanceHeadline4"/>
+        <attr format="reference" name="textAppearanceHeadline5"/>
+        <attr format="reference" name="textAppearanceHeadline6"/>
+        <attr format="reference" name="textAppearanceHeadlineLarge"/>
+        <attr format="reference" name="textAppearanceHeadlineMedium"/>
+        <attr format="reference" name="textAppearanceHeadlineSmall"/>
+        <attr format="reference" name="textAppearanceLabelLarge"/>
+        <attr format="reference" name="textAppearanceLabelMedium"/>
+        <attr format="reference" name="textAppearanceLabelSmall"/>
+        <attr format="boolean" name="textAppearanceLineHeightEnabled"/>
+        <attr format="reference" name="textAppearanceOverline"/>
+        <attr format="reference" name="textAppearanceSubtitle1"/>
+        <attr format="reference" name="textAppearanceSubtitle2"/>
+        <attr format="reference" name="textAppearanceTitleLarge"/>
+        <attr format="reference" name="textAppearanceTitleMedium"/>
+        <attr format="reference" name="textAppearanceTitleSmall"/>
+        <attr format="reference" name="textInputFilledDenseStyle"/>
+        <attr format="reference" name="textInputFilledExposedDropdownMenuStyle"/>
+        <attr format="reference" name="textInputFilledStyle"/>
+        <attr format="reference" name="textInputOutlinedDenseStyle"/>
+        <attr format="reference" name="textInputOutlinedExposedDropdownMenuStyle"/>
+        <attr format="reference" name="textInputOutlinedStyle"/>
+        <attr format="reference" name="textInputStyle"/>
+        <attr format="reference" name="toolbarSurfaceStyle"/>
+        <attr format="reference" name="tooltipStyle"/>
+        <attr format="color" name="trackColor"/>
+        <attr format="reference" name="transitionShapeAppearance"/>
+        <attr format="boolean" name="useMaterialThemeColors"/>
+
+
+    </declare-styleable>
+
+    <declare-styleable name="TimePicker">
+        <!-- @hide The layout of the legacy time picker. -->
+        <attr name="legacyLayout" format="reference" />
+        <!-- @hide The layout of the time picker. -->
+        <attr name="internalLayout" />
+
+        <!-- The text color for the selected time header text, ex. "12" or
+             "PM". This should be a color state list where the activated state
+             will be used when the minute picker or hour picker is active.-->
+        <attr name="headerTextColor" />
+        <!-- The background for the header containing the currently selected time. -->
+        <attr name="headerBackground" format="color|reference" />
+
+        <!-- The color for the hours/minutes numbers. This should be a color
+             state list where the activated state will be used when the number
+             is active.-->
+        <attr name="numbersTextColor" format="color" />
+        <!-- The color for the inner hours numbers used in 24-hour mode. This
+             should be a color state list where the activated state will be
+             used when the number is active.-->
+        <attr name="numbersInnerTextColor" format="color" />
+        <!-- The background color for the hours/minutes numbers. -->
+        <attr name="numbersBackgroundColor" format="color" />
+        <!-- The color for the hours/minutes selector. -->
+        <attr name="numbersSelectorColor" format="color" />
+
+        <!-- Defines the look of the widget. Prior to the L release, the only choice was
+             spinner. As of L, with the Material theme selected, the default layout is clock,
+             but this attribute can be used to force spinner to be used instead. -->
+        <attr name="timePickerMode">
+            <!-- Time picker with spinner controls to select the time. -->
+            <enum name="spinner" value="1" />
+            <!-- Time picker with clock face to select the time. -->
+            <enum name="clock" value="2" />
+        </attr>
+
+        <!-- The text appearance for the AM/PM header.
+             @deprecated Use headerTextColor instead. -->
+        <attr name="headerAmPmTextAppearance" format="reference" />
+        <!-- The text appearance for the time header.
+             @deprecated Use headerTextColor instead. -->
+        <attr name="headerTimeTextAppearance" format="reference" />
+        <!-- The color for the AM/PM selectors.
+             {@deprecated Use headerTextColor instead.}-->
+        <attr name="amPmTextColor" format="color" />
+        <!-- The background color state list for the AM/PM selectors.
+             {@deprecated Use headerBackground instead.}-->
+        <attr name="amPmBackgroundColor" format="color" />
+
+        <!-- @hide Whether this time picker is being displayed within a dialog,
+             in which case it may ignore the requested time picker mode due to
+             space considerations. -->
+        <attr name="dialogMode" />
+    </declare-styleable>
+    <declare-styleable name="DatePicker">
+        <!-- The first day of week according to {@link java.util.Calendar}. -->
+        <attr name="firstDayOfWeek" format="integer" />
+        <!-- The minimal date shown by this calendar view in mm/dd/yyyy format. -->
+        <attr name="minDate" format="string" />
+        <!-- The maximal date shown by this calendar view in mm/dd/yyyy format. -->
+        <attr name="maxDate" format="string" />
+
+        <!-- Whether the spinners are shown. Only valid for "spinner" mode. -->
+        <attr name="spinnersShown" format="boolean" />
+        <!-- Whether the calendar view is shown. Only valid for "spinner" mode. -->
+        <attr name="calendarViewShown" format="boolean" />
+
+        <!-- @hide The layout of the date picker. -->
+        <attr name="internalLayout" format="reference"  />
+        <!-- @hide The layout of the legacy DatePicker. -->
+        <attr name="legacyLayout" />
+
+        <!-- The text color for the selected date header text, ex. "2014" or
+             "Tue, Mar 18". This should be a color state list where the
+             activated state will be used when the year picker or day picker is
+             active.-->
+        <attr name="headerTextColor" format="color" />
+        <!-- The background for the selected date header. -->
+        <attr name="headerBackground" />
+
+        <!-- The list year's text appearance in the list.
+             {@deprecated Use yearListTextColor. }-->
+        <attr name="yearListItemTextAppearance" format="reference" />
+        <!-- @hide The list year's text appearance in the list when activated. -->
+        <attr name="yearListItemActivatedTextAppearance" format="reference" />
+        <!-- The text color list of the calendar. -->
+        <attr name="calendarTextColor" format="color" />
+
+        <!-- Defines the look of the widget. Prior to the L release, the only choice was
+             spinner. As of L, with the Material theme selected, the default layout is calendar,
+             but this attribute can be used to force spinner to be used instead. -->
+        <attr name="datePickerMode">
+            <!-- Date picker with spinner controls to select the date. -->
+            <enum name="spinner" value="1" />
+            <!-- Date picker with calendar to select the date. -->
+            <enum name="calendar" value="2" />
+        </attr>
+
+        <!-- The first year (inclusive), for example "1940".
+             {@deprecated Use minDate instead.} -->
+        <attr name="startYear" format="integer" />
+        <!-- The last year (inclusive), for example "2010".
+             {@deprecated Use maxDate instead.} -->
+        <attr name="endYear" format="integer" />
+        <!-- The text appearance for the month (ex. May) in the selected date header.
+             {@deprecated Use headerTextColor instead.} -->
+        <attr name="headerMonthTextAppearance" format="reference" />
+        <!-- The text appearance for the day of month (ex. 28) in the selected date header.
+             {@deprecated Use headerTextColor instead.} -->
+        <attr name="headerDayOfMonthTextAppearance" format="reference" />
+        <!-- The text appearance for the year (ex. 2014) in the selected date header.
+             {@deprecated Use headerTextColor instead.} -->
+        <attr name="headerYearTextAppearance" format="reference" />
+        <!-- The background color for the header's day of week.
+             {@deprecated No longer displayed.} -->
+        <attr name="dayOfWeekBackground" format="color" />
+        <!-- The text color for the header's day of week.
+             {@deprecated No longer displayed.} -->
+        <attr name="dayOfWeekTextAppearance" format="reference" />
+        <!-- The list year's selected circle color in the list.
+             {@deprecated No longer displayed.} -->
+        <attr name="yearListSelectorColor" format="color" />
+
+        <!-- @hide Whether this time picker is being displayed within a dialog,
+             in which case it may ignore the requested time picker mode due to
+             space considerations. -->
+        <attr name="dialogMode" format="boolean" />
+    </declare-styleable>
+
+
+    <attr name="textColorPrimary" format="reference|color" />
+
+    <attr name="textSize" format="dimension" />
+
+    <!-- Default font family. -->
+    <attr name="fontFamily" format="string" />
+
+    <!-- Default text typeface. -->
+    <attr name="typeface">
+        <enum name="normal" value="0" />
+        <enum name="sans" value="1" />
+        <enum name="serif" value="2" />
+        <enum name="monospace" value="3" />
+    </attr>
+
+    <!-- Default text typeface style. -->
+    <attr name="textStyle">
+        <flag name="normal" value="0" />
+        <flag name="bold" value="1" />
+        <flag name="italic" value="2" />
+    </attr>
+
+    <!-- Color of text (usually same as colorForeground). -->
+    <attr name="textColor" format="reference|color" />
+
+    <!-- Color of highlighted text. -->
+    <attr name="textColorHighlight" format="reference|color" />
+
+    <!-- Color of hint text (displayed when the field is empty). -->
+    <attr name="textColorHint" format="reference|color" />
+
+    <!-- Color of link text (URLs). -->
+    <attr name="textColorLink" format="reference|color" />
+
+    <!-- Reference to a drawable that will be drawn under the insertion cursor. -->
+    <attr name="textCursorDrawable" format="reference" />
+
+    <!-- Indicates that the content of a non-editable TextView can be selected.
+     Default value is false. EditText content is always selectable. -->
+    <attr name="textIsSelectable" format="boolean" />
+
+    <!-- Where to ellipsize text. -->
+    <attr name="ellipsize">
+        <enum name="none" value="0" />
+        <enum name="start" value="1" />
+        <enum name="middle" value="2" />
+        <enum name="end" value="3" />
+        <enum name="marquee" value="4" />
+    </attr>
+
+    <attr name="lineSpacingMultiplier" format="float" />
+</resources>

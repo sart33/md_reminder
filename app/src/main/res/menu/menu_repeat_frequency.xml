@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_0_min"
+        android:fontFamily="@font/comfortaa_regular"
+        android:textColor="@color/color_primary_text"
+        android:background="@color/black"
+        android:title="@string/dm0_minutes" />
+    <item
+        android:id="@+id/menu_15_min"
+        android:fontFamily="@font/comfortaa_regular"
+        android:textColor="@color/color_primary_text"
+        android:background="@color/black"
+        android:title="@string/dm15_minutes" />
+    <item
+        android:id="@+id/menu_hour"
+        android:fontFamily="@font/comfortaa_regular"
+        android:textColor="@color/color_primary_text"
+        android:background="@color/black"
+        android:title="@string/dm_hour" />
+    <item
+        android:id="@+id/menu_4_hour"
+        android:fontFamily="@font/comfortaa_regular"
+        android:textColor="@color/color_primary_text"
+        android:background="@color/black"
+        android:title="@string/dm4_hour" />
+    <item
+        android:id="@+id/menu_every_day"
+        android:fontFamily="@font/comfortaa_regular"
+        android:textColor="@color/color_primary_text"
+        android:background="@color/black"
+        android:title="@string/dm_every_day" />
+</menu>

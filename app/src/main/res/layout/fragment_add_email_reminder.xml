@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background_common"
+    android:minWidth="@dimen/min_width"
+    android:minHeight="@dimen/min_height"
+    tools:context=".presentation.reminder.fragment.AddEmailReminderFragment">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView8"
+        android:layout_width="@dimen/mail_icon_full_layout_width"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_background_common">
+
+            <ImageView
+                    android:id="@+id/ivAddEmail"
+                    android:layout_width="@dimen/mail_icon_width"
+                    android:layout_height="@dimen/mail_icon_height"
+                    android:layout_marginStart="@dimen/mail_icon_layout_margin_start"
+                    android:contentDescription="@string/email"
+                    android:src="@drawable/mail"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                    android:id="@+id/tvAddPhoneNumber"
+                    style="@style/Widget.AppCompat.TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/email_block_margin"
+                    android:fontFamily="@font/comfortaa_regular"
+                    android:text="@string/add_email"
+                    android:textColor="@color/color_primary_text"
+                    android:textColorHint="@color/color_hint"
+                    android:textColorLink="@color/color_link"
+                    android:textSize="@dimen/addemail_text"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivAddEmail"
+                    app:layout_constraintStart_toEndOf="@+id/ivAddEmail"
+                    app:layout_constraintTop_toTopOf="@+id/ivAddEmail"
+                    app:layout_constraintVertical_bias="0.333"
+                    app:textAllCaps="true" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvSmsMessage"
+        android:layout_width="@dimen/email_message_block_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/email_message_block_margin_start"
+        android:layout_marginEnd="@dimen/email_message_block_margin_end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView8">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/color_background_common"
+            app:layout_constraintTop_toBottomOf="@+id/cardView8"
+            tools:layout_editor_absoluteX="@dimen/layout_absolutex">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_sms_message"
+                android:layout_width="@dimen/email_message_field_width"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/email_message_field_margin_top"
+                android:background="@color/color_background_text"
+                android:ems="10"
+                android:inputType="phone"
+                android:paddingStart="@dimen/email_message_field_padding_start"
+                android:paddingTop="@dimen/email_message_field_padding_top"
+                android:paddingEnd="@dimen/email_message_field_padding_end"
+                android:textColor="@color/white"
+                android:textColorHint="@color/color_hint"
+                app:flow_horizontalAlign="start"
+                app:flow_verticalAlign="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_email_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/background_none"
+                        android:fontFamily="@font/comfortaa_regular"
+
+                        android:hint="@string/email_message_text_rem"
+                        android:textColor="@color/color_primary_text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <View
+                android:id="@+id/vLine"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/underline_height"
+                android:background="@color/color_line_3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/et_email_message"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/et_email_message"
+                app:layout_constraintTop_toBottomOf="@+id/et_email_message"
+                tools:ignore="NotSibling" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvPbhoneNumber"
+        android:layout_width="@dimen/email_address_block_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/email_address_block_margin_start"
+        android:layout_marginEnd="@dimen/email_address_block_margin_end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvSmsMessage">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_background_common">
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/til_phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/email_address_field_padding_start"
+                android:paddingTop="@dimen/email_address_field_padding_top"
+                android:textColorHint="@color/color_hint"
+                android:textSize="@dimen/email_address_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_phone_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/background_none"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:hint="@string/email_address"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/color_primary_text" />
+
+                <View
+                    android:id="@+id/vLine3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/underline_height"
+                    android:background="@color/color_line_3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                    android:id="@+id/ivContacts"
+                    android:layout_width="60dp"
+                    android:layout_height="54dp"
+                    android:layout_marginBottom="2dp"
+                    android:contentDescription="@string/go_to_phone_list_contacts"
+                    android:padding="9dp"
+                    android:src="@drawable/contact"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="@dimen/email_footer_width"
+            android:layout_height="@dimen/email_footer_height"
+            android:background="@color/color_background_common"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+        <LinearLayout
+                android:id="@+id/laCancel"
+                android:layout_width="@dimen/cancel_layout_width"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <TextView
+                        android:id="@+id/tvCancelButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:padding="14dp"
+                        android:text="@string/cancel"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_primary_text"
+                        android:textSize="@dimen/cancel_text"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+                android:id="@+id/laSave"
+                android:layout_width="@dimen/cancel_layout_width"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <View
+                        android:id="@+id/view3"
+                        android:layout_width="@dimen/footer_separator_width"
+                        android:layout_height="@dimen/footer_separator_height"
+                        android:background="@color/color_line_separator"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/tvSaveButton"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                        android:id="@+id/tvSaveButton"
+                        android:layout_width="@dimen/save_button_email"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:padding="14dp"
+                        android:text="@string/save"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_primary_text"
+                        android:textSize="@dimen/save_text"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

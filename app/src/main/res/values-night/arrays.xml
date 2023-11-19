@@ -1,0 +1,27 @@
+<resources>
+    <!-- Reply Preference -->
+    <integer-array name="widget_colors">
+        <item>@color/pureWhite</item>
+        <item>@color/pureWhite90</item>
+        <item>@color/pureWhite80</item>
+        <item>@color/pureWhite70</item>
+        <item>@color/pureWhite60</item>
+        <item>@color/pureWhite50</item>
+        <item>@color/pureWhite40</item>
+        <item>@color/pureWhite30</item>
+        <item>@color/pureWhite20</item>
+        <item>@color/pureWhite10</item>
+        <item>@android:color/transparent</item>
+        <item>@android:color/transparent</item>
+        <item>@color/pureBlack10</item>
+        <item>@color/pureBlack20</item>
+        <item>@color/pureBlack30</item>
+        <item>@color/pureBlack40</item>
+        <item>@color/pureBlack50</item>
+        <item>@color/pureBlack60</item>
+        <item>@color/pureBlack70</item>
+        <item>@color/pureBlack80</item>
+        <item>@color/pureBlack90</item>
+        <item>@color/pureBlack</item>
+    </integer-array>
+</resources>

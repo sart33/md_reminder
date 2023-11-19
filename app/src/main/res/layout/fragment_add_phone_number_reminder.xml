@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background_common"
+    android:minWidth="@dimen/min_phone_width"
+    tools:context=".presentation.reminder.fragment.AddPhoneNumberReminderFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView8"
+        android:layout_width="@dimen/header_phone_width"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_background_common">
+
+            <ImageView
+                android:id="@+id/ivAddPhoneNumber"
+                android:layout_width="@dimen/phone_icon_width"
+                android:layout_height="@dimen/phone_icon_height"
+                android:layout_marginStart="@dimen/phone_icon_layout_margin_start"
+                android:contentDescription="@string/phone"
+                android:src="@drawable/phone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvAddPhoneNumber"
+                style="@style/Widget.AppCompat.TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/add_phone_margin"
+                android:fontFamily="@font/comfortaa_regular"
+                android:text="@string/add_phone"
+                android:textColor="@color/color_primary_text"
+                android:textColorHint="@color/color_hint"
+                android:textColorLink="@color/color_link"
+                android:textSize="@dimen/add_phone_text_size"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintBottom_toBottomOf="@+id/ivAddPhoneNumber"
+                app:layout_constraintStart_toEndOf="@+id/ivAddPhoneNumber"
+                app:layout_constraintTop_toTopOf="@+id/ivAddPhoneNumber"
+                app:layout_constraintVertical_bias="0.333"
+                app:textAllCaps="true" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/til_phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/phone_select_panel_start"
+        android:paddingTop="@dimen/phone_select_panel_top"
+        android:textColorHint="@color/color_hint"
+        android:textSize="@dimen/phone_select_panel_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView8">
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_none"
+                android:fontFamily="@font/comfortaa_regular"
+                android:hint="@string/telephone_number"
+                android:inputType="phone"
+                android:textColor="@color/color_primary_text"
+                android:textColorHint="@color/color_hint"
+                android:textColorLink="@color/color_link" />
+
+        <View
+            android:id="@+id/vLine3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/phone_select_panel_line"
+            android:background="@color/color_line_3" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="@dimen/phone_select_panel_footer_width"
+            android:layout_height="@dimen/phone_select_panel_footer_height"
+            android:background="@color/color_background_common"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+        <LinearLayout
+                android:id="@+id/laCancel"
+                android:layout_width="@dimen/phone_footer_cancel_width"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <TextView
+                        android:id="@+id/tvCancelButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:padding="14dp"
+                        android:text="@string/cancel"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_primary_text"
+                        android:textSize="@dimen/phone_footer_cancel_text_size"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+                android:id="@+id/laSave"
+                android:layout_width="@dimen/phone_footer_save_width"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <View
+                        android:id="@+id/view3"
+                        android:layout_width="@dimen/phone_footer_separator_width"
+                        android:layout_height="@dimen/phone_footer_separator_height"
+                        android:background="@color/color_line_3"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/tvSaveButton"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                        android:id="@+id/tvSaveButton"
+                        android:layout_width="@dimen/phone_footer_save_text_width"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:padding="14dp"
+                        android:text="@string/save"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_primary_text"
+                        android:textSize="@dimen/phone_footer_save_text_size"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

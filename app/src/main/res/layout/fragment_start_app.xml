@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_background_common"
+        android:clickable="false"
+        tools:context=".presentation.StartAppFragment">
+
+
+    <ImageView
+            android:id="@+id/ivMainMenu"
+            android:layout_width="@dimen/menu_icon_width"
+            android:layout_height="@dimen/menu_icon_height"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:clickable="true"
+            android:contentDescription="@string/menu"
+            android:contextClickable="true"
+            android:padding="8dp"
+            android:src="@drawable/menu_1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+            android:id="@+id/ivList"
+            android:layout_width="@dimen/background_icon_width"
+            android:layout_height="@dimen/background_icon_height"
+            android:clickable="false"
+            android:contentDescription="@string/big_application_logo"
+            android:contextClickable="false"
+            android:src="@drawable/big_reminder_logo"
+            ads:layout_constraintBottom_toBottomOf="parent"
+            ads:layout_constraintEnd_toEndOf="parent"
+            ads:layout_constraintStart_toStartOf="parent"
+            ads:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.500" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/ivAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="26dp"
+            android:layout_marginBottom="24dp"
+            android:clickable="true"
+            android:contentDescription="@string/add_remind"
+            android:contextClickable="true"
+            android:src="@android:drawable/ic_input_add"
+            ads:backgroundTint="@color/fABColor"
+            ads:layout_constraintBottom_toBottomOf="parent"
+            ads:layout_constraintEnd_toEndOf="parent"
+            app:tint="@color/deep_black" />
+
+    <TextView
+            android:id="@+id/tvCountOfReminders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:contextClickable="true"
+            android:fontFamily="@font/comfortaa_regular"
+            android:padding="16dp"
+            android:text="@string/no_reminders_yet"
+            android:textAlignment="textStart"
+            android:textColor="@color/color_primary_text"
+            android:textDirection="inherit"
+            android:textSize="@dimen/advanced_text_size"
+            ads:layout_constraintEnd_toEndOf="parent"
+            ads:layout_constraintStart_toStartOf="parent"
+            ads:layout_constraintTop_toBottomOf="@+id/ivList" />
+
+    <!--      <androidx.cardview.widget.CardView-->
+    <!--          android:layout_width="match_parent"-->
+    <!--          android:layout_height="@dimen/blank_layout_height"-->
+    <!--          app:cardBackgroundColor="@color/background_none"-->
+    <!--          app:layout_constraintBottom_toTopOf="@+id/ivList"-->
+    <!--          app:layout_constraintTop_toBottomOf="@+id/textView2">-->
+
+    <!--            <ListView-->
+    <!--                android:id="@+id/lvListView"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent" >-->
+
+    <!--            </ListView>-->
+    <!--      </androidx.cardview.widget.CardView>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

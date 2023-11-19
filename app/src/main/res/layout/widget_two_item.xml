@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widgetItem"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="-0.7dp"
+    android:layout_marginTop="-1dp"
+    android:layout_marginRight="-0.7dp"
+    android:background="@drawable/textview_border"
+    android:cacheColorHint="#00000000"
+    android:clickable="false"
+    android:orientation="vertical"
+    android:padding="0dp">
+
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="50dp"
+        android:layout_height="56dp"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="-31dp"
+        android:background="@color/background_none"
+        android:paddingTop="1dp"
+        android:paddingEnd="0dp"
+        android:text="1"
+        android:textAlignment="center"
+        android:textColor="@color/pureBlack80"
+        android:textSize="19sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_count1"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@id/tv_date"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="#e60967"
+        android:text=""
+        android:textSize="0sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tv_count2"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@id/tv_date"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="#2bf150"
+        android:text=""
+        android:textSize="0sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tv_count3"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@id/tv_date"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="#fa0909"
+        android:text=""
+        android:textSize="0sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tv_count4"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@id/tv_date"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="#ea835a"
+        android:text=""
+        android:textSize="0sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tv_count5"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@id/tv_date"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="#0500c9"
+        android:text=""
+        android:textSize="0sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tv_count6"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@id/tv_date"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="#d5dc1b"
+        android:text=""
+        android:textSize="0sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tv_count7"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@id/tv_date"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="#eb0fd9"
+        android:text=""
+        android:textSize="0sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tv_count8"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@id/tv_date"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="#00c926"
+        android:text=""
+        android:textSize="0sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tv_count9"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@id/tv_date"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="#0068c9"
+        android:text=""
+        android:textSize="0sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tv_count10"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@id/tv_date"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:background="#be0303"
+        android:text=""
+        android:textSize="0sp"
+        android:visibility="invisible" />
+
+
+</LinearLayout>

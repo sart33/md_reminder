@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--     <string  My strings -->
+    <string name="now">Now</string>
+    <string name="reminder_text">Текст нагадування</string>
+    <string name="dropdown_menu_timeout">Нагадати заздалегідь</string>
+    <string name="dropdown_repeat_frequency">Нагадувати кожні</string>
+    <string name="hours">год.</string>
+    <string name="min">хв.</string>
+    <string name="call_number">Зателефонувати на номер: </string>
+    <string name="call_numbers">Зателефонувати на номери: </string>
+    <string name="send_message">Надіслати повідомлення: </string>
+    <string name="send_messages">Надіслати повідомлення: </string>
+    <string name="send_email">Надіслати електронного листа: </string>
+    <string name="send_emails">Надіслати електронні листи: </string>
+    <string name="email_message_text_rem">Текст електронного листа</string>
+    <string name="error_input_message">Помилка заповнення поля</string>
+    <string name="error_input_phone_number">Помилка заповнення номера</string>
+    <string name="error_input_email_address">Помилка електронної адреси</string>
+    <string name="phones">Телефони</string>
+    <string name="sms">SMS</string>
+    <string name="emails">Електронні листи</string>
+    <string name="close">Закрити</string>
+    <string name="action">Дія</string>
+    <string name="actions">Дії</string>
+    <string name="call_contact">Зателефонувати контакту: </string>
+    <string name="call_contacts">Зателефонувати контактам: </string>
+    <string name="visible">Видимий</string>
+    <string name="invisible">Невидимий</string>
+    <string name="set_asidefor">Відкласти:</string>
+    <string name="on_15min">на 15 хв.</string>
+    <string name="on_30min">на 30 хв.</string>
+    <string name="on_45min">на 45 хв.</string>
+    <string name="on_1hour">на 1 год.</string>
+    <string name="tomorrow">Завтра</string>
+    <string name="tomorrow_at9">Завтра о 9:00 AM</string>
+    <string name="tomorrow_at13">Завтра о 1:00 PM</string>
+    <string name="tomorrow_at18">Завтра о 6:00 PM</string>
+    <string name="tomorrow_at21">Завтра о 9:00 PM</string>
+    <string name="set_newdate">Встановити нову дату</string>
+    <string name="appwidget_text">ПРИКЛАД</string>
+    <string name="add_widget">Додати віджет</string>
+    <string name="app_widget_description">Опис віджета</string>
+    <string name="no_events">Подій немає</string>
+    <!--     <string from Volodin`s file"  -->
+    <string name="app_name">MD Reminder</string>
+    <string name="no_notes_yet">Записів наразі немає</string>
+    <string name="main_menu">Головне меню</string>
+    <string name="reminders">Нагадування</string>
+    <string name="reminder">Нагадування</string>
+    <string name="notes">Нотатка</string>
+    <string name="note">Нотатки</string>
+    <string name="tasks">Переліки справ</string>
+    <string name="task">Перелік справ</string>
+    <string name="contact">Контакт</string>
+    <string name="contacts">Контакти</string>
+    <string name="secure_notes">Захищені нотатки</string>
+    <string name="secure_note">Захищена нотатка</string>
+    <string name="widgets">Віджети</string>
+    <string name="widget">Віджет</string>
+    <string name="add_contact">Додати контакт</string>
+    <string name="add_number">Додати номер</string>
+    <string name="add_phone">Додати телефон</string>
+    <string name="telephone_number">Номер телефону</string>
+    <string name="add_email">Додати E-Mail</string>
+    <string name="email_text">Текст електронного листа</string>
+    <string name="email_address">Адреса отримувача</string>
+    <string name="add_sms">Додати SMS</string>
+    <string name="sms_message_text">Текст SMS сповіщення</string>
+    <string name="add_image">Додати фон</string>
+    <string name="add_file">Додати файл</string>
+    <string name="save">Зберегти</string>
+    <string name="cancel">Скасувати</string>
+    <string name="today">Сьогодні</string>
+    <string name="world_clock">Світовий годинник</string>
+    <string name="connect_with_us">Зв`язатися з нами</string>
+    <string name="sound_options">Параметри сигналу</string>
+    <!--   APP SETTINGS   -->
+    <string name="select_theme">Оберіть тему</string>
+    <string name="language">Мовні налаштування</string>
+    <string name="time_format">Формат часу</string>
+    <string name="date_format">Формат дати</string>
+    <string name="notifications_sound">Мелодія сповіщення</string>
+    <string name="volume">Гучність</string>
+    <string name="duration">Тривалість сповіщення</string>
+    <!--   Notification duration 2 Level start   -->
+    <string name="five_seconds">5 секунд</string>
+    <string name="fifteen_seconds">15 секунд</string>
+    <string name="thirty_seconds">30 секунд</string>
+    <string name="complete_melody">Повна мелодія</string>
+    <!--   Notification duration 2 Level END   -->
+    <string name="repeating_common">Повторення нагадувань</string>
+    <string name="repeat_every">Повторювати кожні</string>
+    <!--   Repeat notification 2 Level start   -->
+    <string name="five_minutes">5 хвилин</string>
+    <string name="fifteen_minutes">15 хвилин</string>
+    <string name="thirty_minutes">30 хвилин</string>
+    <string name="one_hour">1 годину</string>
+    <!--   Repeat notification 2 Level END   -->
+    <string name="vibration">Вібрація</string>
+    <string name="popup">Вікно сповіщення</string>
+    <string name="full_popup">Повноекранне</string>
+    <string name="statusbar_popup">В панелі статусу</string>
+    <string name="popup_delay">Затримка спливаючого вікна</string>
+    <!--   Notification delay 2 Level start   -->
+    <string name="two_seconds">2 секунд</string>
+    <string name="four_seconds">4 секунд</string>
+    <string name="disable_delay">Затримку вимкнуно</string>
+    <!--   Notification delay 2 Level END   -->
+    <string name="background_app">Фонове зображення</string>
+    <string name="backup">Резервна копія</string>
+    <!--   Backup 2 Level start   -->
+    <string name="all_entries">Всі записи</string>
+    <string name="backup_save">Зберегти</string>
+    <string name="backup_save_folder">Зберегти до теки</string>
+    <string name="backup_save_gdrive">Зберегти до Google Drive</string>
+    <!--   Backup 2 Level END   -->
+    <string name="delete_swipe">Провести пальцем щоб видалити сповіщення</string>
+    <string name="confirm_delete">Підтвердження видалення</string>
+    <string name="trashbox">Смітник</string>
+    <string name="menu_position">Розташування меню</string>
+    <string name="createplus_position">Розташування кнопки "Створити"</string>
+    <string name="left_position">Ліворуч</string>
+    <string name="right_position">Праворуч</string>
+    <string name="autodelete_completed_reminders">Автоматичне видалення завершених нагадувань</string>
+    <string name="title_activity_settings">Видаляти нагадування змахуванням</string>
+    <string name="restore_from">Відновити з резервної копії</string>
+    <!--   ADD REMINDER   -->
+    <string name="reminder_addreminder">Нагадування</string>
+    <string name="text_reminder">Текст нагадування</string>
+    <string name="time_reminder">00:00</string>
+    <string name="date_reminder">Сьогодні</string>
+    <string name="worldclock_reminder">Світовий годинник</string>
+    <string name="alarm_sound_reminder">Звук сповіщення</string>
+    <string name="pre">Нагадати заздалегідь</string>
+    <!--   Pre reminder list   -->
+    <string name="dm0_minutes_before">за 0 хвилин</string>
+    <string name="dm15_minutes_before">за 15 хвилин</string>
+    <string name="dm30_minutes_before">за 30 хвилин</string>
+    <string name="dm45_minutes_before">за 45 хвилин</string>
+    <string name="dm1_hour_before">за 1 годину</string>
+    <!--   Pre reminder list END   -->
+    <string name="repeat_remind_every">Повторювати нагадування</string>
+    <!--   Repeat reminder list   -->
+    <string name="dm0_minutes">Не повторювати</string>
+    <string name="dm15_minutes">Кожні 15 хвилин</string>
+    <string name="dm_hour">Кожну годину</string>
+    <string name="dm4_hour">Кожні 4 години</string>
+    <string name="dm_every_day">Кожного дня (в той самий час)</string>
+    <!--   Repeat reminder list END   -->
+    <string name="add_contact_reminder">Додати контакт</string>
+    <string name="add_phone_reminder">Додати телефон</string>
+    <string name="add_email_reminder">Додати E-mail</string>
+    <string name="add_sms_reminder">Додати SMS</string>
+    <!--   Additional windows to Reminder   -->
+    <string name="enter_phone_number_rem">Введіть номер телефону</string>
+    <string name="sms_text_rem">Введіть текст SMS</string>
+    <string name="phone_number_sms_rem">Контакт SMS</string>
+    <string name="add_email_rem">Додати E-mail</string>
+    <string name="text_email_rem">Введіть текст E-mail повідомлення</string>
+    <string name="add_file_email_rem">Вкласти файл до E-mail</string>
+    <string name="adress_mail">Кому:</string>
+    <string name="cancel_addition_rem">Скасувати</string>
+    <string name="save_addition_rem">Зберегти</string>
+    <!--   ADD NOTE SCREEN   -->
+    <string name="note_text">Текст нотатки</string>
+    <string name="add_note">Додати</string>
+    <string name="contact_note">Контакт</string>
+    <string name="phone_number_note">Номер телефону</string>
+    <string name="email_note">E-mail</string>
+    <string name="addimage_note">Додати зображення</string>
+    <string name="addfile_note">Додати файл</string>
+    <string name="enter_phone_note">Введіть номер телефону</string>
+    <string name="add_email_note">Додати E-mail</string>
+    <string name="cancel_addition_note">Скасувати</string>
+    <string name="save_addition_note">Зберегти</string>
+    <!--   ADD TASKLIST SCREEN   -->
+    <string name="listname">Назва переліку справ</string>
+    <string name="enter_phone_number">Введіть номер телефону</string>
+    <string name="sms_text">Текст SMS повідомлення</string>
+    <string name="phone_number_sms_task">Введіть номер телефону</string>
+    <string name="add_email_task">Додати E-mail</string>
+    <string name="text_email">Введіть текст E-mail повідомлення</string>
+    <string name="add_file_email_task">Вкласти файл в E-mail</string>
+    <string name="cancel_addition_tasklist">Скасувати</string>
+    <string name="save_addition_tasklist">Зберегти</string>
+    <string name="addimage_task">Додати зображення</string>
+    <string name="addfile_task">Додати файл</string>
+    <!--   ADD SECURE NOTE SCREEN   -->
+    <string name="safenote_text">Текст нотатки</string>
+    <string name="safenote_add">Додати</string>
+    <string name="safenote_contact">Контакт</string>
+    <string name="safenote_phone_number">Номер телефону</string>
+    <string name="safenote_email">E-mail</string>
+    <string name="addimage_safenote">Додати зображення</string>
+    <string name="addfile_safenote">Додати файл</string>
+    <string name="enter_phone_safenote">Введіть номер телефону</string>
+    <string name="add_email_safenote">Додати E-mail</string>
+    <string name="add_pin_code">Пін-Код</string>
+    <!--   WIDGET INSTALLATION   -->
+    <string name="theme_widget">Тема</string>
+    <string name="dark_widget">Темна</string>
+    <string name="light_widget">Світла</string>
+    <string name="use_current_theme">Використовувати тему додатку</string>
+    <string name="opacity_widget">Прозорість</string>
+    <string name="set_widget">Встановити</string>
+    <!--   WIDGET CALENDAR   -->
+    <string name="monday">Пн</string>
+    <string name="tuesday">Вт</string>
+    <string name="wednesday">Ср</string>
+    <string name="thursday">Чт</string>
+    <string name="friday">Пт</string>
+    <string name="saturday">Сб</string>
+    <string name="sunday">Нд</string>
+    <string name="january">Січень</string>
+    <string name="february">Лютий</string>
+    <string name="march">Березень</string>
+    <string name="april">Квітень</string>
+    <string name="may">Травень</string>
+    <string name="june">Червень</string>
+    <string name="july">Липень</string>
+    <string name="august">Серпень</string>
+    <string name="september">Вереснь</string>
+    <string name="october">Жовтень</string>
+    <string name="november">Листопад</string>
+    <string name="december">Грудень</string>
+    <!--   WIDGET CALLS   -->
+    <string name="make_call">Зробити дзвінки</string>
+    <!--   WIDGET ONE REMIND   -->
+    <string name="next_task">Наступне завдання</string>
+    <!--   WIDGET WEEKLY   -->
+    <string name="weekly">Тижневик</string>
+    <!--   TRASH   -->
+    <string name="trash">Кошик</string>
+    <string name="empty_trash">Очистити кошик</string>
+    <string name="confirm">Підтвердити</string>
+    <!--   NOTIFICATION   -->
+    <string name="ignore">Ігнорувати</string>
+    <string name="snooze">Відкласти</string>
+    <!--   Snooze variations   -->
+    <string name="fifty">На 15 хвилин</string>
+    <string name="half_hour">На 30 хвилин</string>
+    <string name="forty_five">На 45 хвилин</string>
+    <string name="hour">На 1 годину</string>
+    <string name="on_day">На 1 день</string>
+    <string name="tomorrow_morning">Завтра о 9.00</string>
+    <string name="tomorrow_lunch">Завтра о 13.00</string>
+    <string name="tomorrow_day">Завтра о 18.00</string>
+    <string name="tomorrow_evening">Завтра о 21.00</string>
+    <string name="new_date">Встановити нову дату</string>
+    <!--   Snooze variations END   -->
+    <string name="edit">Редагувати</string>
+    <string name="delete">Видалити</string>
+    <string name="done">Зроблено!</string>
+    <!--   Preference Titles   -->
+    <string name="messages_header">Повідомлення</string>
+    <string name="sync_header">Sync</string>
+    <!--   Messages Preferences   -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+    <!--   Sync Preferences   -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="title_activity_settings2">SettingsActivity2</string>
+    <string name="dropdown_repeat_count">Кількість повторень</string>
+    <!--   TODO: Remove or change this placeholder text   -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="home">Головна</string>
+    <string name="calendar_widget_activity">Календар</string>
+    <string name="header_background">Фон заголовку</string>
+    <string name="background">Фон</string>
+    <string name="text_and_icon_color">Колір тексту та іконок</string>
+    <string name="reminders_list">Список нагадувань</string>
+    <!--    <string name="text_size">Розмір тексту</string>-->
+
+    <string name="ok">Ok</string>
+    <string name="reminders_at_date">Нагадування на дату</string>
+    <string name="settings">Налаштування</string>
+    <string name="application_language">Мова додатку</string>
+    <string name="format_date">Формат дати</string>
+    <string name="widget_title_date_format">Формат дати заголовку віджету</string>
+
+    <!--    <string name="cancel">Скасувати</string>-->
+    <string name="reminder_channel">Канал нагадувань</string>
+    <string name="default_reminder_notifications">Стандартні повідомлення нагадувань</string>
+    <string name="note_channel">Канал нотаток</string>
+    <string name="default_note_notifications">Стандартні повідомлення нотаток</string>
+    <string name="info_channel">Канал інформації</string>
+    <string name="channel_for_other_info_notifications">Канал для інших інформаційних повідомлень</string>
+
+    <string name="red">Червоний</string>
+    <string name="green">Зелений</string>
+    <string name="blue">Синій</string>
+    <string name="yellow">Жовтий</string>
+    <string name="pink">Рожевий</string>
+    <string name="dark_orange">Темно-помаранчевий</string>
+    <string name="teal">Темно-зелений</string>
+
+    <string name="locale">  Мова</string>
+    <string name="english">  Англійська</string>
+    <string name="spanish">  Іспанська</string>
+    <string name="french">  Французька</string>
+    <string name="german">  Німецька</string>
+    <string name="ukrainian">  Українська</string>
+    <string name="sweden">  Шведська</string>
+    <string name="russian">  Російська</string>
+
+
+    <string name="sunday_full">Неділя</string>
+    <string name="monday_full">Понеділок</string>
+    <string name="first_day_of_the_week">Перший день тижня</string>
+    <string name="pick_up_things_from_dry_cleaners">Забрати речі з хімчистки</string>
+    <string name="phone">Телефон</string>
+    <string name="email">Email</string>
+    <string name="run_in_foreground">Запускати в фоні</string>
+    <string name="notification_permission">Дозвіл на сповіщення</string>
+    <string name="allow_app_send_notifications">Будь ласка, дозвольте програмі надсилати сповіщення</string>
+
+    <string name="allow">Дозволити</string>
+
+    <string name="notification_settings">Налаштування сповіщень</string>
+    <string name="show_on_home_screen">Показати на головному екрані</string>
+    <string name="show_on_lock_screen">Показати на заблокованому екрані</string>
+    <string name="full_screen_notification">Повноекранне сповіщення</string>
+    <string name="default_notification_banner">Банер сповіщення за замовчуванням</string>
+    <string name="turn_on_the_screen">Увімкнути екран при отриманні сповіщення</string>
+    <string name="turn_on_full_screen_on_lock">Увімкнути повноекранний режим на заблокованому екрані</string>
+    <string name="turn_on_full_screen_on_home">Увімкнути повноекранний режим на головному екрані</string>
+
+    <string name="number_of_reminders">Кількість нагадувань</string>
+    <string name="no_reminders_yet">Нагадувань поки-що немає</string>
+    <string name="twenty_four_hour_format">24 годинний формат</string>
+
+    <string name="background_image">Зображення фону</string>
+    <string name="back">Назад</string>
+    <string name="notification_visibility_settings">Налаштування видимості сповіщень</string>
+    <string name="select_default_sound">Обрати стандартний звук</string>
+    <string name="select_default_background">Обрати стандартний фон</string>
+
+
+</resources>

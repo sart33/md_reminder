@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Нажатое состояние -->
+    <item android:state_pressed="true">
+        <color android:color="@color/colorPressed" />
+    </item>
+    <!-- Фокусированное состояние -->
+    <item android:state_focused="true">
+        <color android:color="@color/colorFocused" />
+    </item>
+    <!-- Обычное состояние -->
+    <item>
+        <color android:color="@color/colorNormal" />
+    </item>
+</selector>

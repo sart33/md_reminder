@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="repeat_frequency">
+<!--        <item>15 minutes</item>-->
+<!--        <item>hour</item>-->
+<!--        <item>4 hours</item>-->
+<!--        <item>Every day (at a particular time)</item>-->
+    </string-array>
+</resources>

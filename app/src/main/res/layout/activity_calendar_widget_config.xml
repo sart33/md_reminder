@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/first_background_color"
+    android:orientation="vertical"
+    tools:context=".presentation.widget.calendar.CalendarTwoWidgetConfigActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/first_background_color"
+        app:elevation="0dp"
+        app:liftOnScroll="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="68dp">
+
+            <ImageView
+                android:id="@+id/iv_toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:contentDescription="@string/close_widget_settings"
+                app:layout_constraintBottom_toBottomOf="@+id/tvReminderDate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvReminderDate"
+                app:navigationIcon="@drawable/ic_clear_black_24dp"
+                app:navigationIconTint="@color/color_primary_text"
+                app:srcCompat="@drawable/ic_clear_black_24dp"
+                app:title="@string/reminders_list"
+                app:titleCentered="true" />
+
+            <TextView
+                android:id="@+id/tvReminderDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/comfortaa_regular"
+                android:text="@string/calendar_widget_activity"
+                android:textAllCaps="true"
+                android:textColor="@color/color_primary_text"
+                android:textDirection="locale"
+                android:textSize="@dimen/reminder_title_text_size"
+                app:autoSizeMaxTextSize="@dimen/reminder_title_max_text_size"
+                app:autoSizeMinTextSize="@dimen/reminder_title_min_text_size"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.25" />
+
+            <ImageView
+                android:id="@+id/line_image_view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_line_3"
+                android:src="@drawable/line_drawable"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvReminderDate"
+                app:layout_constraintVertical_bias="0.35" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <solutions.mobiledev.reminder.presentation.widget.gradient.UiGradientFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        app:gradientFrameLayout_cornerRadius="0dp"
+        app:gradientFrameLayout_endColor="#344754"
+        app:gradientFrameLayout_startColor="#d2cec8">
+
+        <LinearLayout
+            android:id="@+id/ll_all"
+            android:layout_width="match_parent"
+            android:layout_height="156dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="156dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/material_margin"
+                android:layout_marginEnd="@dimen/material_margin"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llHeaderBg"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/widget_bg_black_40"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/btn_prev"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:contentDescription="@string/go_to_previous_month"
+                        android:scaleType="centerInside"
+                        tools:srcCompat="@drawable/ic_twotone_keyboard_arrow_left_24px" />
+
+                    <TextView
+                        android:id="@+id/widgetTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:gravity="center_vertical"
+                        android:paddingStart="16dp"
+                        android:singleLine="true"
+                        android:text="January 2023"
+                        android:textAllCaps="true"
+                        android:textAppearance="?textAppearanceHeadline5"
+                        android:textColor="@color/color_primary_text"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="RtlSymmetry" />
+
+                    <ImageView
+                        android:id="@+id/btn_next"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:contentDescription="@string/go_to_next_month"
+                        android:scaleType="centerInside"
+                        tools:srcCompat="@drawable/ic_twotone_keyboard_arrow_right_24px" />
+
+                    <ImageView
+                        android:id="@+id/btn_settings"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:contentDescription="@string/go_to_widget_settings"
+                        android:scaleType="centerInside"
+                        tools:srcCompat="@drawable/ic_twotone_settings_24px" />
+
+                    <!--                            <ImageView-->
+                    <!--                                android:id="@+id/btn_voice"-->
+                    <!--                                android:layout_width="50dp"-->
+                    <!--                                android:layout_height="50dp"-->
+                    <!--                                android:scaleType="centerInside"-->
+                    <!--                                tools:srcCompat="@drawable/ic_twotone_mic_24px" />-->
+
+                    <ImageView
+                        android:id="@+id/btn_add_task"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:contentDescription="@string/add_remind"
+                        android:scaleType="centerInside"
+                        tools:srcCompat="@drawable/ic_twotone_add_24px" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llSubHeaderBg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/widget_bg_black_40"
+                    android:orientation="horizontal"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp">
+
+                    <TextView
+                        android:id="@+id/tvSunday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/sunday"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/widget_calendar_red_color"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvMonday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/monday"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_primary_text"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvTuesday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/tuesday"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_primary_text"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvWednesday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/wednesday"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_primary_text"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvThursday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/thursday"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_primary_text"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvFriday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/friday"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_primary_text"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvSaturday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/saturday"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_primary_text"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvSundayEnd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/sunday"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/widget_calendar_red_color"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/line_image_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_line_3"
+                    android:contentDescription="@string/line_image"
+                    android:src="@drawable/line_drawable" />
+
+                <LinearLayout
+                    android:id="@+id/llWidgetBg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/widget_bg_black_40"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </solutions.mobiledev.reminder.presentation.widget.gradient.UiGradientFrameLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/material_margin"
+            android:layout_marginEnd="@dimen/material_margin"
+            android:orientation="vertical">
+
+
+            <TextView
+                style="@style/UiComponentSectionLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/comfortaa_regular"
+                android:textColor="@color/color_primary_text"
+                android:text="@string/header_background" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="?attr/materialCardViewFilledStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="#DEE3EB"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="2dp">
+
+                <com.github.naz013.colorslider.ColorSlider
+                    android:id="@+id/headerBgColorSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="8dp"
+                    app:cs_colors="@array/widget_colors"
+                    tools:ignore="MissingClass" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                style="@style/UiComponentSectionLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/comfortaa_regular"
+                android:textColor="@color/color_primary_text"
+                android:text="@string/background" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="?attr/materialCardViewFilledStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="#DEE3EB"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="2dp">
+
+                <com.github.naz013.colorslider.ColorSlider
+                    android:id="@+id/bgColorSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="8dp"
+                    app:cs_colors="@array/widget_colors"
+                    tools:ignore="MissingClass" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                style="@style/UiComponentSectionLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/comfortaa_regular"
+                android:text="@string/first_day_of_the_week"
+                android:textColor="@color/color_primary_text" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/rbSunday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/comfortaa_regular"
+                    android:text="@string/sunday_full"
+                    android:textColor="@color/color_primary_text" />
+
+                <RadioButton
+                    android:id="@+id/rbMonday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/comfortaa_regular"
+                    android:text="@string/monday_full"
+                    android:textColor="@color/color_primary_text" />
+
+            </RadioGroup>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:text="@string/save"
+        android:textAllCaps="true"
+        android:visibility="visible"
+        app:icon="@drawable/ic_twotone_done_24px" />
+
+</LinearLayout>

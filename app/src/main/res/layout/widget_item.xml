@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widgetItem"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/background_none"
+    android:cacheColorHint="#00000000"
+    android:clickable="false"
+    android:orientation="vertical"
+    android:padding="0dp">
+
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="-15dp"
+        android:paddingStart="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:text="1"
+        android:textAlignment="center"
+        android:textColor="@color/pureBlack80"
+        android:textSize="19sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="37dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/tv_date"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/calendar_widget_rem"
+        android:paddingStart="4dp"
+        android:paddingLeft="4dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:text="10"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
+</LinearLayout>

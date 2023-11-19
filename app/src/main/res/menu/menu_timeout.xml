@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_0_min_b"
+        android:checkable="false"
+        android:title="@string/dm0_minutes_before" />
+    <item
+        android:id="@+id/menu_15_min_b"
+        android:checkable="false"
+        android:title="@string/dm15_minutes_before" />
+    <item
+        android:id="@+id/menu_30_min_b"
+        android:checkable="false"
+        android:title="@string/dm30_minutes_before" />
+    <item
+        android:id="@+id/menu_45_min_b"
+        android:checkable="false"
+        android:title="@string/dm45_minutes_before" />
+    <item
+        android:id="@+id/menu_1_hour_b"
+        android:checkable="false"
+        android:title="@string/dm1_hour_before" />
+    </menu>
+

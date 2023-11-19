@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".StartAppFragment">
+    <item
+        android:id="@+id/menu_remind"
+        android:icon="@drawable/ic_baseline_doorbell_24"
+        android:iconTint="#5A5A5A"
+        android:iconTintMode="src_in"
+        android:title="@string/reminders" />
+    <item
+        android:id="@+id/menu_note"
+        android:icon="@drawable/ic_baseline_edit_note_24"
+        android:iconTint="#5A5A5A"
+        android:iconTintMode="src_in"
+        android:title="@string/notes" />
+    <item
+        android:id="@+id/menu_task"
+        android:icon="@drawable/ic_baseline_add_task_24"
+        android:iconTint="#5A5A5A"
+        android:iconTintMode="src_in"
+        android:title="@string/tasks" />
+    <item
+        android:id="@+id/secure_note"
+        android:icon="@drawable/ic_baseline_security_24"
+        android:iconTint="#5A5A5A"
+        android:iconTintMode="src_in"
+        android:title="@string/secure_notes" />
+    <item
+        android:id="@+id/widget"
+        android:icon="@drawable/ic_baseline_widgets_24"
+        android:iconTint="#5A5A5A"
+        android:iconTintMode="src_in"
+        android:title="@string/widgets" />
+</menu>

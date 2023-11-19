@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--     <string  My strings -->
+    <string name="now">No</string>
+    <string name="reminder_text">Påminnelsens text</string>
+    <string name="dropdown_menu_timeout">Påminn i förväg</string>
+    <string name="dropdown_repeat_frequency">Upprepa varje</string>
+    <string name="hours">timmar</string>
+    <string name="min">min</string>
+    <string name="call_number">Ring upp nummer: </string>
+    <string name="call_numbers">Ring upp numren: </string>
+    <string name="send_message">Skicka meddelande: </string>
+    <string name="send_messages">Skicka meddelanden: </string>
+    <string name="send_email">Skicka e-post: </string>
+    <string name="send_emails">Skicka e-postmeddelanden: </string>
+    <string name="email_message_text_rem">E-postmeddelandet text</string>
+    <string name="error_input_message">Felaktig inmatning i meddelandefältet</string>
+    <string name="error_input_phone_number">Felaktig inmatning i telefonnummret</string>
+    <string name="error_input_email_address">Felaktig inmatning i e-postmeddelanden</string>
+    <string name="phones">Telefoner</string>
+    <string name="sms">SMS</string>
+    <string name="emails">E-post</string>
+    <string name="close">Stäng</string>
+    <string name="action">Åtgärd</string>
+    <string name="actions">Åtgärder</string>
+    <string name="call_contact">Ring upp kontakt: </string>
+    <string name="call_contacts">Ring upp kontakter: </string>
+    <string name="visible">Synlig</string>
+    <string name="invisible">Osynlig</string>
+    <string name="set_asidefor">Flytta fram:</string>
+    <string name="on_15min">om 15 min</string>
+    <string name="on_30min">om 30 min</string>
+    <string name="on_45min">om 45 min</string>
+    <string name="on_1hour">om 1 timme</string>
+    <string name="tomorrow">I morgondag</string>
+    <string name="tomorrow_at9">Imorgon kl. 9:00</string>
+    <string name="tomorrow_at13">Imorgon kl. 13:00</string>
+    <string name="tomorrow_at18">Imorgon kl. 18:00</string>
+    <string name="tomorrow_at21">Imorgon kl. 21:00</string>
+    <string name="set_newdate">Ange nytt datum</string>
+    <string name="appwidget_text">EXEMPEL</string>
+    <string name="add_widget">Lägg till widget</string>
+    <string name="app_widget_description">Det här är en beskrivning av appwidgeten</string>
+    <string name="no_events">Inga händelser</string>
+    <!--     <string from Volodin`s file"  -->
+    <string name="app_name">MD Reminder</string>
+    <string name="no_notes_yet">Inga anteckningar ännu</string>
+    <string name="main_menu">Huvudmeny</string>
+    <string name="reminders">Påminnelser</string>
+    <string name="reminder">Påminnelse</string>
+    <string name="notes">Anteckningar</string>
+    <string name="note">Anteckning</string>
+    <string name="tasks">Att göra-listor</string>
+    <string name="task">Uppgiftslista</string>
+    <string name="contact">Kontakt</string>
+    <string name="contacts">Kontakter</string>
+    <string name="secure_notes">Säkra anteckningar</string>
+    <string name="secure_note">Säker anteckning</string>
+    <string name="widgets">Widgets</string>
+    <string name="widget">Widget</string>
+    <string name="add_contact">Lägg till kontakt</string>
+    <string name="add_number">Lägg till nummer</string>
+    <string name="add_phone">Lägg till telefon</string>
+    <string name="telephone_number">Telefonnummer</string>
+    <string name="add_email">Lägg till e-post</string>
+    <string name="email_text">E-posttext</string>
+    <string name="email_address">E-postadress</string>
+    <string name="add_sms">Lägg till SMS</string>
+    <string name="sms_message_text">SMS-meddelandetext</string>
+    <string name="add_image">Lägg till bild</string>
+    <string name="add_file">Lägg till fil</string>
+    <string name="save">Spara</string>
+    <string name="cancel">Avbryt</string>
+    <string name="today">Idag</string>
+    <string name="world_clock">Världsklocka</string>
+    <string name="connect_with_us">Anslut med oss</string>
+    <string name="sound_options">Ljudalternativ</string>
+    <!--   APP SETTINGS   -->
+    <string name="select_theme">Välj tema</string>
+    <string name="language">Språkinställningar</string>
+    <string name="time_format">Tidsformat</string>
+    <string name="date_format">Datumformat</string>
+    <string name="notifications_sound">Notifikationsljud</string>
+    <string name="volume">Volymkontroll</string>
+    <string name="duration">Notifikationsvaraktighet</string>
+    <!--   Notification duration 2 Level start   -->
+    <string name="five_seconds">5 sekunder</string>
+    <string name="fifteen_seconds">15 sekunder</string>
+    <string name="thirty_seconds">30 sekunder</string>
+    <string name="complete_melody">Fullständig melodi</string>
+    <!--   Notification duration 2 Level END   -->
+    <string name="repeating_common">Upprepa meddelandet</string>
+    <string name="repeat_every">Upprepa varje</string>
+    <!--   Repeat notification 2 Level start   -->
+    <string name="five_minutes">5 minuter</string>
+    <string name="fifteen_minutes">15 minuter</string>
+    <string name="thirty_minutes">30 minuter</string>
+    <string name="one_hour">1 timme</string>
+    <!--   Repeat notification 2 Level END   -->
+    <string name="vibration">Vibration</string>
+    <string name="popup">Popup-fönster</string>
+    <string name="full_popup">Helskärm</string>
+    <string name="statusbar_popup">I statusfältet</string>
+    <string name="popup_delay">Fördröjning för popup-fönster</string>
+    <!--   Notification delay 2 Level start   -->
+    <string name="two_seconds">2 sekunder</string>
+    <string name="four_seconds">4 sekunder</string>
+    <string name="disable_delay">Fördröjning avstängd</string>
+    <!--   Notification delay 2 Level END   -->
+    <string name="background_app">Bakgrundsbild</string>
+    <string name="backup">Säkerhetskopia</string>
+    <!--   Backup 2 Level start   -->
+    <string name="all_entries">Alla poster</string>
+    <string name="backup_save">Spara</string>
+    <string name="backup_save_folder">Spara i mapp</string>
+    <string name="backup_save_gdrive">Spara i Google Drive</string>
+    <!--   Backup 2 Level END   -->
+    <string name="delete_swipe">Svep för att radera aviseringen</string>
+    <string name="confirm_delete">Bekräfta radering</string>
+    <string name="trashbox">Papperskorgen</string>
+    <string name="menu_position">Meny position</string>
+    <string name="createplus_position">"Skapa" knapp position</string>
+    <string name="left_position">Vänster</string>
+    <string name="right_position">Höger</string>
+    <string name="autodelete_completed_reminders">Automatisk radering av avklarade påminnelser</string>
+    <string name="title_activity_settings">Ta bort aviseringar genom att svepa</string>
+    <string name="restore_from">Återställ från säkerhetskopia</string>
+    <!--   ADD REMINDER   -->
+    <string name="reminder_addreminder">Påminnelse</string>
+    <string name="text_reminder">Påminnelsens text</string>
+    <string name="time_reminder">00:00</string>
+    <string name="date_reminder">Idag</string>
+    <string name="worldclock_reminder">Världsklocka</string>
+    <string name="alarm_sound_reminder">Ljuddalternativ</string>
+    <string name="pre">Förpåminnelse</string>
+    <!--   Pre reminder list   -->
+    <string name="dm0_minutes_before">0 minuter fore</string>
+    <string name="dm15_minutes_before">15 minuter före</string>
+    <string name="dm30_minutes_before">30 minuter före</string>
+    <string name="dm45_minutes_before">45 minuter före</string>
+    <string name="dm1_hour_before">1 timme före</string>
+    <!--   Pre reminder list END   -->
+    <string name="repeat_remind_every">Upprepa påminnelse</string>
+    <!--   Repeat reminder list   -->
+    <string name="dm0_minutes">Ingen</string>
+    <string name="dm15_minutes">Varje 15 minuter</string>
+    <string name="dm_hour">Varje timme</string>
+    <string name="dm4_hour">Varje 4 timmar</string>
+    <string name="dm_every_day">Varje dag (vid denna tidpunkt)</string>
+    <!--   Repeat reminder list END   -->
+    <string name="add_contact_reminder">Lägg till kontakt</string>
+    <string name="add_phone_reminder">Lägg till telefonnummer</string>
+    <string name="add_email_reminder">Lägg till E-mail</string>
+    <string name="add_sms_reminder">Lägg till SMS</string>
+    <!--   Additional windows to Reminder   -->
+    <string name="enter_phone_number_rem">Ange telefonnummer</string>
+    <string name="sms_text_rem">SMS-text</string>
+    <string name="phone_number_sms_rem">SMS-kontakt</string>
+    <string name="add_email_rem">Lägg till E-mail</string>
+    <string name="text_email_rem">Ange e-postmeddelande</string>
+    <string name="add_file_email_rem">Lägg till fil i e-post</string>
+    <string name="adress_mail">Till:</string>
+    <string name="cancel_addition_rem">Avbryt</string>
+    <string name="save_addition_rem">Spara</string>
+    <!--   ADD NOTE SCREEN   -->
+    <string name="note_text">Din anteckningstext</string>
+    <string name="add_note">Lägg till</string>
+    <string name="contact_note">Kontakt</string>
+    <string name="phone_number_note">Telefonnummer</string>
+    <string name="email_note">E-post</string>
+    <string name="addimage_note">Lägg till bild</string>
+    <string name="addfile_note">Lägg till fil</string>
+    <string name="enter_phone_note">Ange telefonnummer</string>
+    <string name="add_email_note">Lägg till e-post</string>
+    <string name="cancel_addition_note">Avbryt</string>
+    <string name="save_addition_note">Spara</string>
+    <!--   ADD TASKLIST SCREEN   -->
+    <string name="listname">Namnet på att göra-listan</string>
+    <string name="enter_phone_number">Ange telefonnummer</string>
+    <string name="sms_text">SMS-text</string>
+    <string name="phone_number_sms_task">Ange telefonnummer</string>
+    <string name="add_email_task">Lägg till E-mail</string>
+    <string name="text_email">Ange e-postmeddelande</string>
+    <string name="add_file_email_task">Add file to E-mail</string>
+    <string name="cancel_addition_tasklist">Avbryt</string>
+    <string name="save_addition_tasklist">Spara</string>
+    <string name="addimage_task">Lägg till bild</string>
+    <string name="addfile_task">Lägg till fil</string>
+    <!--   ADD SECURE NOTE SCREEN   -->
+    <string name="safenote_text">Din säkra anteckningstext</string>
+    <string name="safenote_add">Lägg till</string>
+    <string name="safenote_contact">Kontakt</string>
+    <string name="safenote_phone_number">Telefonnummer</string>
+    <string name="safenote_email">E-post</string>
+    <string name="addimage_safenote">Lägg till bild</string>
+    <string name="addfile_safenote">Lägg till fil</string>
+    <string name="enter_phone_safenote">Ange telefonnummer</string>
+    <string name="add_email_safenote">Lägg till e-post</string>
+    <string name="add_pin_code">PIN-Kod</string>
+    <!--   WIDGET INSTALLATION   -->
+    <string name="theme_widget">Tema</string>
+    <string name="dark_widget">Mörk</string>
+    <string name="light_widget">Ljus</string>
+    <string name="use_current_theme">Använd aktuellt app-tema</string>
+    <string name="opacity_widget">Opacitet</string>
+    <string name="set_widget">Använd</string>
+    <!--   WIDGET CALENDAR   -->
+    <string name="monday">Må</string>
+    <string name="tuesday">Ti</string>
+    <string name="wednesday">On</string>
+    <string name="thursday">To</string>
+    <string name="friday">Fr</string>
+    <string name="saturday">Lö</string>
+    <string name="sunday">Sö</string>
+    <string name="january">Januari</string>
+    <string name="february">Februari</string>
+    <string name="march">Mars</string>
+    <string name="april">April</string>
+    <string name="may">Maj</string>
+    <string name="june">Juni</string>
+    <string name="july">Juli</string>
+    <string name="august">Augusti</string>
+    <string name="september">September</string>
+    <string name="october">Oktober</string>
+    <string name="november">November</string>
+    <string name="december">December</string>
+    <!--   WIDGET CALLS   -->
+    <string name="make_call">Ringa samtal</string>
+    <!--   WIDGET ONE REMIND   -->
+    <string name="next_task">Nästa uppgift</string>
+    <!--   WIDGET WEEKLY   -->
+    <string name="weekly">Veckoplanerare</string>
+    <!--   TRASH   -->
+    <string name="trash">Papperskorgen</string>
+    <string name="empty_trash">Töm papperskorgen</string>
+    <string name="confirm">Bekräfta</string>
+    <!--   NOTIFICATION   -->
+    <string name="ignore">Ignorera</string>
+    <string name="snooze">Snooze</string>
+    <!--   Snooze variations   -->
+    <string name="fifty">Om 15 minuter</string>
+    <string name="half_hour">Om 30 minuter</string>
+    <string name="forty_five">Om 45 minuter</string>
+    <string name="hour">Om 1 timme</string>
+    <string name="on_day">On 1 dag</string>
+    <string name="tomorrow_morning">Imorgon kl 9.00</string>
+    <string name="tomorrow_lunch">Imorgon kl 13.00</string>
+    <string name="tomorrow_day">Imorgon kl 18.00</string>
+    <string name="tomorrow_evening">Imorgon kl 21.00</string>
+    <string name="new_date">Ange ett nytt datum</string>
+    <!--   Snooze variations END   -->
+    <string name="edit">Redigera</string>
+    <string name="delete">Radera</string>
+    <string name="done">Markera som klar!</string>
+    <!--   Preference Titles   -->
+    <string name="messages_header">Meddelanden</string>
+    <string name="sync_header">Sync</string>
+    <!--   Messages Preferences   -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+    <!--   Sync Preferences   -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="title_activity_settings2">SettingsActivity2</string>
+    <string name="dropdown_repeat_count">"Antal upprepningar "</string>
+    <!--   TODO: Remove or change this placeholder text   -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Hem</string>
+    <string name="calendar_widget_activity">Kalender</string>
+    <string name="header_background">Bakgrund för rubrik</string>
+    <string name="background">Bakgrund</string>
+    <string name="text_and_icon_color">Text och ikonfärg</string>
+    <string name="reminders_list">Påminnelser</string>
+<!--    <string name="text_size"></string>-->
+        <string name="text_size">Textstorlek</string>
+
+    <string name="ok">OK</string>
+    <string name="reminders_at_date">Påminnelser vid datum</string>
+    <string name="settings">Inställningar</string>
+    <string name="application_language">Appens språk</string>
+    <string name="format_date">Datumformat</string>
+    <string name="widget_title_date_format">Widget rubriks datumformat</string>
+
+
+    <!--    <string name="cancel">Avbryt</string>-->
+    <string name="reminder_channel">Påminnelserkanal</string>
+    <string name="default_reminder_notifications">Standardpåminnelsemeddelanden</string>
+    <string name="note_channel">Anteckningskanal</string>
+    <string name="default_note_notifications">Standardanteckningsmeddelanden</string>
+    <string name="info_channel">Informationkanal</string>
+    <string name="channel_for_other_info_notifications">Kanal för övriga informativa meddelanden</string>
+
+    <string name="red">Röd</string>
+    <string name="green">Grön</string>
+    <string name="blue">Blå</string>
+    <string name="yellow">Gul</string>
+    <string name="pink">Rosa</string>
+    <string name="dark_orange">Mörkorange</string>
+    <string name="teal">Mörkgrön</string>
+
+    <string name="locale">Locale</string>
+    <string name="english">  Engelska</string>
+    <string name="spanish">  Spanska</string>
+    <string name="french">  Franska</string>
+    <string name="german">  Tyska</string>
+    <string name="ukrainian">  Ukrainska</string>
+    <string name="sweden">  Svenska</string>
+
+    <string name="auto">Bil</string>
+    <string name="sunday_full">Söndag</string>
+    <string name="monday_full">Måndag</string>
+    <string name="first_day_of_the_week">Första dagen i veckan</string>
+    <string name="pick_up_things_from_dry_cleaners">Hämta saker från kemtvätten</string>
+    <string name="phone">Telefon</string>
+    <string name="email">E-post</string>
+    <string name="notification_permission">Tillstånd för meddelanden</string>
+    <string name="allow_app_send_notifications">Vänligen tillåt appen att skicka meddelanden</string>
+    <string name="allow">Tillåt</string>
+
+    <string name="run_in_foreground">Kör i förgrunden</string>
+    <string name="notification_settings">Aviseringsinställningar</string>
+    <string name="show_on_home_screen">Visa på startskärmen</string>
+    <string name="show_on_lock_screen">Visa på låsskärmen</string>
+    <string name="full_screen_notification">Helskärmsavisering</string>
+    <string name="default_notification_banner">Standardaviseringbanderoll</string>
+    <string name="turn_on_the_screen">Aktivera skärmen vid mottagande av en avisering</string>
+    <string name="turn_on_full_screen_on_lock">Aktivera helskärmsavisering på låsskärmen</string>
+    <string name="turn_on_full_screen_on_home">Aktivera helskärmsavisering på startskärmen</string>
+    <string name="twenty_four_hour_format">24 timmars format</string>
+
+    <string name="background_image">Bakgrundsbild</string>
+    <string name="back">Tillbaka</string>
+    <string name="notification_visibility_settings">Inställningar för meddelandesynlighet</string>
+    <string name="select_default_sound">Välj standardljud</string>
+    <string name="select_default_background">Välj standardbakgrund</string>
+
+</resources>

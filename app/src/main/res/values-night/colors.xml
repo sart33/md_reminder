@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="background_click">#FF6650a4</color>
+    <color name="text_click">#FFFFFF</color>
+    <color name="background_start_click">#00000000</color>
+    <color name="text_start_click">#FFFFFF</color>
+    <color name="notification_background_click">#90005777</color>
+    <color name="notification_background_start_click">#00000000</color>
+<!--    <color name="purple_200">#FFBB86FC</color>-->
+<!--    <color name="purple_500">#FF6200EE</color>-->
+<!--    <color name="purple_700">#FF3700B3</color>-->
+    <color name="teal_200">#9575CD</color>
+    <color name="teal_700">#FF6650a4</color>
+    <color name="background_connectmenu_black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="color_hint">#FFFFFF</color>
+    <color name="color_primary_text">#FFFFFF</color>
+    <color name="color_line">#7d7d7d</color>
+    <color name="color_hint_two">#6A6767</color>
+    <color name="first_background_color">#232323</color>
+    <color name="deep_black">#1b1b1b</color>
+    <color name="color_line_3">#FFFFFF</color>
+    <color name="color_link">#03DAC5</color>
+    <color name="color_background_common">#141414</color>
+    <color name="color_background_text">#101010</color>
+    <color name="color_line_separator">#A2A2A2</color>
+    <color name="background_reminder">#717171</color>
+    <color name="color_line_separator_2">#848484</color>
+    <color name="color_line_resume">#656565</color>
+    <color name="color_background_end">#2F2F2F</color>
+    <color name="notification_panel_color">#7D0B0B0B</color>
+    <color name="image_background_mask">#99141414</color>
+    <color name="background_none">#00000000</color>
+    <color name="inactiv_remind_background">#858585</color>
+    <color name="light_blue_50">#FFE1F5FE</color>
+    <color name="light_blue_200">#FF81D4FA</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="widget_calendar_today_background">#E8F84D</color>
+    <color name="widget_calendar_red_color">#CE1508</color>
+
+
+    <!--OLD COLORS-->
+
+    <color name="pureWhite">#FFFFFF</color>
+    <color name="pureWhite10">#1AFFFFFF</color>
+    <color name="pureWhite20">#33FFFFFF</color>
+    <color name="pureWhite30">#4DFFFFFF</color>
+    <color name="pureWhite40">#66FFFFFF</color>
+    <color name="pureWhite50">#80FFFFFF</color>
+    <color name="pureWhite60">#99FFFFFF</color>
+    <color name="pureWhite70">#B3FFFFFF</color>
+    <color name="pureWhite80">#CCFFFFFF</color>
+    <color name="pureWhite90">#E6FFFFFF</color>
+
+    <!--    <color name="lightBg1">#fafafa</color>-->
+    <!--    <color name="lightBg2">#f5f5f5</color>-->
+    <!--    <color name="lightBg3">#eeeeee</color>-->
+    <!--    <color name="lightBg4">#bdbdbd</color>-->
+    <!--    <color name="darkBg1">#707070</color>-->
+    <!--    <color name="darkBg2">#757575</color>-->
+    <!--    <color name="darkBg3">#616161</color>-->
+    <!--    <color name="darkBg4">#424242</color>-->
+    <color name="pureBlack10">#1A000000</color>
+    <color name="pureBlack20">#33000000</color>
+    <color name="pureBlack30">#4D000000</color>
+    <color name="pureBlack40">#66000000</color>
+    <color name="pureBlack50">#80000000</color>
+    <color name="pureBlack60">#99000000</color>
+    <color name="pureBlack70">#B3000000</color>
+    <color name="pureBlack80">#CC000000</color>
+    <color name="pureBlack90">#E6000000</color>
+    <color name="pureBlack">#000000</color>
+
+    <color name="fABColor">#9575CD</color>
+</resources>

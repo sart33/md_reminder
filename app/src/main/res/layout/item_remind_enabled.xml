@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/full_block_zero"
+        android:layout_marginTop="@dimen/full_block_four"
+        android:layout_marginEnd="@dimen/full_block_zero"
+        android:layout_marginBottom="@dimen/full_block_four"
+        android:backgroundTintMode="src_in"
+        android:hapticFeedbackEnabled="false"
+        android:scrollbarThumbVertical="@drawable/addimage"
+        app:cardBackgroundColor="@color/first_background_color"
+        app:cardCornerRadius="@dimen/full_block_four"
+        app:cardElevation="@dimen/full_block_four"
+        app:cardUseCompatPadding="true">
+
+    <LinearLayout
+            android:id="@+id/llActive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textview_border_two"
+            android:orientation="horizontal"
+            android:padding="@dimen/common_layout_padding_reminder_list">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                    <TextView
+                            android:id="@+id/tv_text"
+                            android:layout_width="@dimen/reminder_text_width_reminder_list"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/reminder_text_margin_top_reminder_list"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:paddingBottom="@dimen/reminder_text_padding_bottom_reminder_list"
+                            android:textColor="@color/color_primary_text"
+                            android:textSize="@dimen/reminder_text_size_reminder_list"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:lineHeight="@dimen/reminder_text_line_reminder_list"
+                            tools:text="Напоминания — простая и в то же время функциональная ..." />
+
+                    <ImageView
+                            android:id="@+id/iv_file"
+                            android:layout_width="@dimen/icon_width_reminder_list"
+                            android:layout_height="@dimen/icon_height_reminder_list"
+                            android:contentDescription="@string/file"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_text"
+                            app:srcCompat="@drawable/attachfilew" />
+
+                    <ImageView
+                            android:id="@+id/iv_mail"
+                            android:layout_width="@dimen/icon_width_reminder_list"
+                            android:layout_height="@dimen/icon_height_reminder_list"
+                            android:layout_marginEnd="@dimen/icon_layout_margin_reminder_list"
+                            android:contentDescription="@string/email_icon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/iv_file"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_text"
+                            app:srcCompat="@drawable/mail" />
+
+                    <ImageView
+                            android:id="@+id/iv_delete_sms1"
+                            android:layout_width="@dimen/icon_width_reminder_list"
+                            android:layout_height="@dimen/icon_height_reminder_list"
+                            android:layout_marginEnd="@dimen/icon_layout_margin_reminder_list"
+                            android:contentDescription="@string/sms_icon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/iv_mail"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_text"
+                            app:srcCompat="@drawable/sms" />
+
+                    <ImageView
+                            android:id="@+id/iv_call"
+                            android:layout_width="@dimen/first_icon_width_reminder_list"
+                            android:layout_height="@dimen/icon_height_reminder_list"
+                            android:layout_marginEnd="@dimen/icon_layout_margin_reminder_list"
+                            android:contentDescription="@string/phone_icon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/iv_delete_sms1"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_text"
+                            app:srcCompat="@drawable/phone" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                    <TextView
+                            android:id="@+id/tv_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/color_primary_text"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/reminder_text_size_reminder_list"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="25.травня.2023" />
+
+                    <TextView
+                            android:id="@+id/tv_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:text="19:00"
+                            android:textColor="@color/color_primary_text"
+                            android:textSize="@dimen/time_text_size_reminder_list"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

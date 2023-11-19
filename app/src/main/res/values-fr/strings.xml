@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--     <string  My strings -->
+    <string name="now" translatable="false">Now</string>
+    <string name="reminder_text">Texte de rappel</string>
+    <string name="dropdown_menu_timeout">Rappeler à l`avance</string>
+    <string name="dropdown_repeat_frequency">Répéter toutes les</string>
+    <string name="hours">heures</string>
+    <string name="min">min</string>
+    <string name="call_number">Numéro d`appel: </string>
+    <string name="call_numbers">Numéros d`appel: </string>
+    <string name="send_message">Envoyer un message: </string>
+    <string name="send_messages">Envoyer des messages: </string>
+    <string name="send_email">Envoyer un E-mail: </string>
+    <string name="send_emails">Envoyer des E-mails: </string>
+    <string name="email_message_text_rem">Texte de l`e-mail</string>
+    <string name="error_input_message">Message d`erreur de saisie de champ</string>
+    <string name="error_input_phone_number">Message d`erreur de saisie de numéro de téléphone</string>
+    <string name="error_input_email_address">Message d`erreur de saisie de champ e-mails</string>
+    <string name="phones">Téléphones</string>
+    <string name="sms">SMS</string>
+    <string name="emails">E-mails</string>
+    <string name="close">Fermer</string>
+    <string name="action">Action</string>
+    <string name="actions">Actions</string>
+    <string name="call_contact">Appeler le contact: </string>
+    <string name="call_contacts">Appeler les contacts: </string>
+    <string name="visible">Visible</string>
+    <string name="invisible">Invisible</string>
+    <string name="set_asidefor">Répéter dans...:</string>
+    <string name="on_15min">dans 15 min</string>
+    <string name="on_30min">dans 30 min</string>
+    <string name="on_45min">dans 45 min</string>
+    <string name="on_1hour">dans 1 heure</string>
+    <string name="tomorrow">demain</string>
+    <string name="tomorrow_at9">demain à 9h00 du matin</string>
+    <string name="tomorrow_at13">demain à 13h00</string>
+    <string name="tomorrow_at18">demain à 18h00</string>
+    <string name="tomorrow_at21">demain à 21h00</string>
+    <string name="set_newdate">Définir la nouvelle date</string>
+    <string name="appwidget_text">EXEMPLE</string>
+    <string name="add_widget">Ajouter un widget</string>
+    <string name="app_widget_description">Voici la description du widget de l`application</string>
+    <string name="no_events">Sans événements</string>
+    <!--     <string from Volodin`s file"  -->
+    <string name="app_name">MD Reminder</string>
+    <string name="no_notes_yet" translatable="false">Aucune note pour le moment</string>
+    <string name="main_menu" translatable="false">Menu principal</string>
+    <string name="reminders" translatable="false">Rappels</string>
+    <string name="reminder" translatable="false">Rappel</string>
+    <string name="notes" translatable="false">Notes</string>
+    <string name="note" translatable="false">Note</string>
+    <string name="tasks" translatable="false">Listes de tâches</string>
+    <string name="task" translatable="false">Liste de tâches</string>
+    <string name="contact" translatable="false">Contact</string>
+    <string name="contacts" translatable="false">Contacts</string>
+    <string name="secure_notes" translatable="false">Notes sécurisées</string>
+    <string name="secure_note" translatable="false">Note sécurisées</string>
+    <string name="widgets" translatable="false">Widgets</string>
+    <string name="widget" translatable="false">Widget</string>
+    <string name="add_contact" translatable="false">Ajouter un contact</string>
+    <string name="add_number" translatable="false">Ajouter un numéro</string>
+    <string name="add_phone" translatable="false">Ajouter un téléphone</string>
+    <string name="telephone_number" translatable="false">Numéro de téléphone</string>
+    <string name="add_email" translatable="false">Ajouter un email</string>
+    <string name="email_text" translatable="false">Texte de l`e-mail</string>
+    <string name="email_address" translatable="false">Adresse e-mail</string>
+    <string name="add_sms" translatable="false">Ajouter un SMS</string>
+    <string name="sms_message_text" translatable="false">Texte du SMS</string>
+    <string name="add_image" translatable="false">Ajouter une image</string>
+    <string name="add_file" translatable="false">Ajouter un fichier</string>
+    <string name="save" translatable="false">Sauvegarder</string>
+    <string name="cancel" translatable="false">Annuler</string>
+    <string name="today" translatable="false">Aujourd`hui</string>
+    <string name="world_clock" translatable="false">Fuseau horaire</string>
+    <string name="connect_with_us" translatable="false">Connectez-vous avec nous</string>
+    <string name="sound_options" translatable="false">Options sonores</string>
+    <!--   APP SETTINGS   -->
+    <string name="select_theme" translatable="false">Sélectionner le thème</string>
+    <string name="language" translatable="false">Paramètres de langue</string>
+    <string name="time_format" translatable="false">Format de l`heure</string>
+    <string name="date_format" translatable="false">Format de la date</string>
+    <string name="notifications_sound" translatable="false">Son de notification</string>
+    <string name="volume" translatable="false">Le volume</string>
+    <string name="duration" translatable="false">Durée de la notification</string>
+    <!--   Notification duration 2 Level start   -->
+    <string name="five_seconds" translatable="false">5 secondes</string>
+    <string name="fifteen_seconds" translatable="false">15 secondes</string>
+    <string name="thirty_seconds" translatable="false">30 secondes</string>
+    <string name="complete_melody" translatable="false">Mélodie complète</string>
+    <!--   Notification duration 2 Level END   -->
+    <string name="repeating_common" translatable="false">Notification récurrente</string>
+    <string name="repeat_every" translatable="false">Répéter tous les</string>
+    <!--   Repeat notification 2 Level start   -->
+    <string name="five_minutes" translatable="false">5 minutes</string>
+    <string name="fifteen_minutes" translatable="false">15 minutes</string>
+    <string name="thirty_minutes" translatable="false">30 minutes</string>
+    <string name="one_hour" translatable="false">1 heure</string>
+    <!--   Repeat notification 2 Level END   -->
+    <string name="vibration" translatable="false">Vibration</string>
+    <string name="popup" translatable="false">Écran contextuel</string>
+    <string name="full_popup" translatable="false">Complet</string>
+    <string name="statusbar_popup" translatable="false">Dans la barre d`état</string>
+    <string name="popup_delay" translatable="false">Délai de l`écran contextuel</string>
+    <!--   Notification delay 2 Level start   -->
+    <string name="two_seconds" translatable="false">2 secondes</string>
+    <string name="four_seconds" translatable="false">4 secondes</string>
+    <string name="disable_delay" translatable="false">Délai désactivé</string>
+    <!--   Notification delay 2 Level END   -->
+    <string name="background_app" translatable="false">Image de fond</string>
+    <string name="backup" translatable="false">Sauvegarde</string>
+    <!--   Backup 2 Level start   -->
+    <string name="all_entries" translatable="false">Toutes les entrées</string>
+    <string name="backup_save" translatable="false">Enregistrer</string>
+    <string name="backup_save_folder" translatable="false">Enregistrer dans un dossier</string>
+    <string name="backup_save_gdrive" translatable="false">Enregistrer dans Google Drive</string>
+    <!--   Backup 2 Level END   -->
+    <string name="delete_swipe" translatable="false">Suppression d`un rappel par balayage</string>
+    <string name="confirm_delete" translatable="false">Confirmer la suppression</string>
+    <string name="trashbox" translatable="false">Corbeille</string>
+    <string name="menu_position" translatable="false">Position du menu</string>
+    <string name="createplus_position" translatable="false">Position du bouton "Créer"</string>
+    <string name="left_position" translatable="false">Gauche</string>
+    <string name="right_position" translatable="false">Droite</string>
+    <string name="autodelete_completed_reminders" translatable="false">Supprimer automatiquement les rappels terminés</string>
+    <string name="title_activity_settings" translatable="false">Supprimer les notifications par balayage</string>
+    <string name="restore_from" translatable="false">Restaurer à partir d`une sauvegarde</string>
+    <!--   ADD REMINDER   -->
+    <string name="reminder_addreminder" translatable="false">Rappel</string>
+    <string name="text_reminder" translatable="false">Texte du rappel</string>
+    <string name="time_reminder" translatable="false">00:00</string>
+    <string name="date_reminder" translatable="false">Aujourd`hui</string>
+    <string name="worldclock_reminder" translatable="false">Fuseau horaire</string>
+    <string name="alarm_sound_reminder" translatable="false">Options sonores</string>
+    <string name="pre" translatable="false">Rappel préalable</string>
+    <!--   Pre reminder list   -->
+    <string name="dm0_minutes_before">0 Minuten avant</string>
+    <string name="dm15_minutes_before" translatable="false">15 minutes avant</string>
+    <string name="dm30_minutes_before" translatable="false">30 minutes avant</string>
+    <string name="dm45_minutes_before" translatable="false">45 minutes avant</string>
+    <string name="dm1_hour_before" translatable="false">1 heure avant</string>
+    <!--   Pre reminder list END   -->
+    <string name="repeat_remind_every" translatable="false">Répéter le rappel</string>
+    <!--   Repeat reminder list   -->
+    <string name="dm0_minutes">Aucun</string>
+    <string name="dm15_minutes" translatable="false">chaque 15 minutes</string>
+    <string name="dm_hour" translatable="false">chaque heure</string>
+    <string name="dm4_hour" translatable="false">toutes les 4 heures</string>
+    <string name="dm_every_day" translatable="false">Tous les jours (à cette heure)</string>
+    <!--   Repeat reminder list END   -->
+    <string name="add_contact_reminder" translatable="false">Ajouter un contact</string>
+    <string name="add_phone_reminder" translatable="false">Ajouter un téléphone</string>
+    <string name="add_email_reminder" translatable="false">Ajouter un e-mail</string>
+    <string name="add_sms_reminder" translatable="false">Ajouter un SMS</string>
+    <!--   Additional windows to Reminder   -->
+    <string name="enter_phone_number_rem" translatable="false">Entrer le numéro de téléphone</string>
+    <string name="sms_text_rem" translatable="false">SMS-texte</string>
+    <string name="phone_number_sms_rem" translatable="false">SMS Contact</string>
+    <string name="add_email_rem" translatable="false">Ajouter l`adresse e-mail</string>
+    <string name="text_email_rem" translatable="false">Entrer le message e-mail</string>
+    <string name="add_file_email_rem" translatable="false">Ajouter un fichier à l`e-mail</string>
+    <string name="adress_mail" translatable="false">À:</string>
+    <string name="cancel_addition_rem" translatable="false">Annuler</string>
+    <string name="save_addition_rem" translatable="false">Sauvegarder</string>
+    <!--   ADD NOTE SCREEN   -->
+    <string name="note_text" translatable="false">Le texte de votre note</string>
+    <string name="add_note" translatable="false">Ajouter</string>
+    <string name="contact_note" translatable="false">Contact</string>
+    <string name="phone_number_note" translatable="false">Numéro de téléphone</string>
+    <string name="email_note" translatable="false">E-mail</string>
+    <string name="addimage_note" translatable="false">Ajouter une image</string>
+    <string name="addfile_note" translatable="false">Ajouter un fichier</string>
+    <string name="enter_phone_note" translatable="false">Saisir un numéro de téléphone</string>
+    <string name="add_email_note" translatable="false">Ajouter un e-mail</string>
+    <string name="cancel_addition_note" translatable="false">Annuler</string>
+    <string name="save_addition_note" translatable="false">Enregistrer</string>
+    <!--   ADD TASKLIST SCREEN   -->
+    <string name="listname" translatable="false">Nom de la liste de tâches</string>
+    <string name="enter_phone_number" translatable="false">Entrer le numéro de téléphone</string>
+    <string name="sms_text" translatable="false">Texte SMS</string>
+    <string name="phone_number_sms_task" translatable="false">Saisir un numéro de téléphone</string>
+    <string name="add_email_task" translatable="false">Ajouter un e-mail</string>
+    <string name="text_email" translatable="false">Entrer le message e-mail</string>
+    <string name="add_file_email_task" translatable="false">Ajouter un fichier à l`e-mail</string>
+    <string name="cancel_addition_tasklist" translatable="false">Annuler</string>
+    <string name="save_addition_tasklist" translatable="false">Enregistrer</string>
+    <string name="addimage_task" translatable="false">Ajouter une image</string>
+    <string name="addfile_task" translatable="false">Ajouter un fichier</string>
+    <!--   ADD SECURE NOTE SCREEN   -->
+    <string name="safenote_text" translatable="false">Le texte de votre note</string>
+    <string name="safenote_add" translatable="false">Ajouter</string>
+    <string name="safenote_contact" translatable="false">Contact</string>
+    <string name="safenote_phone_number" translatable="false">Numéro de téléphone</string>
+    <string name="safenote_email" translatable="false">E-mail</string>
+    <string name="addimage_safenote" translatable="false">Ajouter une image</string>
+    <string name="addfile_safenote" translatable="false">Ajouter un fichier</string>
+    <string name="enter_phone_safenote" translatable="false">Saisir un numéro de téléphone</string>
+    <string name="add_email_safenote" translatable="false">Ajouter e-mail</string>
+    <string name="add_pin_code" translatable="false">Code PIN</string>
+    <!--   WIDGET INSTALLATION   -->
+    <string name="theme_widget" translatable="false">Thème</string>
+    <string name="dark_widget" translatable="false">Sombre</string>
+    <string name="light_widget" translatable="false">Clair</string>
+    <string name="use_current_theme" translatable="false">Utiliser le thème actuel de l`application</string>
+    <string name="opacity_widget" translatable="false">Opacité</string>
+    <string name="set_widget" translatable="false">Définir</string>
+    <!--   WIDGET CALENDAR   -->
+    <string name="monday" translatable="false">Lu</string>
+    <string name="tuesday" translatable="false">Ma</string>
+    <string name="wednesday" translatable="false">Me</string>
+    <string name="thursday" translatable="false">Je</string>
+    <string name="friday" translatable="false">Ve</string>
+    <string name="saturday" translatable="false">Sa</string>
+    <string name="sunday" translatable="false">Di</string>
+    <string name="january" translatable="false">Janvier</string>
+    <string name="february" translatable="false">Février</string>
+    <string name="march" translatable="false">Mars</string>
+    <string name="april" translatable="false">Avril</string>
+    <string name="may" translatable="false">Mai</string>
+    <string name="june" translatable="false">Juin</string>
+    <string name="july" translatable="false">Juillet</string>
+    <string name="august" translatable="false">Août</string>
+    <string name="september" translatable="false">Septembre</string>
+    <string name="october" translatable="false">Octobre</string>
+    <string name="november" translatable="false">Novembre</string>
+    <string name="december" translatable="false">Décembre</string>
+    <!--   WIDGET CALLS   -->
+    <string name="make_call" translatable="false">Faire des appels</string>
+    <!--   WIDGET ONE REMIND   -->
+    <string name="next_task" translatable="false">Prochaine tâche</string>
+    <!--   WIDGET WEEKLY   -->
+    <string name="weekly" translatable="false">Hebdomadaire</string>
+    <!--   TRASH   -->
+    <string name="trash" translatable="false">Corbeille</string>
+    <string name="empty_trash" translatable="false">Nettoyer la poubelle</string>
+    <string name="confirm" translatable="false">Confirmer</string>
+    <!--   NOTIFICATION   -->
+    <string name="ignore" translatable="false">Ignorer</string>
+    <string name="snooze" translatable="false">Repousser</string>
+    <!--   Snooze variations   -->
+    <string name="fifty" translatable="false">Dans 15 minutes</string>
+    <string name="half_hour" translatable="false">Dans 30 minutes</string>
+    <string name="forty_five" translatable="false">Dans 45 minutes</string>
+    <string name="hour" translatable="false">Dans 1 heure</string>
+    <string name="on_day" translatable="false">Dans 1 jour</string>
+    <string name="tomorrow_morning" translatable="false">Demain à 9h00 du matin</string>
+    <string name="tomorrow_lunch" translatable="false">Demain à 13h00</string>
+    <string name="tomorrow_day" translatable="false">Demain à 18h00</string>
+    <string name="tomorrow_evening" translatable="false">Demain à 21h00</string>
+    <string name="new_date" translatable="false">Définir une nouvelle date</string>
+    <!--   Snooze variations END   -->
+    <string name="edit" translatable="false">Éditer</string>
+    <string name="delete" translatable="false">Supprimer</string>
+    <string name="done" translatable="false">Marquer comme fait!</string>
+    <!--   Preference Titles   -->
+    <string name="messages_header" translatable="false">Messages</string>
+    <string name="sync_header" translatable="false">Sync</string>
+    <!--   Messages Preferences   -->
+    <string name="signature_title" translatable="false">Your signature</string>
+    <string name="reply_title" translatable="false">Default reply action</string>
+    <!--   Sync Preferences   -->
+    <string name="sync_title" translatable="false">Sync email periodically</string>
+    <string name="attachment_title" translatable="false">Download incoming attachments</string>
+    <string name="attachment_summary_on" translatable="false">Automatically download attachments for incoming emails </string>
+    <string name="attachment_summary_off" translatable="false">Only download attachments when manually requested</string>
+    <string name="title_activity_settings2" translatable="false">SettingsActivity2</string>
+    <string name="dropdown_repeat_count" translatable="false">Nombre de répétitions</string>
+    <!--   TODO: Remove or change this placeholder text   -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+
+    <string name="home">Accueil</string>
+    <string name="calendar_widget_activity">Calendrier</string>
+    <string name="header_background">Arrière-plan de l`en-tête</string>
+    <string name="background">Arrière-plan</string>
+    <string name="text_and_icon_color">Couleur du texte et des icônes</string>
+    <string name="reminders_list">Liste des rappels</string>
+
+    <!--    <string name="text_size">Taille du texte</string>-->
+
+    <string name="ok">OK</string>
+    <string name="reminders_at_date">Rappels à la date</string>
+    <string name="settings">Paramètres</string>
+    <string name="application_language">Langue de l`application</string>
+    <string name="format_date">Format de la date</string>
+    <string name="widget_title_date_format">Format de date du titre du widget</string>
+
+    <!--    <string name="cancel">Annuler</string>-->
+    <string name="reminder_channel">Canal de rappel</string>
+    <string name="default_reminder_notifications">Notifications de rappel par défaut</string>
+    <string name="note_channel">Canal de note</string>
+    <string name="default_note_notifications">Notifications de note par défaut</string>
+    <string name="info_channel">Canal d`informations</string>
+    <string name="channel_for_other_info_notifications">Canal pour d`autres notifications informatives</string>
+
+    <string name="red">Rouge</string>
+    <string name="green">Vert</string>
+    <string name="blue">Bleu</string>
+    <string name="yellow">Jaune</string>
+    <string name="pink">Rose</string>
+    <string name="dark_orange">Orange foncé</string>
+    <string name="teal">Vert foncé</string>
+
+    <string name="locale">Locale</string>
+    <string name="english">  Anglais</string>
+    <string name="spanish">  Espagnol</string>
+    <string name="french">  Français</string>
+    <string name="german">  Allemand</string>
+    <string name="ukrainian">  Ukrainien</string>
+    <string name="sweden">  Suédois</string>
+
+    <string name="auto">Auto</string>
+    <string name="sunday_full">Dimanche</string>
+    <string name="monday_full">Lundi</string>
+    <string name="first_day_of_the_week">Premier jour de la semaine</string>
+    <string name="pick_up_things_from_dry_cleaners">Récupérer les affaires chez le teinturier</string>
+    <string name="phone">Téléphone</string>
+    <string name="email">Email</string>
+    <string name="notification_permission">Permission de notification</string>
+    <string name="allow_app_send_notifications">Veuillez autoriser l`application à envoyer des notifications</string>
+    <string name="allow">Autoriser</string>
+
+    <string name="run_in_foreground">Exécuter en premier plan</string>
+    <string name="notification_settings">Paramètres de notification</string>
+    <string name="show_on_home_screen">Afficher sur l`écran d`accueil</string>
+    <string name="show_on_lock_screen">Afficher sur l`écran de verrouillage</string>
+    <string name="full_screen_notification">Notification en plein écran</string>
+    <string name="default_notification_banner">Bannière de notification par défaut</string>
+    <string name="turn_on_the_screen">Allumer l`écran lors de la réception d`une notification</string>
+    <string name="turn_on_full_screen_on_lock">Activer la notification en plein écran sur l`écran de verrouillage</string>
+    <string name="turn_on_full_screen_on_home">Activer la notification en plein écran sur l`écran d`accueil</string>
+    <string name="twenty_four_hour_format">Format 24 heures</string>
+
+    <string name="background_image">Image de fond</string>
+    <string name="back">Retour</string>
+    <string name="notification_visibility_settings">Paramètres de visibilité des notifications</string>
+    <string name="select_default_sound">Sélectionner le son par défaut</string>
+    <string name="select_default_background">Sélectionner l`arrière-plan par défaut</string>
+</resources>

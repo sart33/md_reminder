@@ -1,0 +1,1856 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/deep_black"
+    android:textAlignment="center"
+    tools:context=".presentation.reminder.fragment.ReminderEditFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_layout_height"
+        app:cardBackgroundColor="@color/first_background_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/cancel_edit_remind"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tvReminderDate"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/close" />
+
+            <TextView
+                android:id="@+id/tvReminderDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/comfortaa_regular"
+                android:text="@string/reminder"
+                android:textAllCaps="true"
+                android:textColor="@color/color_primary_text"
+                android:textDirection="locale"
+                android:textSize="24sp"
+                app:autoSizeMaxTextSize="24sp"
+                app:autoSizeMinTextSize="20sp"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/save_edit_remind"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.977"
+                app:layout_constraintStart_toEndOf="@+id/tvReminderDate"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/checked" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvInput"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:cardBackgroundColor="@color/deep_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_reminder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/deep_black"
+                android:textAlignment="viewStart"
+                android:textColorHint="@color/color_hint_two"
+                app:flow_horizontalAlign="start"
+                app:flow_verticalAlign="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_reminder"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@color/deep_black"
+                    android:elegantTextHeight="false"
+                    android:ems="10"
+                    android:fontFamily="@font/comfortaa_regular"
+                    android:freezesText="false"
+                    android:gravity="start|top"
+                    android:hint="@string/reminder_text"
+                    android:inputType="textMultiLine"
+                    android:lineHeight="28sp"
+                    android:paddingStart="10dp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/color_primary_text"
+                    android:textColorHint="@color/color_hint_two"
+                    android:textSize="20sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvInput">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/background_reminder">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView2"
+                        android:layout_width="@dimen/time_date_layout_width"
+                        android:layout_height="@dimen/time_date_layout_height"
+                        android:outlineProvider="paddedBounds"
+                        app:cardBackgroundColor="@color/deep_black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <View
+                                android:id="@+id/view2"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/time_date_line_height"
+                                android:layout_marginBottom="64dp"
+                                android:background="@color/color_line_separator_2"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/ivTime"
+                                        android:layout_width="@dimen/menu_icon_width"
+                                        android:layout_height="@dimen/menu_icon_height"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="@dimen/timer_icon_margin_top"
+                                        android:baselineAlignBottom="false"
+                                        android:contentDescription="@string/select_of_time"
+                                        android:paddingLeft="5dp"
+                                        android:paddingTop="8dp"
+                                        android:paddingRight="5dp"
+                                        android:paddingBottom="2dp"
+                                        android:textAlignment="center"
+                                        app:srcCompat="@drawable/alarm_reminder" />
+
+                                    <TextView
+                                        android:id="@+id/tvTime"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="sans-serif"
+                                        android:text="@string/now"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/color_primary_text"
+                                        app:autoSizeMaxTextSize="@dimen/timer_icon_max_text_size"
+                                        app:autoSizeMinTextSize="@dimen/timer_icon_min_text_size"
+                                        app:autoSizeTextType="uniform" />
+
+                                    <TextView
+                                        android:id="@+id/tvTimeTwo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="TextView"
+                                        android:visibility="gone" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/ivCalendar"
+                                        android:layout_width="@dimen/menu_icon_width"
+                                        android:layout_height="@dimen/menu_icon_height"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="@dimen/timer_icon_margin_top"
+                                        android:contentDescription="@string/select_of_date"
+                                        android:paddingLeft="5dp"
+                                        android:paddingTop="8dp"
+                                        android:paddingRight="5dp"
+                                        android:paddingBottom="2dp"
+                                        app:srcCompat="@drawable/date" />
+
+                                    <TextView
+                                        android:id="@+id/tvCalendar"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="@dimen/calendar_icon_text_height"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="@dimen/calendar_icon_text_margin_top"
+                                        android:fontFamily="@font/comfortaa_regular"
+                                        android:text="@string/today"
+                                        android:textColor="@color/color_primary_text"
+                                        app:autoSizeMaxTextSize="@dimen/calendar_icon_max_text_size"
+                                        app:autoSizeMinTextSize="@dimen/calendar_icon_min_text_size"
+                                        app:autoSizeTextType="uniform"
+                                        app:lineHeight="@dimen/calendar_icon_text_line_height" />
+
+                                    <TextView
+                                        android:id="@+id/tvCalendarTwo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="TextView"
+                                        android:visibility="gone" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/color_line_separator_2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cardView2"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvRememberMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/first_background_color"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view">
+
+
+                        <LinearLayout
+                            android:id="@+id/llDropdownBlock"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/llDropdown"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:orientation="horizontal">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/clDropdown"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:id="@+id/clMenu1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:paddingTop="28dp"
+                                            android:paddingRight="15dp">
+
+                                            <TextView
+                                                android:id="@+id/tvMenu1"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:elegantTextHeight="false"
+                                                android:fontFamily="@font/comfortaa_regular"
+                                                android:paddingStart="10dp"
+                                                android:text="@string/dropdown_menu_timeout"
+                                                android:textAlignment="textStart"
+                                                android:textColor="@color/color_line"
+                                                android:textDirection="inherit"
+                                                android:textSize="17sp"
+                                                app:autoSizeMaxTextSize="18sp"
+                                                app:autoSizeMinTextSize="12sp"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent" />
+
+                                            <ImageView
+                                                android:id="@+id/ivMenu1"
+                                                android:layout_width="15dp"
+                                                android:layout_height="15dp"
+                                                android:layout_marginEnd="4dp"
+                                                android:src="@drawable/dropdown_jcon"
+                                                app:constraint_referenced_tags="@string/drop_down_menu_advance_reminder"
+                                                app:layout_constraintBottom_toBottomOf="@+id/tvMenu1"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintTop_toTopOf="@+id/tvMenu1"
+                                                app:layout_constraintVertical_bias="1.0" />
+
+                                            <View
+                                                android:id="@+id/vLine1"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="1dp"
+                                                android:layout_marginTop="2dp"
+                                                android:layout_marginBottom="5dp"
+                                                android:background="@color/color_line_resume"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toEndOf="@+id/ivMenu1"
+                                                app:layout_constraintStart_toStartOf="@+id/tvMenu1"
+                                                app:layout_constraintTop_toBottomOf="@+id/tvMenu1" />
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:id="@+id/clMenu2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:paddingTop="28dp"
+                                            android:paddingRight="15dp">
+
+                                            <TextView
+                                                android:id="@+id/tvMenu2"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:elegantTextHeight="false"
+                                                android:fontFamily="@font/comfortaa_regular"
+                                                android:paddingStart="10dp"
+                                                android:text="@string/dropdown_repeat_frequency"
+                                                android:textAlignment="textStart"
+                                                android:textColor="@color/color_line"
+                                                android:textDirection="inherit"
+                                                android:textSize="17sp"
+                                                app:autoSizeMinTextSize="12sp"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent" />
+
+                                            <ImageView
+                                                android:id="@+id/ivMenu2"
+                                                android:layout_width="15dp"
+                                                android:layout_height="15dp"
+                                                android:layout_marginEnd="4dp"
+                                                android:contentDescription="@string/drop_down_menu_repeat_every"
+                                                android:src="@drawable/dropdown_jcon"
+                                                app:layout_constraintBottom_toBottomOf="@+id/tvMenu2"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintTop_toTopOf="@+id/tvMenu2"
+                                                app:layout_constraintVertical_bias="1.0" />
+
+                                            <View
+                                                android:id="@+id/vLine"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="1dp"
+                                                android:layout_marginTop="2dp"
+                                                android:layout_marginBottom="5dp"
+                                                android:background="@color/color_line_resume"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toEndOf="@+id/ivMenu2"
+                                                app:layout_constraintStart_toStartOf="@+id/tvMenu2"
+                                                app:layout_constraintTop_toBottomOf="@+id/tvMenu2" />
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:id="@+id/clMenu3"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+
+                                            android:paddingTop="28dp"
+                                            android:paddingRight="15dp">
+
+                                            <TextView
+                                                android:id="@+id/tvMenu3"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:elegantTextHeight="false"
+                                                android:fontFamily="@font/comfortaa_regular"
+                                                android:paddingStart="10dp"
+                                                android:text="@string/dropdown_repeat_count"
+                                                android:textAlignment="textStart"
+                                                android:textColor="@color/color_line"
+                                                android:textDirection="inherit"
+                                                android:textSize="17sp"
+                                                app:autoSizeMinTextSize="12sp"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent" />
+
+                                            <ImageView
+                                                android:id="@+id/ivMenu3"
+                                                android:layout_width="15dp"
+                                                android:layout_height="15dp"
+                                                android:layout_marginEnd="4dp"
+                                                android:contentDescription="@string/drop_down_menu_number_of_repeat"
+                                                android:src="@drawable/dropdown_jcon"
+                                                app:layout_constraintBottom_toBottomOf="@+id/tvMenu3"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintTop_toTopOf="@+id/tvMenu3"
+                                                app:layout_constraintVertical_bias="1.0" />
+
+                                            <View
+                                                android:id="@+id/vLine3"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="1dp"
+                                                android:layout_marginTop="2dp"
+                                                android:layout_marginBottom="5dp"
+                                                android:background="@color/color_line_resume"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toEndOf="@+id/ivMenu3"
+                                                app:layout_constraintStart_toStartOf="@+id/tvMenu3"
+                                                app:layout_constraintTop_toBottomOf="@+id/tvMenu3" />
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                    </LinearLayout>
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llClickableBlocks"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:id="@+id/clSoundBlockWrapper"
+                                            android:layout_width="@dimen/advanced_sound_block_width"
+                                            android:layout_height="@dimen/advanced_sound_block_height"
+                                            android:layout_marginTop="@dimen/advanced_sound_block_margin"
+                                            android:layout_weight="2"
+                                            android:background="@color/background_none"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent">
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                                android:id="@+id/clSoundBlock"
+                                                android:layout_width="0dp"
+                                                android:layout_height="0dp"
+                                                android:layout_weight="2"
+                                                android:background="@drawable/textview_border"
+                                                android:padding="@dimen/advanced_sound_block_padding"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent">
+
+
+                                            <TextView
+                                                    android:id="@+id/tvMelody"
+                                                    android:layout_width="@dimen/add_options_layout_width"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/comfortaa_regular"
+                                                    android:text="@string/sound_options"
+                                                    android:textAlignment="center"
+                                                    android:textColor="@color/color_primary_text"
+                                                    app:autoSizeMinTextSize="@dimen/add_options_text_size_min"
+                                                    app:layout_constraintEnd_toEndOf="parent"
+                                                    app:layout_constraintHorizontal_bias="0.0"
+                                                    app:layout_constraintStart_toStartOf="parent"
+                                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                            <ImageView
+                                                    android:id="@+id/ivMelody"
+                                                    android:layout_width="@dimen/icon_media_add_width"
+                                                    android:layout_height="@dimen/icon_media_add_height"
+                                                    android:contentDescription="@string/add_an_audio_file"
+                                                    app:layout_constraintBottom_toBottomOf="parent"
+                                                    app:layout_constraintEnd_toEndOf="parent"
+                                                    app:layout_constraintStart_toStartOf="parent"
+                                                    app:layout_constraintTop_toBottomOf="@+id/tvMelody"
+                                                    app:srcCompat="@drawable/ringtone" />
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:id="@+id/clAddImageWrapper"
+                                            android:layout_width="@dimen/advanced_sound_block_width"
+                                            android:layout_height="@dimen/advanced_sound_block_height"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginBottom="24dp"
+                                            android:layout_weight="2"
+                                            android:background="@color/background_none"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="@+id/clSoundBlockWrapper"
+                                            app:layout_constraintHorizontal_bias="0.0"
+                                            app:layout_constraintStart_toStartOf="@+id/clSoundBlockWrapper"
+                                            app:layout_constraintTop_toBottomOf="@+id/clSoundBlockWrapper">
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                                android:id="@+id/clAddImage"
+                                                android:layout_width="0dp"
+                                                android:layout_height="0dp"
+                                                android:background="@drawable/textview_border"
+                                                android:elevation="5dp"
+                                                android:padding="@dimen/advanced_image_block_padding"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent">
+
+                                            <TextView
+                                                    android:id="@+id/tv_add_image"
+                                                    android:layout_width="@dimen/add_options_layout_width"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/comfortaa_regular"
+                                                    android:text="@string/add_image"
+                                                    android:textAlignment="center"
+                                                    android:textColor="@color/color_primary_text"
+                                                    app:autoSizeMinTextSize="@dimen/add_options_text_size_min"
+                                                    app:layout_constraintEnd_toEndOf="parent"
+                                                    app:layout_constraintHorizontal_bias="0.0"
+                                                    app:layout_constraintStart_toStartOf="parent"
+                                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                            <ImageView
+                                                    android:id="@+id/iv_add_image"
+                                                    android:layout_width="@dimen/icon_image_add_width"
+                                                    android:layout_height="@dimen/icon_media_add_height"
+                                                    android:contentDescription="@string/add_an_image"
+                                                    app:layout_constraintBottom_toBottomOf="parent"
+                                                    app:layout_constraintEnd_toEndOf="parent"
+                                                    app:layout_constraintStart_toStartOf="parent"
+                                                    app:layout_constraintTop_toBottomOf="@+id/tv_add_image"
+                                                    app:srcCompat="@drawable/addimage" />
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/first_background_color">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="46dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_add_contact"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="17dp"
+                            app:cardBackgroundColor="@color/first_background_color"
+                                app:cardElevation="0dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="65dp"
+                                android:layout_marginRight="10dp">
+
+
+                                <ImageView
+                                    android:id="@+id/ivContact"
+                                    android:layout_width="@dimen/menu_icon_width"
+                                    android:layout_height="@dimen/menu_icon_height"
+                                    android:layout_marginStart="10dp"
+                                    android:contentDescription="@string/contacts_icon"
+                                    android:padding="7dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@drawable/contact" />
+
+                                <TextView
+                                    android:id="@+id/tvContact"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/comfortaa_regular"
+                                    android:text="@string/contact"
+                                    android:textColor="@color/color_primary_text"
+                                    app:autoSizeMinTextSize="10sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/ivContact"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.536" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cvAddPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="@color/first_background_color">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="65dp">
+
+                                <ImageView
+                                    android:id="@+id/ivPhone"
+                                    android:layout_width="@dimen/menu_icon_width"
+                                    android:layout_height="@dimen/menu_icon_height"
+                                    android:layout_marginStart="10dp"
+                                    android:contentDescription="@string/add_phone_icon"
+                                    android:padding="7dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@drawable/phone" />
+
+                                <TextView
+                                    android:id="@+id/tvPhone"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/comfortaa_regular"
+                                    android:text="@string/phone"
+                                    android:textColor="@color/color_primary_text"
+                                    app:autoSizeMinTextSize="10sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/ivPhone"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.512" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cvAddEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="@color/first_background_color">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="67dp">
+
+                                <ImageView
+                                    android:id="@+id/ivEmail"
+                                    android:layout_width="@dimen/menu_icon_width"
+                                    android:layout_height="@dimen/menu_icon_height"
+                                    android:layout_marginStart="10dp"
+                                    android:contentDescription="@string/add_mail_icon"
+                                    android:padding="7dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@drawable/mail" />
+
+                                <TextView
+                                    android:id="@+id/tvEmail"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/comfortaa_regular"
+                                    android:text="@string/email"
+                                    android:textColor="@color/color_primary_text"
+                                    app:autoSizeMinTextSize="10sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/ivEmail"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.512" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cvAddSms"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="@color/first_background_color">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="67dp">
+
+                                <ImageView
+                                    android:id="@+id/ivSms"
+                                    android:layout_width="@dimen/menu_icon_width"
+                                    android:layout_height="@dimen/menu_icon_height"
+                                    android:layout_marginStart="10dp"
+                                    android:contentDescription="@string/sms"
+                                    android:padding="7dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@drawable/sms" />
+
+                                <TextView
+                                    android:id="@+id/tvSms"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/comfortaa_regular"
+                                    android:text="@string/sms"
+                                    android:textColor="@color/color_primary_text"
+                                    app:autoSizeMinTextSize="10sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/ivSms"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.512" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="100"
+                        android:orientation="vertical">
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/contacts_scroll_view">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="138dp"
+                                android:orientation="horizontal">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_contact_one"
+                                    android:layout_width="80dp"
+                                    android:layout_height="138dp"
+                                    android:layout_weight="1"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:id="@+id/tv_contact_one"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="TextView1"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/color_primary_text"
+                                        android:visibility="visible"
+                                        app:layout_constraintBottom_toTopOf="@+id/iv_contact_one"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_contact_one"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_marginBottom="8dp"
+                                        android:layout_weight="1"
+                                        android:contentDescription="@string/avatar_contact_one_icon"
+                                        android:visibility="visible"
+                                        app:layout_constraintBottom_toTopOf="@+id/iv_delete_contact_one"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_delete_contact_one"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:contentDescription="@string/contact_one_delete"
+                                        android:src="@drawable/miniclose"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_contact_two"
+                                    android:layout_width="80dp"
+                                    android:layout_height="138dp"
+                                    android:layout_weight="1"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:id="@+id/tv_contact_two"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="TextView1"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/color_primary_text"
+                                        android:visibility="visible"
+                                        app:layout_constraintBottom_toTopOf="@+id/iv_contact_two"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_contact_two"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_marginBottom="8dp"
+                                        android:layout_weight="1"
+                                        android:contentDescription="@string/avatar_contact_two_icon"
+                                        android:visibility="visible"
+                                        app:layout_constraintBottom_toTopOf="@+id/iv_delete_contact_two"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_delete_contact_two"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:contentDescription="@string/contact_two_delete"
+                                        android:src="@drawable/miniclose"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_contact_three"
+                                    android:layout_width="80dp"
+                                    android:layout_height="138dp"
+                                    android:layout_weight="1"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:id="@+id/tv_contact_three"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="TextView1"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/color_primary_text"
+                                        android:visibility="visible"
+                                        app:layout_constraintBottom_toTopOf="@+id/iv_contact_three"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_contact_three"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_marginBottom="8dp"
+                                        android:layout_weight="1"
+                                        android:contentDescription="@string/avatar_contact_three_icon"
+                                        android:visibility="visible"
+                                        app:layout_constraintBottom_toTopOf="@+id/iv_delete_contact_three"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_delete_contact_three"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:contentDescription="@string/contact_three_delete"
+                                        android:src="@drawable/miniclose"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_contact_four"
+                                    android:layout_width="80dp"
+                                    android:layout_height="138dp"
+                                    android:layout_weight="1"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:id="@+id/tv_contact_four"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="TextView1"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/color_primary_text"
+                                        android:visibility="visible"
+                                        app:layout_constraintBottom_toTopOf="@+id/iv_contact_four"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_contact_four"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_marginBottom="8dp"
+                                        android:layout_weight="1"
+                                        android:contentDescription="@string/avatar_contact_four_icon"
+                                        android:visibility="visible"
+                                        app:layout_constraintBottom_toTopOf="@+id/iv_delete_contact_four"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_delete_contact_four"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:contentDescription="@string/contact_four_delete"
+                                        android:src="@drawable/miniclose"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_contact_five"
+                                    android:layout_width="80dp"
+                                    android:layout_height="138dp"
+                                    android:layout_weight="1"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:id="@+id/tv_contact_five"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="TextView1"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/color_primary_text"
+                                        android:visibility="visible"
+                                        app:layout_constraintBottom_toTopOf="@+id/iv_contact_five"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_contact_five"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_marginBottom="8dp"
+                                        android:layout_weight="1"
+                                        android:contentDescription="@string/avatar_contact_five_icon"
+                                        android:visibility="visible"
+                                        app:layout_constraintBottom_toTopOf="@+id/iv_delete_contact_five"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_delete_contact_five"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:contentDescription="@string/contact_five_delete"
+                                        android:src="@drawable/miniclose"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_contact_six"
+                                    android:layout_width="80dp"
+                                    android:layout_height="138dp"
+                                    android:layout_weight="1"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:id="@+id/tv_contact_six"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="TextView1"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/color_primary_text"
+                                        android:visibility="visible"
+                                        app:layout_constraintBottom_toTopOf="@+id/iv_contact_six"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_contact_six"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_marginBottom="8dp"
+                                        android:layout_weight="1"
+                                        android:contentDescription="@string/avatar_contact_six_icon"
+                                        android:visibility="visible"
+                                        app:layout_constraintBottom_toTopOf="@+id/iv_delete_contact_six"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_delete_contact_six"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:contentDescription="@string/avatar_contact_six_icon"
+                                        android:src="@drawable/miniclose"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </LinearLayout>
+                        </HorizontalScrollView>
+
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_phone_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/tv_phone_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="24dp"
+                                        android:paddingTop="14dp"
+                                        android:text="TextView"
+                                        android:textColor="@color/color_primary_text"
+                                        android:textSize="16sp"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <View
+                                        android:id="@+id/v_phone_1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="1dp"
+                                        android:background="@color/color_line"
+                                        app:layout_constraintEnd_toEndOf="@+id/tv_phone_1"
+                                        app:layout_constraintStart_toStartOf="@+id/tv_phone_1"
+                                        app:layout_constraintTop_toBottomOf="@+id/tv_phone_1" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_delete_phone_1"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_weight="0"
+                                        android:contentDescription="@string/phone_one_delete"
+                                        android:src="@drawable/miniclose"
+                                        android:visibility="invisible"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.3"
+                                        app:layout_constraintStart_toEndOf="@+id/tv_phone_1"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_phone_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    tools:layout_editor_absoluteY="37dp">
+
+                                    <TextView
+                                        android:id="@+id/tv_phone_2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="24dp"
+                                        android:paddingTop="11dp"
+                                        android:text="TextView"
+                                        android:textColor="@color/color_primary_text"
+                                        android:textSize="16sp"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <View
+                                        android:id="@+id/v_phone_2"
+                                        android:layout_width="0dp"
+                                        android:layout_height="1dp"
+                                        android:background="@color/color_line"
+                                        android:contentDescription="@string/phone_two_delete"
+                                        app:layout_constraintEnd_toEndOf="@+id/tv_phone_2"
+                                        app:layout_constraintStart_toStartOf="@+id/tv_phone_2"
+                                        app:layout_constraintTop_toBottomOf="@+id/tv_phone_2" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_delete_phone_2"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_weight="0"
+                                        android:src="@drawable/miniclose"
+                                        android:visibility="invisible"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.3"
+                                        app:layout_constraintStart_toEndOf="@+id/tv_phone_2"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_phone_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:visibility="gone"
+                                    tools:layout_editor_absoluteY="37dp">
+
+                                    <TextView
+                                        android:id="@+id/tv_phone_3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="24dp"
+                                        android:paddingTop="11dp"
+                                        android:text="TextView"
+                                        android:textColor="@color/color_primary_text"
+                                        android:textSize="16sp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <View
+                                        android:id="@+id/v_phone_3"
+                                        android:layout_width="0dp"
+                                        android:layout_height="1dp"
+                                        android:background="@color/color_line"
+                                        app:layout_constraintEnd_toEndOf="@+id/tv_phone_3"
+                                        app:layout_constraintStart_toStartOf="@+id/tv_phone_3"
+                                        app:layout_constraintTop_toBottomOf="@+id/tv_phone_3" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_delete_phone_3"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_weight="0"
+                                        android:contentDescription="@string/phone_three_delete"
+                                        android:src="@drawable/miniclose"
+                                        android:visibility="invisible"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.3"
+                                        app:layout_constraintStart_toEndOf="@+id/tv_phone_3"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_phone_4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:visibility="gone"
+                                    tools:layout_editor_absoluteY="37dp">
+
+                                    <TextView
+                                        android:id="@+id/tv_phone_4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="24dp"
+                                        android:paddingTop="11dp"
+                                        android:text="TextView"
+                                        android:textColor="@color/color_primary_text"
+                                        android:textSize="16sp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <View
+                                        android:id="@+id/v_phone_4"
+                                        android:layout_width="0dp"
+                                        android:layout_height="1dp"
+                                        android:background="@color/color_line"
+                                        app:layout_constraintEnd_toEndOf="@+id/tv_phone_4"
+                                        app:layout_constraintStart_toStartOf="@+id/tv_phone_4"
+                                        app:layout_constraintTop_toBottomOf="@+id/tv_phone_4" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_delete_phone_4"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_weight="0"
+                                        android:contentDescription="@string/phone_four_delete"
+                                        android:src="@drawable/miniclose"
+                                        android:visibility="invisible"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.3"
+                                        app:layout_constraintStart_toEndOf="@+id/tv_phone_4"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_phone_5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:visibility="gone"
+                                    tools:layout_editor_absoluteY="37dp">
+
+                                    <TextView
+                                        android:id="@+id/tv_phone_5"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="24dp"
+                                        android:paddingTop="11dp"
+                                        android:text="TextView"
+                                        android:textColor="@color/color_primary_text"
+                                        android:textSize="16sp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <View
+                                        android:id="@+id/v_phone_5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="1dp"
+                                        android:background="@color/color_line"
+                                        app:layout_constraintEnd_toEndOf="@+id/tv_phone_5"
+                                        app:layout_constraintStart_toStartOf="@+id/tv_phone_5"
+                                        app:layout_constraintTop_toBottomOf="@+id/tv_phone_5" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_delete_phone_5"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_weight="0"
+                                        android:contentDescription="@string/phone_five_delete"
+                                        android:src="@drawable/miniclose"
+                                        android:visibility="invisible"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.3"
+                                        app:layout_constraintStart_toEndOf="@+id/tv_phone_5"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_email_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/tv_email_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="24dp"
+                                        android:paddingTop="11dp"
+                                        android:text="TextView"
+                                        android:textColor="@color/color_primary_text"
+                                        android:textSize="16sp"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <View
+                                        android:id="@+id/v_email_1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="1dp"
+                                        android:background="@color/color_line"
+                                        app:layout_constraintEnd_toEndOf="@+id/tv_email_1"
+                                        app:layout_constraintStart_toStartOf="@+id/tv_email_1"
+                                        app:layout_constraintTop_toBottomOf="@+id/tv_email_1" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_delete_email_1"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_weight="0"
+                                        android:contentDescription="@string/mail_one_delete"
+                                        android:src="@drawable/miniclose"
+                                        android:visibility="invisible"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.3"
+                                        app:layout_constraintStart_toEndOf="@+id/tv_email_1"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_email_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/tv_email_2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="24dp"
+                                        android:paddingTop="11dp"
+                                        android:text="TextView"
+                                        android:textColor="@color/color_primary_text"
+                                        android:textSize="16sp"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <View
+                                        android:id="@+id/v_email_2"
+                                        android:layout_width="0dp"
+                                        android:layout_height="1dp"
+                                        android:background="@color/color_line"
+                                        app:layout_constraintEnd_toEndOf="@+id/tv_email_2"
+                                        app:layout_constraintStart_toStartOf="@+id/tv_email_2"
+                                        app:layout_constraintTop_toBottomOf="@+id/tv_email_2" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_delete_email_2"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_weight="0"
+                                        android:contentDescription="@string/mail_two_delete"
+                                        android:src="@drawable/miniclose"
+                                        android:visibility="invisible"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.3"
+                                        app:layout_constraintStart_toEndOf="@+id/tv_email_2"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_email_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    tools:visibility="gone">
+
+                                    <TextView
+                                        android:id="@+id/tv_email_3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="24dp"
+                                        android:paddingTop="9dp"
+                                        android:text="TextView"
+                                        android:textColor="@color/color_primary_text"
+                                        android:textSize="16sp"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <View
+                                        android:id="@+id/v_email_3"
+                                        android:layout_width="0dp"
+                                        android:layout_height="1dp"
+                                        android:background="@color/color_line"
+                                        app:layout_constraintEnd_toEndOf="@+id/tv_email_3"
+                                        app:layout_constraintStart_toStartOf="@+id/tv_email_3"
+                                        app:layout_constraintTop_toBottomOf="@+id/tv_email_3" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_delete_email_3"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_weight="0"
+                                        android:contentDescription="@string/mail_three_delete"
+                                        android:src="@drawable/miniclose"
+                                        android:visibility="invisible"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.3"
+                                        app:layout_constraintStart_toEndOf="@+id/tv_email_3"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_email_4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    tools:visibility="gone">
+
+                                    <TextView
+                                        android:id="@+id/tv_email_4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="24dp"
+                                        android:paddingTop="9dp"
+                                        android:text="TextView"
+                                        android:textColor="@color/color_primary_text"
+                                        android:textSize="16sp"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <View
+                                        android:id="@+id/v_email_4"
+                                        android:layout_width="0dp"
+                                        android:layout_height="1dp"
+                                        android:background="@color/color_line"
+                                        app:layout_constraintEnd_toEndOf="@+id/tv_email_4"
+                                        app:layout_constraintStart_toStartOf="@+id/tv_email_4"
+                                        app:layout_constraintTop_toBottomOf="@+id/tv_email_4" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_delete_email_4"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_weight="0"
+                                        android:contentDescription="@string/mail_four_delete"
+                                        android:src="@drawable/miniclose"
+                                        android:visibility="invisible"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.3"
+                                        app:layout_constraintStart_toEndOf="@+id/tv_email_4"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_email_5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    tools:visibility="gone">
+
+                                    <TextView
+                                        android:id="@+id/tv_email_5"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="24dp"
+                                        android:paddingTop="9dp"
+                                        android:text="TextView"
+                                        android:textColor="@color/color_primary_text"
+                                        android:textSize="16sp"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <View
+                                        android:id="@+id/v_email_5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="1dp"
+                                        android:background="@color/color_line"
+                                        app:layout_constraintEnd_toEndOf="@+id/tv_email_5"
+                                        app:layout_constraintStart_toStartOf="@+id/tv_email_5"
+                                        app:layout_constraintTop_toBottomOf="@+id/tv_email_5" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_delete_email_5"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_weight="0"
+                                        android:contentDescription="@string/mail_five_delete"
+                                        android:src="@drawable/miniclose"
+                                        android:visibility="invisible"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.3"
+                                        app:layout_constraintStart_toEndOf="@+id/tv_email_5"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_sms_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/tv_sms_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="24dp"
+                                        android:paddingTop="11dp"
+                                        android:text="TextView"
+                                        android:textColor="@color/color_primary_text"
+                                        android:textSize="16sp"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <View
+                                        android:id="@+id/v_sms_1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="1dp"
+                                        android:background="@color/color_line"
+                                        app:layout_constraintEnd_toEndOf="@+id/tv_sms_1"
+                                        app:layout_constraintStart_toStartOf="@+id/tv_sms_1"
+                                        app:layout_constraintTop_toBottomOf="@+id/tv_sms_1" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_delete_sms1"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_weight="0"
+                                        android:contentDescription="@string/sms_one_delete"
+                                        android:src="@drawable/miniclose"
+                                        android:visibility="invisible"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.3"
+                                        app:layout_constraintStart_toEndOf="@+id/tv_sms_1"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_sms_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/tv_sms_2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="24dp"
+                                        android:paddingTop="9dp"
+                                        android:text="TextView"
+                                        android:textColor="@color/color_primary_text"
+                                        android:textSize="16sp"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <View
+                                        android:id="@+id/v_sms_2"
+                                        android:layout_width="0dp"
+                                        android:layout_height="1dp"
+                                        android:background="@color/color_line"
+                                        app:layout_constraintEnd_toEndOf="@+id/tv_sms_2"
+                                        app:layout_constraintStart_toStartOf="@+id/tv_sms_2"
+                                        app:layout_constraintTop_toBottomOf="@+id/tv_sms_2" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_delete_sms_2"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_weight="0"
+                                        android:contentDescription="@string/sms_two_delete"
+                                        android:src="@drawable/miniclose"
+                                        android:visibility="invisible"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.3"
+                                        app:layout_constraintStart_toEndOf="@+id/tv_sms_2"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_sms_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    tools:visibility="gone">
+
+                                    <TextView
+                                        android:id="@+id/tv_sms_3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="24dp"
+                                        android:paddingTop="9dp"
+                                        android:text="TextView"
+                                        android:textColor="@color/color_primary_text"
+                                        android:textSize="16sp"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <View
+                                        android:id="@+id/v_sms_3"
+                                        android:layout_width="0dp"
+                                        android:layout_height="1dp"
+                                        android:background="@color/color_line"
+                                        app:layout_constraintEnd_toEndOf="@+id/tv_sms_3"
+                                        app:layout_constraintStart_toStartOf="@+id/tv_sms_3"
+                                        app:layout_constraintTop_toBottomOf="@+id/tv_sms_3" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_delete_sms_3"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_weight="0"
+                                        android:contentDescription="@string/sms_three_delete"
+                                        android:src="@drawable/miniclose"
+                                        android:visibility="invisible"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.3"
+                                        app:layout_constraintStart_toEndOf="@+id/tv_sms_3"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_sms_4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    tools:visibility="gone">
+
+                                    <TextView
+                                        android:id="@+id/tv_sms_4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="24dp"
+                                        android:paddingTop="9dp"
+                                        android:text="TextView"
+                                        android:textColor="@color/color_primary_text"
+                                        android:textSize="16sp"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <View
+                                        android:id="@+id/v_sms_4"
+                                        android:layout_width="0dp"
+                                        android:layout_height="1dp"
+                                        android:background="@color/color_line"
+                                        app:layout_constraintEnd_toEndOf="@+id/tv_sms_4"
+                                        app:layout_constraintStart_toStartOf="@+id/tv_sms_4"
+                                        app:layout_constraintTop_toBottomOf="@+id/tv_sms_4" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_delete_sms_4"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_weight="0"
+                                        android:contentDescription="@string/sms_four_delete"
+                                        android:src="@drawable/miniclose"
+                                        android:visibility="invisible"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.3"
+                                        app:layout_constraintStart_toEndOf="@+id/tv_sms_4"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_sms_5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:id="@+id/tv_sms_5"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="24dp"
+                                        android:paddingTop="9dp"
+                                        android:text="TextView"
+                                        android:textColor="@color/color_primary_text"
+                                        android:textSize="16sp"
+                                        android:visibility="invisible"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <View
+                                        android:id="@+id/v_sms_5"
+                                        android:layout_width="0dp"
+                                        android:layout_height="1dp"
+                                        android:background="@color/color_line"
+                                        app:layout_constraintEnd_toEndOf="@+id/tv_sms_5"
+                                        app:layout_constraintStart_toStartOf="@+id/tv_sms_5"
+                                        app:layout_constraintTop_toBottomOf="@+id/tv_sms_5" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_delete_sms_5"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_weight="0"
+                                        android:contentDescription="@string/sms_five_delete"
+                                        android:src="@drawable/miniclose"
+                                        android:visibility="invisible"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.3"
+                                        app:layout_constraintStart_toEndOf="@+id/tv_sms_5"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </LinearLayout>
+                        </ScrollView>
+
+
+                        <!--                        <LinearLayout-->
+                        <!--                            android:layout_width="match_parent"-->
+                        <!--                            android:layout_height="match_parent"-->
+                        <!--                            android:orientation="vertical">-->
+
+                        <!--                        </LinearLayout>-->
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/footer_height"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/laAddContent"
+            android:layout_width="@dimen/add_file_layout_width"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/laAddFile"
+                android:layout_width="@dimen/add_file_another_layout_width"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_add_file"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/add_file_layout_padding">
+
+                    <TextView
+                        android:id="@+id/tvAddFile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:text="@string/add_file"
+                        android:textAlignment="center"
+                        android:textColor="@color/color_primary_text"
+                        app:autoSizeMinTextSize="@dimen/add_options_text_size_min" />
+
+                    <ImageView
+                        android:id="@+id/ivAddFile"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/add_options_layout_height"
+                        android:contentDescription="@string/added_file"
+                        app:srcCompat="@drawable/attachfilew" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/laSave"
+            android:layout_width="@dimen/save_layout_width"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="@dimen/footer_separator_width"
+                    android:layout_height="@dimen/footer_separator_height"
+                    android:background="@color/color_line_separator"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tvSaveButton"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvSaveButton"
+                    android:layout_width="@dimen/save_layout_width"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/comfortaa_regular"
+                    android:padding="14dp"
+                    android:text="@string/save"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/color_primary_text"
+                    android:textSize="@dimen/save_layout_text_size"
+                    app:autoSizeMinTextSize="@dimen/save_layout_min_text_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

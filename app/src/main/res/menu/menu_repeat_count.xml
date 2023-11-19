@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_1_count"
+        android:title="@string/one" />
+    <item
+        android:id="@+id/menu_2_count"
+        android:title="@string/two" />
+    <item
+        android:id="@+id/menu_3_count"
+        android:title="@string/three" />
+    <item
+        android:id="@+id/menu_4_count"
+        android:title="@string/four" />
+    <item
+        android:id="@+id/menu_5_count"
+        android:title="@string/five" />
+    <item
+        android:id="@+id/menu_6_count"
+        android:title="@string/six" />
+</menu>

@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fifty_dp_height">50dp</dimen>
+    <dimen name="icon_size">48dp</dimen>
+    <dimen name="big_icon_size">54dp</dimen>
+    <dimen name="huge_icon_size">62dp</dimen>
+    <dimen name="margin">16dp</dimen>
+    <dimen name="small_text">17sp</dimen>
+    <dimen name="small_text_line_height">24sp</dimen>
+    <dimen name="title_text">32sp</dimen>
+    <dimen name="big_padding">40dp</dimen>
+    <dimen name="top_bottom_padding">16dp</dimen>
+
+
+    <dimen name="tv_reminder_time">28dp</dimen>
+    <dimen name="reminder_notification_small_text">16sp</dimen>
+    <dimen name="reminder_notification_title">24sp</dimen>
+    <dimen name="reminder_contact">17sp</dimen>
+    <dimen name="reminder_contact_name">18sp</dimen>
+    <dimen name="notification_header_panel">50sp</dimen>
+    <dimen name="icon_timer">25dp</dimen>
+    <dimen name="icon_timer_margin_end">16dp</dimen>
+    <dimen name="text_reminder_window">48dp</dimen>
+    <dimen name="actions_title_window">50dp</dimen>
+    <dimen name="action_height">60dp</dimen>
+    <dimen name="action_icon">34dp</dimen>
+    <dimen name="avatar_icon">60dp</dimen>
+    <dimen name="margin_start_title">16dp</dimen>
+    <dimen name="added_file">54dp</dimen>
+    <dimen name="margin_action">16dp</dimen>
+    <dimen name="padding_action">4dp</dimen>
+    <dimen name="margin_action_detail">15dp</dimen>
+    <dimen name="margin_full_action">10dp</dimen>
+    <dimen name="action_no_icon">34dp</dimen>
+    <dimen name="margin_start_no_icon">16dp</dimen>
+    <dimen name="margin_start_no_icon_second">24dp</dimen>
+    <dimen name="margin_start_icon_action">24dp</dimen>
+
+    <!--    CV Contact Field    -->
+    <dimen name="cv_height">60dp</dimen>
+    <dimen name="cv_width">0dp</dimen>
+    <dimen name="cv_margin_start">14dp</dimen>
+    <dimen name="cv_margin_start_another">24dp</dimen>
+    <dimen name="cv_margin_end">24dp</dimen>
+
+    <dimen name="cv_footer_height">54dp</dimen>
+    <dimen name="scroll_height">0dp</dimen>
+    <dimen name="scroll_width">0dp</dimen>
+
+    <!--    Linear Layout    -->
+    <!--    <dimen name="editor_absolute_x">43dp</dimen>-->
+    <!--    <dimen name="editor_absolute_y">388dp</dimen>-->
+    <dimen name="noicon_height">29dp</dimen>
+    <dimen name="noicon_width">36dp</dimen>
+    <dimen name="phone_three">0dp</dimen>
+    <dimen name="vcontacts_margin_top">10dp</dimen>
+    <dimen name="vcontacts_margin_bottom">20dp</dimen>
+    <dimen name="vcontacts_margin_end">20dp</dimen>
+    <dimen name="vcontacts_margin_start">72dp</dimen>
+    <dimen name="vcontacts_height">2dp</dimen>
+    <dimen name="line_message_margin_top">10dp</dimen>
+    <dimen name="line_message_margin_bottom">20dp</dimen>
+    <dimen name="line_message_margin_end">20dp</dimen>
+    <dimen name="line_message_margin_start">72dp</dimen>
+    <dimen name="line_message_height">2dp</dimen>
+    <dimen name="addfile_height">40dp</dimen>
+    <dimen name="addfile_padding_bottom">15dp</dimen>
+    <dimen name="addfile_padding_top">15dp</dimen>
+    <dimen name="addfile_textsize">20sp</dimen>
+    <dimen name="another_footer_width">0dp</dimen>
+
+    <!--    <dimen name="layout_actions_size">0dp</dimen>-->
+    <dimen name="layout_margin_unlicensed">0dp</dimen>
+    <dimen name="layout_footer_height">80dp</dimen>
+    <dimen name="layout_file_height">80dp</dimen>
+    <dimen name="layout_footer_width">0dp</dimen>
+    <dimen name="layout_contact_two">62dp</dimen>
+    <dimen name="layout_phone_one_margin_start">14dp</dimen>
+    <dimen name="layout_phone_one_margin_end">24dp</dimen>
+    <!--    <dimen name="layout_phone_one_width">0dp</dimen>-->
+
+    <!--     Reminder Text Window  -->
+    <dimen name="line_height">30sp</dimen>
+    <dimen name="padding_reminder_text">18dp</dimen>
+
+
+    <!--     Widget  -->
+    <dimen name="widget_date_title">20sp</dimen>
+    <dimen name="widget_action_icon">24dp</dimen>
+    <dimen name="widget_block_top_bottom_margin">5dp</dimen>
+    <dimen name="widget_block_date">14sp</dimen>
+    <dimen name="widget_block_time">15sp</dimen>
+    <dimen name="widget_block_message">14sp</dimen>
+    <dimen name="widget_block_line_height">18sp</dimen>
+    <dimen name="widget_block_attach_icon">22dp</dimen>
+    <dimen name="widget_block_attach_email">14dp</dimen>
+
+
+
+
+
+
+    <!--  Add E-mail Fragment  -->
+
+    <dimen name="mail_icon_width">60dp</dimen>
+    <dimen name="mail_icon_height">60dp</dimen>
+    <dimen name="mail_icon_layout_margin_start">16dp</dimen>
+    <dimen name="mail_icon_full_layout_width">0dp</dimen>
+    <dimen name="email_footer_width">0dp</dimen>
+    <dimen name="email_footer_height">60dp</dimen>
+    <dimen name="addemail_text">18sp</dimen>
+    <dimen name="email_block_margin">16dp</dimen>
+    <dimen name="email_message_block_width">0dp</dimen>
+    <dimen name="email_message_block_margin_start">18dp</dimen>
+    <dimen name="email_message_block_margin_end">18dp</dimen>
+    <dimen name="email_address_block_width">0dp</dimen>
+    <dimen name="email_address_block_margin_start">18dp</dimen>
+    <dimen name="email_address_block_margin_end">18dp</dimen>
+    <dimen name="layout_absolutex">4dp</dimen>
+    <dimen name="email_message_field_width">0dp</dimen>
+    <dimen name="email_message_field_margin_top">40dp</dimen>
+    <dimen name="email_message_field_padding_start">5dp</dimen>
+    <dimen name="email_message_field_padding_top">30dp</dimen>
+    <dimen name="email_message_field_padding_end">5dp</dimen>
+    <dimen name="email_address_field_padding_start">5dp</dimen>
+    <dimen name="email_address_field_padding_top">50dp</dimen>
+    <dimen name="email_address_text_size">18sp</dimen>
+    <dimen name="min_width">300dp</dimen>
+    <dimen name="min_height">500dp</dimen>
+    <dimen name="person_icon_width">24dp</dimen>
+    <dimen name="person_icon_height">24dp</dimen>
+    <dimen name="person_margin_end">16dp</dimen>
+    <dimen name="person_margin_bottom">16dp</dimen>
+    <dimen name="underline_height">1dp</dimen>
+    <dimen name="save_button_email">0dp</dimen>
+    <dimen name="save_text">24sp</dimen>
+    <dimen name="cancel_text">24sp</dimen>
+    <dimen name="cancel_layout_width">0dp</dimen>
+    <dimen name="footer_separator_width">1dp</dimen>
+    <dimen name="footer_separator_height">32dp</dimen>
+
+    <!--  Add Phone Number Fragment  -->
+
+    <dimen name="phone_icon_width">60dp</dimen>
+    <dimen name="phone_icon_height">60dp</dimen>
+    <dimen name="phone_icon_layout_margin_start">16dp</dimen>
+    <dimen name="add_phone_text_size">18sp</dimen>
+    <dimen name="add_phone_margin">16dp</dimen>
+    <dimen name="min_phone_width">300dp</dimen>
+    <dimen name="header_phone_width">0dp</dimen>
+    <dimen name="phone_select_panel_start">5dp</dimen>
+    <dimen name="phone_select_panel_top">50dp</dimen>
+    <dimen name="phone_select_panel_text_size">18sp</dimen>
+    <dimen name="phone_select_panel_line">1dp</dimen>
+    <dimen name="phone_select_panel_footer_width">411dp</dimen>
+    <dimen name="phone_select_panel_footer_height">60dp</dimen>
+    <dimen name="phone_footer_cancel_width">0dp</dimen>
+    <dimen name="phone_footer_save_width">0dp</dimen>
+    <dimen name="phone_footer_save_text_width">0dp</dimen>
+    <dimen name="phone_footer_save_text_size">24sp</dimen>
+    <dimen name="phone_footer_cancel_text_size">24sp</dimen>
+    <dimen name="phone_footer_separator_width">1dp</dimen>
+    <dimen name="phone_footer_separator_height">32dp</dimen>
+
+
+
+    <!--  Add SMS Fragment  -->
+
+    <dimen name="sms_icon_width">60dp</dimen>
+    <dimen name="sms_icon_height">60dp</dimen>
+    <dimen name="sms_icon_layout_margin_start">16dp</dimen>
+    <dimen name="select_phone_text_size">18sp</dimen>
+    <dimen name="add_sms_text_size">18sp</dimen>
+    <dimen name="add_sms_margin">16dp</dimen>
+    <dimen name="message_select_panel_start">5dp</dimen>
+    <dimen name="message_select_panel_top">50dp</dimen>
+    <dimen name="contact_icon_width">24dp</dimen>
+    <dimen name="contact_icon_height">24dp</dimen>
+    <dimen name="contact_icon_margin_end">16dp</dimen>
+    <dimen name="contact_icon_margin_bottom">16dp</dimen>
+    <dimen name="message_phone_underline">1dp</dimen>
+    <dimen name="message_footer_cancel_text_size">24sp</dimen>
+    <dimen name="message_footer_save_text_size">24sp</dimen>
+    <dimen name="message_footer_save_width">0dp</dimen>
+    <dimen name="message_footer_save_text_width">0dp</dimen>
+    <dimen name="message_footer_separator_width">1dp</dimen>
+    <dimen name="message_footer_separator_height">32dp</dimen>
+    <dimen name="message_min_width">300dp</dimen>
+    <dimen name="message_min_height">500dp</dimen>
+    <dimen name="header_message_width">0dp</dimen>
+    <dimen name="layout_message_width">0dp</dimen>
+    <dimen name="layout_message_margin_start">18dp</dimen>
+    <dimen name="layout_message_margin_end">18dp</dimen>
+    <dimen name="message_absolutex">-4dp</dimen>
+    <dimen name="layout_message_margin_top">40dp</dimen>
+    <dimen name="layout_message_padding_start">5dp</dimen>
+    <dimen name="layout_message_padding_top">30dp</dimen>
+    <dimen name="layout_message_padding_end">5dp</dimen>
+
+    <dimen name="layout_phone_width">0dp</dimen>
+    <dimen name="layout_phone_margin_start">18dp</dimen>
+    <dimen name="layout_phone_margin_end">18dp</dimen>
+
+    <dimen name="footer_add_message_width">0dp</dimen>
+    <dimen name="footer_add_message_height">60dp</dimen>
+    <dimen name="cancel_footer_add_message_width">0dp</dimen>
+
+    <!--  Fragment Contact  -->
+
+    <dimen name="contact_layout_height">46dp</dimen>
+    <dimen name="contact_text_size">24sp</dimen>
+    <dimen name="contact_list_width">0dp</dimen>
+    <dimen name="contact_list_height">0dp</dimen>
+    <dimen name="contact_list_footer_width">0dp</dimen>
+    <dimen name="contact_list_footer_height">60dp</dimen>
+    <dimen name="contact_list_cancel_width">0dp</dimen>
+    <dimen name="contact_list_save_width">0dp</dimen>
+    <dimen name="contact_list_save_cancel_text_size">24sp</dimen>
+    <dimen name="contact_footer_separator_width">1dp</dimen>
+    <dimen name="contact_footer_separator_height">32dp</dimen>
+
+
+
+    <!--  Fragment Contacts Email  -->
+
+    <dimen name="contact_mail_header_text">24sp</dimen>
+    <dimen name="contact_mail_layout_height">0dp</dimen>
+    <dimen name="contact_mail_footer_layout_height">60dp</dimen>
+    <dimen name="contact_mail_footer_layout_width">0dp</dimen>
+    <dimen name="contact_mail_layout_width">0dp</dimen>
+    <dimen name="contact_mail_cancel_text">24sp</dimen>
+    <dimen name="contact_mail_save_text">24sp</dimen>
+    <dimen name="contact_mail_save_layout_width">0dp</dimen>
+    <dimen name="contact_mail_footer_separator_width">1dp</dimen>
+    <dimen name="contact_mail_footer_separator_height">32dp</dimen>
+
+
+    <!--  Fragment Contacts SMS  -->
+
+    <dimen name="contact_sms_header_text">24sp</dimen>
+    <dimen name="contact_sms_header_height">48dp</dimen>
+    <dimen name="contact_sms_layout_height">0dp</dimen>
+    <dimen name="contact_sms_layout_width">0dp</dimen>
+
+
+    <!--   Fragment Reminder List   -->
+    <dimen name="header_height">56dp</dimen>
+    <dimen name="trash_width">26dp</dimen>
+    <dimen name="trash_height">26dp</dimen>
+    <dimen name="menu_width">48dp</dimen>
+    <dimen name="menu_height">48dp</dimen>
+    <dimen name="trash_margin_top">16dp</dimen>
+    <dimen name="trash_margin_end">16dp</dimen>
+    <dimen name="menu_margin_top">16dp</dimen>
+    <dimen name="menu_margin_start">16dp</dimen>
+    <dimen name="name_max_text_size">36sp</dimen>
+    <dimen name="name_min_text_size">18sp</dimen>
+    <dimen name="name_current_text_size">24sp</dimen>
+    <dimen name="main_layout_reminders_width">0dp</dimen>
+    <dimen name="main_layout_reminders_height">0dp</dimen>
+    <dimen name="scrollbar_size">0dp</dimen>
+    <dimen name="round_button_margin_end">16dp</dimen>
+    <dimen name="round_button_height">0dp</dimen>
+    <dimen name="round_button_margin_bottom">16dp</dimen>
+
+
+    <!--   Item Contact   -->
+
+    <dimen name="item_contact_padding">0dp</dimen>
+    <dimen name="item_contact_phone_number_layout_margin_top">7dp</dimen>
+    <dimen name="item_contact_phone_number_min_text_size">14sp</dimen>
+    <dimen name="item_contact_phone_number_text_size">20sp</dimen>
+    <dimen name="item_contact_phone_number_padding">10dp</dimen>
+    <dimen name="item_contact_phone_number_padding_start">20dp</dimen>
+    <dimen name="avatar_height">90dp</dimen>
+    <dimen name="checkbox_width">48dp</dimen>
+    <dimen name="checkbox_height">48dp</dimen>
+    <dimen name="checkbox_margin_top">5dp</dimen>
+    <dimen name="common_layout_margin_top">-5dp</dimen>
+    <dimen name="common_layout_margin_bottom">-4dp</dimen>
+    <dimen name="card_corner_radius">0dp</dimen>
+    <dimen name="unnamed_margin_top">5dp</dimen>
+    <dimen name="unnamed_text_size">22sp</dimen>
+    <dimen name="unnamed_padding">10dp</dimen>
+
+
+    <!--   Item Contact Last   -->
+
+    <dimen name="item_contact_last_layout_height">1dp</dimen>
+    <dimen name="item_contact_last_phone_number_padding">0dp</dimen>
+    <dimen name="item_contact_last_example_min_text_size">14sp</dimen>
+    <dimen name="item_contact_last_example_text_size">22sp</dimen>
+    <dimen name="item_contact_last_example_padding">10dp</dimen>
+    <dimen name="item_contact_last_example_margin_top">5dp</dimen>
+    <dimen name="item_contact_last_example_number_margin_top">7dp</dimen>
+    <dimen name="item_contact_last_example_number_min_text_size">14sp</dimen>
+    <dimen name="item_contact_last_example_number_text_size">20sp</dimen>
+    <dimen name="item_contact_last_example_number_padding">10dp</dimen>
+    <dimen name="item_contact_last_example_number_padding_start">20dp</dimen>
+
+    <!--   Item Remind Check   -->
+
+    <dimen name="date_reminder_list">1dp</dimen>
+    <dimen name="icon_width_reminder_list">24dp</dimen>
+    <dimen name="icon_height_reminder_list">24dp</dimen>
+    <dimen name="first_icon_width_reminder_list">20dp</dimen>
+    <dimen name="icon_layout_margin_reminder_list">8dp</dimen>
+    <dimen name="time_text_size_reminder_list">16sp</dimen>
+    <dimen name="reminder_text_width_reminder_list">0dp</dimen>
+    <dimen name="reminder_text_margin_top_reminder_list">24dp</dimen>
+    <dimen name="reminder_text_padding_bottom_reminder_list">6dp</dimen>
+    <dimen name="reminder_text_line_reminder_list">24sp</dimen>
+    <dimen name="reminder_text_size_reminder_list">16sp</dimen>
+    <dimen name="common_layout_padding_reminder_list">5dp</dimen>
+    <dimen name="full_block_zero">0dp</dimen>
+    <dimen name="full_block_four">4dp</dimen>
+
+
+    <!--   Fragment Start App   -->
+
+    <dimen name="menu_icon_width">48dp</dimen>
+    <dimen name="menu_icon_height">48dp</dimen>
+    <dimen name="menu_icon_margin_start">16dp</dimen>
+    <dimen name="menu_icon_margin_top">16dp</dimen>
+    <dimen name="plus_icon_width">48dp</dimen>
+    <dimen name="plus_icon_height">48dp</dimen>
+    <dimen name="plus_icon_margin_bottom">26dp</dimen>
+    <dimen name="plus_icon_margin_end">24dp</dimen>
+    <dimen name="warning_padding">20dp</dimen>
+    <dimen name="warning_text_size">34sp</dimen>
+    <dimen name="no_notes_margin_bottom">140dp</dimen>
+    <dimen name="no_notes_text_size_min">48sp</dimen>
+    <dimen name="no_notes_text_size_max">96sp</dimen>
+    <dimen name="no_notes_text_size">48sp</dimen>
+    <dimen name="background_icon_width">280dp</dimen>
+    <dimen name="background_icon_height">280dp</dimen>
+    <dimen name="background_icon_margin_bottom">8dp</dimen>
+    <dimen name="blank_layout_height">0dp</dimen>
+
+    <!--   Fragment Reminder Add FUCK!!!  -->
+    <dimen name="cancel_check_icons_padding_top">5dp</dimen>
+    <dimen name="cancel_check_icons_padding_bottom">5dp</dimen>
+    <dimen name="reminder_title_max_text_size">24sp</dimen>
+    <dimen name="reminder_title_min_text_size">20sp</dimen>
+    <dimen name="reminder_title_text_size">24sp</dimen>
+    <dimen name="text_reminder_field_height">100dp</dimen>
+    <dimen name="text_reminder_field_padding_start">10dp</dimen>
+    <dimen name="text_reminder_field_text_size">20sp</dimen>
+    <dimen name="timer_icon_width">40dp</dimen>
+    <dimen name="timer_icon_height">25dp</dimen>
+    <dimen name="timer_icon_margin_top">14dp</dimen>
+
+    <dimen name="timer_icon_max_text_size">14sp</dimen>
+    <dimen name="timer_icon_min_text_size">10sp</dimen>
+    <dimen name="calendar_icon_width">44dp</dimen>
+    <dimen name="calendar_icon_height">30dp</dimen>
+    <dimen name="calendar_icon_margin_top">24dp</dimen>
+    <dimen name="calendar_icon_max_text_size">14sp</dimen>
+    <dimen name="calendar_icon_min_text_size">10sp</dimen>
+    <dimen name="calendar_icon_text_height">16dp</dimen>
+    <dimen name="calendar_icon_text_margin_top">-2dp</dimen>
+    <dimen name="calendar_icon_text_line_height">10dp</dimen>
+    <dimen name="add_options_text_size_min">10sp</dimen>
+    <dimen name="add_options_text_margin_start">20dp</dimen>
+    <dimen name="add_options_layout_width">0dp</dimen>
+    <dimen name="add_options_layout_height">26dp</dimen>
+    <dimen name="icon_media_add_width">30dp</dimen>
+    <dimen name="icon_media_add_height">30dp</dimen>
+    <dimen name="icon_image_add_width">34dp</dimen>
+    <dimen name="add_action_icon_size">24dp</dimen>
+    <dimen name="add_action_icon_margin_start">16dp</dimen>
+    <dimen name="add_action_mail_icon_margin_start">20dp</dimen>
+    <dimen name="add_plus_action_icon_margin_start">8dp</dimen>
+    <dimen name="add_plus_action_icon_size">16dp</dimen>
+    <dimen name="action_checkbox_size">20dp</dimen>
+    <dimen name="action_checkbox_margin">4dp</dimen>
+    <dimen name="warning_reminder_text_size">20sp</dimen>
+    <dimen name="action_line_width">0dp</dimen>
+    <dimen name="action_line_height">1dp</dimen>
+    <dimen name="action_line_block_margin_right">36dp</dimen>
+    <dimen name="action_line_first_block_padding_top">14dp</dimen>
+    <dimen name="action_line_last_block_padding_top">9dp</dimen>
+    <dimen name="action_line_block_text_size">16sp</dimen>
+    <dimen name="action_line_block_padding_top">11dp</dimen>
+    <dimen name="advanced_line_height">1dp</dimen>
+    <dimen name="advanced_line_margin_top">2dp</dimen>
+    <dimen name="advanced_line_margin_bottom">5dp</dimen>
+    <dimen name="advanced_text_size">17sp</dimen>
+    <dimen name="advanced_width">0dp</dimen>
+    <dimen name="advanced_padding_start">10dp</dimen>
+    <dimen name="advanced_min_text_size">12sp</dimen>
+    <dimen name="advanced_max_text_size">18sp</dimen>
+    <dimen name="advanced_block_padding_top">28dp</dimen>
+    <dimen name="advanced_block_padding_right">15dp</dimen>
+    <dimen name="advanced_sound_block_width">82dp</dimen>
+    <dimen name="advanced_sound_block_height">86dp</dimen>
+    <dimen name="advanced_sound_block_margin">24dp</dimen>
+    <dimen name="advanced_sound_block_padding">7dp</dimen>
+    <dimen name="advanced_image_block_width">82dp</dimen>
+    <dimen name="advanced_image_block_height">86dp</dimen>
+    <dimen name="advanced_image_block_margin_top">8dp</dimen>
+    <dimen name="advanced_image_block_margin_bottom">24dp</dimen>
+    <dimen name="advanced_image_block_padding">7dp</dimen>
+    <dimen name="triangle_fallen_margin_end">4dp</dimen>
+    <dimen name="triangle_fallen_size">15dp</dimen>
+    <dimen name="header_layout_height">50dp</dimen>
+    <dimen name="reminder_text_layout_height">120dp</dimen>
+    <dimen name="full_layout_height">0dp</dimen>
+    <dimen name="time_date_layout_height">80dp</dimen>
+
+    <dimen name="time_date_layout_width">0dp</dimen>
+    <dimen name="time_date_line_height">1dp</dimen>
+    <dimen name="time_date_line_margin_bottom">54dp</dimen>
+    <dimen name="advanced_layout_width">0dp</dimen>
+    <dimen name="actions_layout_margin_top">30dp</dimen>
+    <dimen name="plus_actions_layout_margin_top">30dp</dimen>
+    <dimen name="plus_actions_layout_width">170dp</dimen>
+    <dimen name="plus_add_layout_height">65dp</dimen>
+    <dimen name="plus_add_more_layout_height">67dp</dimen>
+    <dimen name="actions_list_margin_right">4dp</dimen>
+    <dimen name="contacts_added_layout_height">100dp</dimen>
+    <dimen name="contact_added_layout_height">100dp</dimen>
+    <dimen name="contact_added_layout_width">80dp</dimen>
+    <dimen name="contact_added_margin_bottom">1dp</dimen>
+    <dimen name="contact_added_avatar_size">60dp</dimen>
+    <dimen name="contact_added_avatar_margin_bottom">4dp</dimen>
+    <dimen name="editor_contact_absolute_y">37dp</dimen>
+    <dimen name="phone_number_three_width">0dp</dimen>
+    <dimen name="phone_number_three_height">1dp</dimen>
+    <dimen name="delete_action_size">20dp</dimen>
+    <dimen name="delete_action_margin_start">4dp</dimen>
+    <dimen name="footer_height">60dp</dimen>
+    <dimen name="add_file_layout_width">0dp</dimen>
+    <dimen name="add_file_another_layout_width">0dp</dimen>
+    <dimen name="add_file_layout_padding">5dp</dimen>
+    <dimen name="save_layout_width">0dp</dimen>
+    <dimen name="save_layout_min_text_size">14sp</dimen>
+    <dimen name="save_layout_text_size">24sp</dimen>
+    <dimen name="input_text_line_height">28sp</dimen>
+</resources>
+
+

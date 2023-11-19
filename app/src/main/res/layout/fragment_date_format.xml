@@ -1,0 +1,317 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background_common"
+    android:minWidth="@dimen/min_width"
+    android:minHeight="@dimen/min_height"
+    tools:context=".presentation.settings.DateFormatFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_layout_height"
+        app:cardBackgroundColor="@color/first_background_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                    android:id="@+id/ivMainMenu"
+                    android:layout_width="@dimen/menu_icon_width"
+                    android:layout_height="@dimen/menu_icon_height"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="4dp"
+                    android:contentDescription="@string/open_menu"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tvReminderDate"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/menu_1" />
+
+            <TextView
+                android:id="@+id/tvReminderDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/comfortaa_regular"
+                android:text="@string/date_format"
+                android:textAllCaps="false"
+                android:textColor="@color/color_primary_text"
+                android:textDirection="locale"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                    android:id="@+id/ivSetting"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/go_to_application_settings"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    app:srcCompat="@drawable/settings"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/tvReminderDate"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0"
+                     />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/selected_date_format_list"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_weight="1"
+                    android:background="@color/background_none"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <RadioButton
+                        android:id="@+id/rbDateFormat1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/fifty_dp_height"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:text="@string/date_format"
+                        android:textColor="@color/color_primary_text"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbDateFormat2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/fifty_dp_height"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:text="@string/date_format"
+                        android:textColor="@color/color_primary_text"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbDateFormat3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/fifty_dp_height"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:text="@string/date_format"
+                        android:textColor="@color/color_primary_text"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbDateFormat4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/fifty_dp_height"
+                        android:layout_marginTop="24dp"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:text="@string/date_format"
+                        android:textColor="@color/color_primary_text"
+                        android:textSize="18sp" />
+
+
+                    <RadioButton
+                        android:id="@+id/rbDateFormat5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/fifty_dp_height"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:text="@string/date_format"
+                        android:textColor="@color/color_primary_text"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbDateFormat6"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/fifty_dp_height"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:text="@string/date_format"
+                        android:textColor="@color/color_primary_text"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbDateFormat7"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/fifty_dp_height"
+                        android:layout_marginTop="24dp"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:text="@string/date_format"
+                        android:textColor="@color/color_primary_text"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbDateFormat8"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/fifty_dp_height"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:text="@string/date_format"
+                        android:textColor="@color/color_primary_text"
+                        android:textSize="18sp" />
+
+
+                    <RadioButton
+                        android:id="@+id/rbDateFormat9"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/fifty_dp_height"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:text="@string/date_format"
+                        android:textColor="@color/color_primary_text"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbDateFormat10"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/fifty_dp_height"
+                        android:layout_marginTop="24dp"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:text="@string/date_format"
+                        android:textColor="@color/color_primary_text"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbDateFormat11"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/fifty_dp_height"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:text="@string/date_format"
+                        android:textColor="@color/color_primary_text"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbDateFormat12"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/fifty_dp_height"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:text="@string/date_format"
+                        android:textColor="@color/color_primary_text"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbDateFormat13"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/fifty_dp_height"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:text="@string/date_format"
+                        android:textColor="@color/color_primary_text"
+                        android:textSize="18sp" />
+
+                </RadioGroup>
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="@dimen/email_footer_width"
+            android:layout_height="@dimen/email_footer_height"
+            android:background="@color/color_background_common"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+        <LinearLayout
+                android:id="@+id/laCancel"
+                android:layout_width="@dimen/cancel_layout_width"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <TextView
+                        android:id="@+id/tvCancelButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:padding="14dp"
+                        android:text="@string/back"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_primary_text"
+                        android:textSize="@dimen/cancel_text"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+                android:id="@+id/laSave"
+                android:layout_width="@dimen/save_layout_width"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <View
+                        android:id="@+id/view3"
+                        android:layout_width="@dimen/footer_separator_width"
+                        android:layout_height="@dimen/footer_separator_height"
+                        android:background="@color/color_line_separator"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

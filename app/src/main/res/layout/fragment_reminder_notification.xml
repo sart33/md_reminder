@@ -1,0 +1,1974 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_reminder"
+    android:textAlignment="center"
+    tools:context=".presentation.notification.ReminderNotificationFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cvMessage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+        <View
+            android:id="@+id/vMask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/image_background_mask"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/notification_header_panel"
+            app:cardBackgroundColor="@color/notification_panel_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                        android:id="@+id/tvReminderDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_start_title"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:text="13 січня, 2023"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+                        android:textColor="#FFFFFF"
+                        android:textDirection="locale"
+                        android:textSize="@dimen/reminder_notification_title"
+                        app:autoSizeTextType="uniform"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivTimer"
+                    android:layout_width="@dimen/icon_timer"
+                    android:layout_height="@dimen/icon_timer"
+                    android:layout_marginEnd="@dimen/icon_timer_margin_end"
+                    android:contentDescription="@string/alarm_icon"
+                    android:src="@drawable/timer"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tvReminderTime"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                        android:id="@+id/tvReminderTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginEnd="@dimen/margin_start_title"
+                        android:fontFamily="sans-serif"
+                        android:text="17:27"
+                        android:textColor="#FFFFFF"
+                        android:textDirection="locale"
+
+                        android:textSize="@dimen/reminder_notification_title"
+                        android:textStyle="normal"
+                        app:autoSizeTextType="uniform"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                    android:id="@+id/tvReminderMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/text_reminder_window"
+                    android:fontFamily="@font/comfortaa_regular"
+                    android:padding="@dimen/padding_reminder_text"
+                    android:text="Позвонить напомнить о покупке торта"
+                    android:textColor="#FFFFFF"
+                    android:textDirection="locale"
+                    android:textSize="@dimen/reminder_notification_small_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:lineHeight="@dimen/line_height" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clActionBar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/actions_title_window"
+
+                android:background="@color/notification_panel_color"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvReminderMessage">
+
+                <TextView
+                    android:id="@+id/tvActionTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_start_title"
+                    android:fontFamily="@font/comfortaa_regular"
+                    android:text="@string/actions"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+                    android:textColor="#FFFFFF"
+                    android:textDirection="locale"
+                    android:textSize="@dimen/reminder_notification_title"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:layout_width="@dimen/scroll_width"
+            android:layout_height="@dimen/scroll_height"
+            android:contentDescription="@string/information_and_actions_in_current_remind"
+            app:layout_constraintBottom_toTopOf="@+id/clFile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clContactOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_full_action"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/imageViewOne"
+                        android:layout_width="@dimen/action_icon"
+                        android:layout_height="@dimen/action_icon"
+                        android:layout_marginStart="@dimen/margin_start_icon_action"
+                        android:contentDescription="@string/phone_icon"
+                        android:src="@drawable/tm_phonechapter"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="@dimen/cv_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/cv_margin_start"
+                        android:layout_marginEnd="@dimen/cv_margin_end"
+                        app:cardBackgroundColor="@color/background_none"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewOne"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivAvatarOne"
+                            android:layout_width="@dimen/avatar_icon"
+                            android:layout_height="@dimen/avatar_icon"
+                            android:contentDescription="@string/avatar_contact_one_icon"
+                            android:src="@drawable/no_image_icon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvNameOne"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action_detail"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:lineHeight="22sp"
+                            android:padding="@dimen/padding_action"
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_contact_name"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivAvatarOne"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvPhoneNumberOne"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action_detail"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_notification_small_text"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivAvatarOne"
+                            app:layout_constraintTop_toBottomOf="@+id/tvNameOne" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clContactTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_full_action"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/imageViewTwo"
+                        android:layout_width="@dimen/action_icon"
+                        android:layout_height="@dimen/action_icon"
+                        android:layout_marginStart="@dimen/margin_start_icon_action"
+                        android:contentDescription="@string/invisible_phone_image"
+                        android:src="@drawable/tm_phonechapter"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="@dimen/cv_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/cv_margin_start"
+                        android:layout_marginEnd="@dimen/cv_margin_end"
+                        app:cardBackgroundColor="@color/background_none"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewTwo"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivAvatarTwo"
+                            android:layout_width="@dimen/avatar_icon"
+                            android:layout_height="@dimen/avatar_icon"
+                            android:contentDescription="@string/avatar_contact_two_icon"
+                            android:src="@drawable/no_image_icon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvNameTwo"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action_detail"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:lineHeight="22sp"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_contact_name"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivAvatarTwo"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvPhoneNumberTwo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action_detail"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_notification_small_text"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivAvatarTwo"
+                            app:layout_constraintTop_toBottomOf="@+id/tvNameTwo" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clContactThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_full_action"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/imageViewThree"
+                        android:layout_width="@dimen/action_icon"
+                        android:layout_height="@dimen/action_icon"
+                        android:layout_marginStart="@dimen/margin_start_icon_action"
+                        android:contentDescription="@string/invisible_phone_image"
+                        android:src="@drawable/tm_phonechapter"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="@dimen/cv_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/cv_margin_start"
+                        android:layout_marginEnd="@dimen/cv_margin_end"
+                        app:cardBackgroundColor="@color/background_none"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewThree"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivAvatarThree"
+                            android:layout_width="@dimen/avatar_icon"
+                            android:layout_height="@dimen/avatar_icon"
+                            android:contentDescription="@string/avatar_contact_three_icon"
+                            android:src="@drawable/no_image_icon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvNameThree"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action_detail"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:lineHeight="22sp"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_contact_name"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivAvatarThree"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvPhoneNumberThree"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action_detail"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_notification_small_text"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivAvatarThree"
+                            app:layout_constraintTop_toBottomOf="@+id/tvNameThree" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clContactFour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_full_action"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/imageViewFour"
+                        android:layout_width="@dimen/action_icon"
+                        android:layout_height="@dimen/action_icon"
+                        android:layout_marginStart="@dimen/margin_start_icon_action"
+                        android:contentDescription="@string/invisible_phone_image"
+                        android:src="@drawable/tm_phonechapter"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="@dimen/cv_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/cv_margin_start"
+                        android:layout_marginEnd="@dimen/cv_margin_end"
+                        app:cardBackgroundColor="@color/background_none"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewFour"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivAvatarFour"
+                            android:layout_width="@dimen/avatar_icon"
+                            android:layout_height="@dimen/avatar_icon"
+                            android:contentDescription="@string/avatar_contact_four_icon"
+                            android:src="@drawable/no_image_icon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvNameFour"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action_detail"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:lineHeight="22sp"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_contact_name"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivAvatarFour"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvPhoneNumberFour"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action_detail"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_notification_small_text"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivAvatarFour"
+                            app:layout_constraintTop_toBottomOf="@+id/tvNameFour" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clContactFive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_full_action"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/imageViewFive"
+                        android:layout_width="@dimen/action_icon"
+                        android:layout_height="@dimen/action_icon"
+                        android:layout_marginStart="@dimen/margin_start_icon_action"
+                        android:contentDescription="@string/invisible_phone_image"
+                        android:src="@drawable/tm_phonechapter"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="@dimen/cv_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/cv_margin_start"
+                        android:layout_marginEnd="@dimen/cv_margin_end"
+                        app:cardBackgroundColor="@color/background_none"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewFive"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivAvatarFive"
+                            android:layout_width="@dimen/avatar_icon"
+                            android:layout_height="@dimen/avatar_icon"
+                            android:contentDescription="@string/avatar_contact_five_icon"
+                            android:src="@drawable/no_image_icon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvNameFive"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action_detail"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:lineHeight="22sp"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_contact_name"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivAvatarFive"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvPhoneNumberFive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action_detail"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_notification_small_text"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivAvatarFive"
+                            app:layout_constraintTop_toBottomOf="@+id/tvNameFive" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clContactSix"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_full_action"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/imageViewSix"
+                        android:layout_width="@dimen/action_icon"
+                        android:layout_height="@dimen/action_icon"
+                        android:layout_marginStart="@dimen/margin_start_icon_action"
+                        android:contentDescription="@string/invisible_phone_image"
+                        android:src="@drawable/tm_phonechapter"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="@dimen/cv_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/cv_margin_start"
+                        android:layout_marginEnd="@dimen/cv_margin_end"
+                        app:cardBackgroundColor="@color/background_none"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewSix"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivAvatarSix"
+                            android:layout_width="@dimen/avatar_icon"
+                            android:layout_height="@dimen/avatar_icon"
+                            android:contentDescription="@string/avatar_contact_six_icon"
+                            android:src="@drawable/no_image_icon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvNameSix"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action_detail"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:lineHeight="22sp"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_contact_name"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivAvatarSix"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvPhoneNumberSix"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action_detail"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_notification_small_text"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivAvatarSix"
+                            app:layout_constraintTop_toBottomOf="@+id/tvNameSix" />
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guideline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_begin="20dp" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clPhoneOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_full_action">
+
+                    <ImageView
+                        android:id="@+id/ivPhoneOne"
+                        android:layout_width="@dimen/action_no_icon"
+                        android:layout_height="@dimen/action_no_icon"
+                        android:layout_marginStart="@dimen/margin_start_icon_action"
+                        android:contentDescription="@string/invisible_phone_image"
+                        android:src="@drawable/tm_phonechapter"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="@dimen/cv_width"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/cv_margin_start"
+                        android:layout_marginEnd="@dimen/cv_margin_end"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/ivPhoneOne"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0">
+
+                        <ImageView
+                            android:id="@+id/ivEmptyAvaOne"
+                            android:layout_width="@dimen/avatar_icon"
+                            android:layout_height="@dimen/avatar_icon"
+                            android:contentDescription="@string/invisible_avatar_image"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:src="@tools:sample/avatars" />
+
+                        <TextView
+                            android:id="@+id/tvPhoneOne"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_contact_name"
+
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivEmptyAvaOne"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clPhoneTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_full_action">
+
+                    <ImageView
+                        android:id="@+id/ivPhoneTwo"
+                        android:layout_width="@dimen/action_no_icon"
+                        android:layout_height="@dimen/action_no_icon"
+                        android:layout_marginStart="@dimen/margin_start_icon_action"
+                        android:contentDescription="@string/invisible_phone_image"
+                        android:src="@drawable/tm_phonechapter"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="@dimen/cv_width"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/cv_margin_start"
+                        android:layout_marginEnd="@dimen/cv_margin_end"
+                        android:contentDescription="@string/snooze_current_remind"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivPhoneTwo"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivEmptyAvaTwo"
+                            android:layout_width="@dimen/avatar_icon"
+                            android:layout_height="@dimen/avatar_icon"
+                            android:contentDescription="@string/edit_current_remind"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:src="@tools:sample/avatars" />
+
+                        <TextView
+                            android:id="@+id/tvPhoneTwo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_contact_name"
+
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivEmptyAvaTwo"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clPhoneThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_full_action">
+
+                    <ImageView
+                        android:id="@+id/ivPhoneThree"
+                        android:layout_width="@dimen/action_no_icon"
+                        android:layout_height="@dimen/action_no_icon"
+                        android:layout_marginStart="@dimen/margin_start_no_icon_second"
+                        android:contentDescription="@string/invisible_phone_image"
+                        android:src="@drawable/tm_phonechapter"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="@dimen/cv_width"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/cv_margin_start"
+                        android:layout_marginEnd="@dimen/cv_margin_end"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivPhoneThree"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivEmptyAvaThree"
+                            android:layout_width="@dimen/avatar_icon"
+                            android:layout_height="@dimen/avatar_icon"
+                            android:contentDescription="@string/invisible_avatar_image"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:src="@tools:sample/avatars" />
+
+                        <TextView
+                            android:id="@+id/tvPhoneThree"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_contact_name"
+
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivEmptyAvaThree"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clPhoneFour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_full_action">
+
+                    <ImageView
+                        android:id="@+id/ivPhoneFour"
+                        android:layout_width="@dimen/action_no_icon"
+                        android:layout_height="@dimen/action_no_icon"
+                        android:layout_marginStart="@dimen/margin_start_no_icon_second"
+                        android:contentDescription="@string/invisible_phone_image"
+                        android:src="@drawable/tm_phonechapter"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="@dimen/cv_width"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/cv_margin_start"
+                        android:layout_marginEnd="@dimen/cv_margin_end"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivPhoneFour"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivEmptyAvaFour"
+                            android:layout_width="@dimen/avatar_icon"
+                            android:layout_height="@dimen/avatar_icon"
+                            android:contentDescription="@string/invisible_avatar_image"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:src="@tools:sample/avatars" />
+
+                        <TextView
+                            android:id="@+id/tvPhoneFour"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_contact_name"
+
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivEmptyAvaFour"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clPhoneFive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_full_action">
+
+                    <ImageView
+                        android:id="@+id/ivPhoneFive"
+                        android:layout_width="@dimen/action_no_icon"
+                        android:layout_height="@dimen/action_no_icon"
+                        android:layout_marginStart="@dimen/margin_start_no_icon_second"
+                        android:contentDescription="@string/invisible_phone_image"
+                        android:src="@drawable/tm_phonechapter"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="@dimen/cv_width"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/cv_margin_start"
+                        android:layout_marginEnd="@dimen/cv_margin_end"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivPhoneFive"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivEmptyAvaFive"
+                            android:layout_width="@dimen/avatar_icon"
+                            android:layout_height="@dimen/avatar_icon"
+                            android:contentDescription="@string/invisible_avatar_image"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:src="@tools:sample/avatars" />
+
+                        <TextView
+                            android:id="@+id/tvPhoneFive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_contact_name"
+
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivEmptyAvaFive"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clPhoneSix"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_full_action">
+
+                    <ImageView
+                        android:id="@+id/ivPhoneSix"
+                        android:layout_width="@dimen/action_no_icon"
+                        android:layout_height="@dimen/action_no_icon"
+                        android:layout_marginStart="@dimen/margin_start_no_icon_second"
+                        android:contentDescription="@string/invisible_phone_image"
+                        android:src="@drawable/tm_phonechapter"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="@dimen/cv_width"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/cv_margin_start"
+                        android:layout_marginEnd="@dimen/cv_margin_end"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivPhoneSix"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivEmptyAvaSix"
+                            android:layout_width="@dimen/avatar_icon"
+                            android:layout_height="@dimen/avatar_icon"
+                            android:contentDescription="@string/invisible_avatar_image"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:src="@tools:sample/avatars" />
+
+                        <TextView
+                            android:id="@+id/tvPhoneSix"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_contact_name"
+
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivEmptyAvaSix"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                        android:id="@+id/vContacts"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/vcontacts_height"
+                        android:layout_marginStart="@dimen/vcontacts_margin_start"
+                        android:layout_marginTop="@dimen/vcontacts_margin_top"
+                        android:layout_marginEnd="@dimen/vcontacts_margin_end"
+                        android:layout_marginBottom="@dimen/vcontacts_margin_bottom"
+                        android:background="@color/pureWhite" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clMessageOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_full_action"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/ivMessageOne"
+                        android:layout_width="@dimen/action_icon"
+                        android:layout_height="@dimen/action_icon"
+                        android:layout_marginStart="@dimen/margin_start_icon_action"
+                        android:contentDescription="@string/sms_icon"
+                        android:src="@drawable/tm_smschapter"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="@dimen/cv_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/cv_margin_start"
+                        android:layout_marginEnd="@dimen/cv_margin_end"
+                        app:cardBackgroundColor="@color/background_none"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivMessageOne"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivAvatarMessageOne"
+                            android:layout_width="@dimen/avatar_icon"
+                            android:layout_height="@dimen/avatar_icon"
+                            android:contentDescription="@string/avatar_contact_sms_one_icon"
+                            android:src="@drawable/no_image_icon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvMessageContactOne"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_contact_name"
+
+                            app:layout_constraintStart_toEndOf="@+id/ivAvatarMessageOne"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvMessageTextOne"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action_detail"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_notification_small_text"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivAvatarMessageOne" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clMessageTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_full_action"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/ivMessageTwo"
+                        android:layout_width="@dimen/action_icon"
+                        android:layout_height="@dimen/action_icon"
+                        android:layout_marginStart="@dimen/margin_start_icon_action"
+                        android:contentDescription="@string/invisible_sms_message_image"
+                        android:src="@drawable/tm_smschapter"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="@dimen/cv_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/cv_margin_start"
+                        android:layout_marginEnd="@dimen/cv_margin_end"
+                        app:cardBackgroundColor="@color/background_none"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivMessageTwo"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivAvatarMessageTwo"
+                            android:layout_width="@dimen/avatar_icon"
+                            android:layout_height="@dimen/avatar_icon"
+                            android:contentDescription="@string/avatar_contact_sms_two_icon"
+                            android:src="@drawable/no_image_icon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvMessageContactTwo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_contact_name"
+
+                            app:layout_constraintStart_toEndOf="@+id/ivAvatarMessageTwo"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvMessageTextTwo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action_detail"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_notification_small_text"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivAvatarMessageTwo" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clMessageThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_full_action"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/ivMessageThree"
+                        android:layout_width="@dimen/action_icon"
+                        android:layout_height="@dimen/action_icon"
+                        android:layout_marginStart="@dimen/margin_start_icon_action"
+                        android:contentDescription="@string/invisible_sms_message_image"
+                        android:src="@drawable/tm_smschapter"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="@dimen/cv_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/cv_margin_start"
+                        android:layout_marginEnd="@dimen/cv_margin_end"
+                        app:cardBackgroundColor="@color/background_none"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivMessageThree"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivAvatarMessageThree"
+                            android:layout_width="@dimen/avatar_icon"
+                            android:layout_height="@dimen/avatar_icon"
+                            android:contentDescription="@string/avatar_contact_sms_three_icon"
+                            android:src="@drawable/no_image_icon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvMessageContactThree"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_contact_name"
+
+                            app:layout_constraintStart_toEndOf="@+id/ivAvatarMessageThree"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvMessageTextThree"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action_detail"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_notification_small_text"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivAvatarMessageThree" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clMessageFour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_full_action"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/ivMessageFour"
+                        android:layout_width="@dimen/action_icon"
+                        android:layout_height="@dimen/action_icon"
+                        android:layout_marginStart="@dimen/margin_start_icon_action"
+                        android:contentDescription="@string/invisible_sms_message_image"
+                        android:src="@drawable/tm_smschapter"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="@dimen/cv_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/cv_margin_start"
+                        android:layout_marginEnd="@dimen/cv_margin_end"
+                        app:cardBackgroundColor="@color/background_none"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivMessageFour"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivAvatarMessageFour"
+                            android:layout_width="@dimen/avatar_icon"
+                            android:layout_height="@dimen/avatar_icon"
+                            android:contentDescription="@string/avatar_contact_sms_four_icon"
+                            android:src="@drawable/no_image_icon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvMessageContactFour"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_contact_name"
+                            app:layout_constraintStart_toEndOf="@+id/ivAvatarMessageFour"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvMessageTextFour"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action_detail"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_notification_small_text"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivAvatarMessageFour" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clMessageFive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_full_action"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/ivMessageFive"
+                        android:layout_width="@dimen/action_icon"
+                        android:layout_height="@dimen/action_icon"
+                        android:layout_marginStart="@dimen/margin_start_icon_action"
+                        android:contentDescription="@string/invisible_sms_message_image"
+                        android:src="@drawable/tm_smschapter"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="@dimen/cv_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/cv_margin_start"
+                        android:layout_marginEnd="@dimen/cv_margin_end"
+                        app:cardBackgroundColor="@color/background_none"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivMessageFive"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivAvatarMessageFive"
+                            android:layout_width="@dimen/avatar_icon"
+                            android:layout_height="@dimen/avatar_icon"
+                            android:contentDescription="@string/avatar_contact_sms_five_icon"
+                            android:src="@drawable/no_image_icon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvMessageContactFive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_contact_name"
+
+                            app:layout_constraintStart_toEndOf="@+id/ivAvatarMessageFive"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvMessageTextFive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action_detail"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_notification_small_text"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivAvatarMessageFive" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clMessageSix"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_full_action"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/ivMessageSix"
+                        android:layout_width="@dimen/action_icon"
+                        android:layout_height="@dimen/action_icon"
+                        android:layout_marginStart="@dimen/margin_start_icon_action"
+                        android:contentDescription="@string/invisible_sms_message_image"
+                        android:src="@drawable/tm_smschapter"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="@dimen/cv_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/cv_margin_start"
+                        android:layout_marginEnd="@dimen/cv_margin_end"
+                        app:cardBackgroundColor="@color/background_none"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivMessageSix"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivAvatarMessageSix"
+                            android:layout_width="@dimen/avatar_icon"
+                            android:layout_height="@dimen/avatar_icon"
+                            android:contentDescription="@string/avatar_contact_sms_six_icon"
+                            android:src="@drawable/no_image_icon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvMessageContactSix"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_contact_name"
+                            app:layout_constraintStart_toEndOf="@+id/ivAvatarMessageSix"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvMessageTextSix"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action_detail"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_notification_small_text"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivAvatarMessageSix" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <View
+                        android:id="@+id/vLineMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/line_message_height"
+                        android:layout_marginStart="@dimen/line_message_margin_start"
+                        android:layout_marginTop="@dimen/line_message_margin_top"
+                        android:layout_marginEnd="@dimen/line_message_margin_end"
+                        android:layout_marginBottom="@dimen/line_message_margin_bottom"
+                        android:background="@color/pureWhite" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clMailOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_full_action"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/ivMailOne"
+                        android:layout_width="@dimen/action_icon"
+                        android:layout_height="@dimen/action_icon"
+                        android:layout_marginStart="@dimen/margin_start_icon_action"
+                        android:contentDescription="@string/email_icon"
+                        android:src="@drawable/tm_mailchapter"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="@dimen/cv_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/cv_margin_start"
+                        android:layout_marginEnd="@dimen/cv_margin_end"
+                        app:cardBackgroundColor="@color/background_none"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivMailOne"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivMailAvaOne"
+                            android:layout_width="@dimen/avatar_icon"
+                            android:layout_height="@dimen/avatar_icon"
+                            android:contentDescription="@string/avatar_contact_email_one_icon"
+                            android:src="@drawable/no_image_icon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvEmailTextOne"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_contact_name"
+                            app:layout_constraintStart_toEndOf="@+id/ivMailAvaOne"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvEmailAddressOne"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action_detail"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_notification_small_text"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivMailAvaOne" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clMailTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_full_action"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/ivMailTwo"
+                        android:layout_width="@dimen/action_icon"
+                        android:layout_height="@dimen/action_icon"
+                        android:layout_marginStart="@dimen/margin_start_icon_action"
+                        android:contentDescription="@string/invisible_email_image"
+                        android:src="@drawable/tm_mailchapter"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="@dimen/cv_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/cv_margin_start"
+                        android:layout_marginEnd="@dimen/cv_margin_end"
+                        app:cardBackgroundColor="@color/background_none"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivMailTwo"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivMailAvaTwo"
+                            android:layout_width="@dimen/avatar_icon"
+                            android:layout_height="@dimen/avatar_icon"
+                            android:contentDescription="@string/avatar_contact_email_two_icon"
+                            android:src="@drawable/no_image_icon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvEmailTextTwo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_contact_name"
+                            app:layout_constraintStart_toEndOf="@+id/ivMailAvaTwo"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvEmailAddressTwo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action_detail"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_notification_small_text"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivMailAvaTwo" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clMailThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_full_action"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/ivMailThree"
+                        android:layout_width="@dimen/action_icon"
+                        android:layout_height="@dimen/action_icon"
+                        android:layout_marginStart="@dimen/margin_start_icon_action"
+                        android:contentDescription="@string/invisible_email_image"
+                        android:src="@drawable/tm_mailchapter"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="@dimen/cv_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/cv_margin_start"
+                        android:layout_marginEnd="@dimen/cv_margin_end"
+                        app:cardBackgroundColor="@color/background_none"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivMailThree"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivMailAvaThree"
+                            android:layout_width="@dimen/avatar_icon"
+                            android:layout_height="@dimen/avatar_icon"
+                            android:contentDescription="@string/avatar_contact_email_three_icon"
+                            android:src="@drawable/no_image_icon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvEmailTextThree"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_contact_name"
+                            app:layout_constraintStart_toEndOf="@+id/ivMailAvaThree"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvEmailAddressThree"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action_detail"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_notification_small_text"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivMailAvaThree" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clMailFour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_full_action"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/ivMailFour"
+                        android:layout_width="@dimen/action_icon"
+                        android:layout_height="@dimen/action_icon"
+                        android:layout_marginStart="@dimen/margin_start_icon_action"
+                        android:contentDescription="@string/invisible_email_image"
+                        android:src="@drawable/tm_mailchapter"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="@dimen/cv_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/cv_margin_start"
+                        android:layout_marginEnd="@dimen/cv_margin_end"
+                        app:cardBackgroundColor="@color/background_none"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivMailFour"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivMailAvaFour"
+                            android:layout_width="@dimen/avatar_icon"
+                            android:layout_height="@dimen/avatar_icon"
+                            android:contentDescription="@string/avatar_contact_email_four_icon"
+                            android:src="@drawable/no_image_icon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvEmailTextFour"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_contact_name"
+                            app:layout_constraintStart_toEndOf="@+id/ivMailAvaFour"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvEmailAddressFour"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action_detail"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_notification_small_text"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivMailAvaFour" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clMailFive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_full_action"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/ivMailFive"
+                        android:layout_width="@dimen/action_icon"
+                        android:layout_height="@dimen/action_icon"
+                        android:layout_marginStart="@dimen/margin_start_icon_action"
+                        android:contentDescription="@string/invisible_email_image"
+                        android:src="@drawable/tm_mailchapter"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="@dimen/cv_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/cv_margin_start"
+                        android:layout_marginEnd="@dimen/cv_margin_end"
+                        app:cardBackgroundColor="@color/background_none"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivMailFive"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivMailAvaFive"
+                            android:layout_width="@dimen/avatar_icon"
+                            android:layout_height="@dimen/avatar_icon"
+                            android:contentDescription="@string/avatar_contact_email_five_icon"
+                            android:src="@drawable/no_image_icon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvEmailTextFive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_contact_name"
+                            app:layout_constraintStart_toEndOf="@+id/ivMailAvaFive"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvEmailAddressFive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action_detail"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_notification_small_text"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivMailAvaFive" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clMailSix"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_full_action"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/ivMailSix"
+                        android:layout_width="@dimen/action_icon"
+                        android:layout_height="@dimen/action_icon"
+                        android:layout_marginStart="@dimen/margin_start_icon_action"
+                        android:contentDescription="@string/invisible_email_image"
+                        android:src="@drawable/tm_mailchapter"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="@dimen/cv_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/cv_margin_start"
+                        android:layout_marginEnd="@dimen/cv_margin_end"
+                        app:cardBackgroundColor="@color/background_none"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivMailSix"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivMailAvaSix"
+                            android:layout_width="@dimen/avatar_icon"
+                            android:layout_height="@dimen/avatar_icon"
+                            android:contentDescription="@string/avatar_contact_email_six_icon"
+                            android:src="@drawable/no_image_icon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvEmailTextSix"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_contact_name"
+                            app:layout_constraintStart_toEndOf="@+id/ivMailAvaSix"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvEmailAddressSix"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_action_detail"
+                            android:fontFamily="@font/comfortaa_regular"
+                            android:padding="@dimen/padding_action"
+                            android:text=""
+                            android:textColor="#FFFFFF"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/reminder_notification_small_text"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivMailAvaSix" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clFile"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_file_height"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/background_none"
+                app:layout_constraintBottom_toTopOf="@+id/cvComandPanel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+            <LinearLayout
+                    android:id="@+id/llAddFile"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/added_file"
+                    android:layout_marginBottom="26dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                        android:id="@+id/ivAddedFile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/added_file"
+                        android:src="@drawable/mi_add_file"
+                        android:visibility="visible" />
+
+                <TextView
+                        android:id="@+id/tvAddedFilename"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="9"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:paddingTop="@dimen/addfile_padding_top"
+                        android:paddingBottom="@dimen/addfile_padding_bottom"
+                        android:text=""
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+                        android:textColor="#FFFFFF"
+                        android:textDirection="locale"
+                        android:textSize="@dimen/addfile_textsize"
+                        android:visibility="visible" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvComandPanel"
+            android:layout_width="@dimen/another_footer_width"
+            android:layout_height="@dimen/layout_footer_height"
+            app:cardBackgroundColor="@color/background_none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cv_footer_height"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivStop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/deactivate_current_remind"
+                    android:src="@drawable/mi_stop" />
+
+                <ImageView
+                    android:id="@+id/ivEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/edit_current_remind"
+                    android:src="@drawable/mi_edit" />
+
+                <ImageView
+                    android:id="@+id/ivSnooze"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/snooze_current_remind"
+                    android:src="@drawable/mi_snooze" />
+
+                <ImageView
+                    android:id="@+id/ivTrash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/delete_current_remind"
+                    android:src="@drawable/mi_trashbox" />
+
+                <ImageView
+                    android:id="@+id/ivCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/close_current_remind"
+                    android:src="@drawable/mi_check" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
