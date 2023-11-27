@@ -15,6 +15,7 @@ import androidx.lifecycle.ViewModelProvider
 import solutions.mobiledev.reminder.R
 import solutions.mobiledev.reminder.databinding.FragmentPostponeNotificationBinding
 import solutions.mobiledev.reminder.domain.entity.ReminderItem
+import solutions.mobiledev.reminder.presentation.Constants
 import solutions.mobiledev.reminder.presentation.reminder.ReminderViewModel
 import solutions.mobiledev.reminder.presentation.reminder.fragment.ReminderDialogFragment
 import java.text.SimpleDateFormat
@@ -101,7 +102,6 @@ class PostponeNotificationFragment : ReminderDialogFragment() {
             ViewModelProvider(this@PostponeNotificationFragment)[ReminderViewModel::class.java]
         super.onViewCreated(view, savedInstanceState)
         topBarTouchAnimation()
-//        if (LocalDateTime.now().toString() <= DATE_TIME) {
         tvDayOne.text = getText(R.string.tomorrow)
         tvTomorrow9.text =
             "${getText(R.string.tomorrow)} ${dateTimeManager.getTime(LocalTime.parse("09:00"))}"
@@ -125,12 +125,15 @@ class PostponeNotificationFragment : ReminderDialogFragment() {
                     animatorSetMin15.start()
                     newLocalDateTime = localDateTime.plusMinutes(15)
                     val dateTimeArr = newLocalDateTime.toString().split("T")
-                    val timeArr = dateTimeArr[1].split(".")
+                    val timeArr = dateTimeArr[1].split(":")
+                    val firstDateTime = dateTimeArr[0] + "T" + timeArr[0] + ":" + timeArr[1]
+                    val date = dateTimeArr[0]
+                    val time = timeArr[0] +  ":" + timeArr[1]
                     editDateAndTimeRem(
                         reminderItem.id,
-                        newLocalDateTime.toString(),
-                        dateTimeArr[0],
-                        timeArr[0],
+                        firstDateTime,
+                        date,
+                        time,
                         count
                     )
                     dismiss()
@@ -139,12 +142,15 @@ class PostponeNotificationFragment : ReminderDialogFragment() {
                     animatorSetMin30.start()
                     newLocalDateTime = localDateTime.plusMinutes(30)
                     val dateTimeArr = newLocalDateTime.toString().split("T")
-                    val timeArr = dateTimeArr[1].split(".")
+                    val timeArr = dateTimeArr[1].split(":")
+                    val firstDateTime = dateTimeArr[0] + "T" + timeArr[0] + ":" + timeArr[1]
+                    val date = dateTimeArr[0]
+                    val time = timeArr[0] +  ":" + timeArr[1]
                     editDateAndTimeRem(
                         reminderItem.id,
-                        newLocalDateTime.toString(),
-                        dateTimeArr[0],
-                        timeArr[0],
+                        firstDateTime,
+                        date,
+                        time,
                         count
                     )
                     dismiss()
@@ -153,12 +159,15 @@ class PostponeNotificationFragment : ReminderDialogFragment() {
                     animatorSetMin45.start()
                     newLocalDateTime = localDateTime.plusMinutes(45)
                     val dateTimeArr = newLocalDateTime.toString().split("T")
-                    val timeArr = dateTimeArr[1].split(".")
+                    val timeArr = dateTimeArr[1].split(":")
+                    val firstDateTime = dateTimeArr[0] + "T" + timeArr[0] + ":" + timeArr[1]
+                    val date = dateTimeArr[0]
+                    val time = timeArr[0] +  ":" + timeArr[1]
                     editDateAndTimeRem(
                         reminderItem.id,
-                        newLocalDateTime.toString(),
-                        dateTimeArr[0],
-                        timeArr[0],
+                        firstDateTime,
+                        date,
+                        time,
                         count
                     )
                     dismiss()
@@ -167,12 +176,15 @@ class PostponeNotificationFragment : ReminderDialogFragment() {
                     animatorSetHourOne.start()
                     newLocalDateTime = localDateTime.plusHours(1)
                     val dateTimeArr = newLocalDateTime.toString().split("T")
-                    val timeArr = dateTimeArr[1].split(".")
+                    val timeArr = dateTimeArr[1].split(":")
+                    val firstDateTime = dateTimeArr[0] + "T" + timeArr[0] + ":" + timeArr[1]
+                    val date = dateTimeArr[0]
+                    val time = timeArr[0] +  ":" + timeArr[1]
                     editDateAndTimeRem(
                         reminderItem.id,
-                        newLocalDateTime.toString(),
-                        dateTimeArr[0],
-                        timeArr[0],
+                        firstDateTime,
+                        date,
+                        time,
                         count
                     )
                     dismiss()
@@ -181,12 +193,15 @@ class PostponeNotificationFragment : ReminderDialogFragment() {
                     animatorSetDayOne.start()
                     newLocalDateTime = localDateTime.plusDays(1)
                     val dateTimeArr = newLocalDateTime.toString().split("T")
-                    val timeArr = dateTimeArr[1].split(".")
+                    val timeArr = dateTimeArr[1].split(":")
+                    val firstDateTime = dateTimeArr[0] + "T" + timeArr[0] + ":" + timeArr[1]
+                    val date = dateTimeArr[0]
+                    val time = timeArr[0] +  ":" + timeArr[1]
                     editDateAndTimeRem(
                         reminderItem.id,
-                        newLocalDateTime.toString(),
-                        dateTimeArr[0],
-                        timeArr[0],
+                        firstDateTime,
+                        date,
+                        time,
                         count
                     )
                     dismiss()
@@ -197,12 +212,11 @@ class PostponeNotificationFragment : ReminderDialogFragment() {
                     val dateTimeList = newLocalDateTime.toString().split("T")
                     newLocalDateTime = LocalDateTime.parse("${dateTimeList[0]}T09:00")
                     val dateTimeArr = newLocalDateTime.toString().split("T")
-                    val timeArr = dateTimeArr[1].split(".")
                     editDateAndTimeRem(
                         reminderItem.id,
                         newLocalDateTime.toString(),
                         dateTimeArr[0],
-                        timeArr[0],
+                        "09:00",
                         count
                     )
                     dismiss()
@@ -213,12 +227,11 @@ class PostponeNotificationFragment : ReminderDialogFragment() {
                     val dateTimeList = newLocalDateTime.toString().split("T")
                     newLocalDateTime = LocalDateTime.parse("${dateTimeList[0]}T13:00")
                     val dateTimeArr = newLocalDateTime.toString().split("T")
-                    val timeArr = dateTimeArr[1].split(".")
                     editDateAndTimeRem(
                         reminderItem.id,
                         newLocalDateTime.toString(),
                         dateTimeArr[0],
-                        timeArr[0],
+                        "13:00",
                         count
                     )
                     dismiss()
@@ -229,12 +242,11 @@ class PostponeNotificationFragment : ReminderDialogFragment() {
                     val dateTimeList = newLocalDateTime.toString().split("T")
                     newLocalDateTime = LocalDateTime.parse("${dateTimeList[0]}T18:00")
                     val dateTimeArr = newLocalDateTime.toString().split("T")
-                    val timeArr = dateTimeArr[1].split(".")
                     editDateAndTimeRem(
                         reminderItem.id,
                         newLocalDateTime.toString(),
                         dateTimeArr[0],
-                        timeArr[0],
+                        "18:00",
                         count
                     )
                     dismiss()
@@ -245,12 +257,11 @@ class PostponeNotificationFragment : ReminderDialogFragment() {
                     val dateTimeList = newLocalDateTime.toString().split("T")
                     newLocalDateTime = LocalDateTime.parse("${dateTimeList[0]}T21:00")
                     val dateTimeArr = newLocalDateTime.toString().split("T")
-                    val timeArr = dateTimeArr[1].split(".")
                     editDateAndTimeRem(
                         reminderItem.id,
                         newLocalDateTime.toString(),
                         dateTimeArr[0],
-                        timeArr[0],
+                        "21:00",
                         count
                     )
                     dismiss()
@@ -290,7 +301,7 @@ class PostponeNotificationFragment : ReminderDialogFragment() {
 
         animatorSetMin15 = AnimatorSet()
         animatorSetMin15.playTogether(bgColorAnimatorMin15, textColorAnimatorMin15)
-        animatorSetMin15.duration = 500 // 500мс
+        animatorSetMin15.duration = Constants.DEFAULT_DURATION
 
         val bgColorAnimatorMin30 = ValueAnimator.ofObject(
             ArgbEvaluator(),
@@ -315,7 +326,7 @@ class PostponeNotificationFragment : ReminderDialogFragment() {
 
         animatorSetMin30 = AnimatorSet()
         animatorSetMin30.playTogether(bgColorAnimatorMin30, textColorAnimatorMin30)
-        animatorSetMin30.duration = 500 // 500мс
+        animatorSetMin30.duration = Constants.DEFAULT_DURATION
 
         val bgColorAnimatorMin45 = ValueAnimator.ofObject(
             ArgbEvaluator(),
@@ -340,7 +351,7 @@ class PostponeNotificationFragment : ReminderDialogFragment() {
 
         animatorSetMin45 = AnimatorSet()
         animatorSetMin45.playTogether(bgColorAnimatorMin45, textColorAnimatorMin45)
-        animatorSetMin45.duration = 500 // 500мс
+        animatorSetMin45.duration = Constants.DEFAULT_DURATION
 
         val bgColorAnimatorHourOne = ValueAnimator.ofObject(
             ArgbEvaluator(),
@@ -365,7 +376,7 @@ class PostponeNotificationFragment : ReminderDialogFragment() {
 
         animatorSetHourOne = AnimatorSet()
         animatorSetHourOne.playTogether(bgColorAnimatorHourOne, textColorAnimatorHourOne)
-        animatorSetHourOne.duration = 500 // 500мс
+        animatorSetHourOne.duration = Constants.DEFAULT_DURATION
 
 
         val bgColorAnimatorDayOne = ValueAnimator.ofObject(
@@ -391,7 +402,7 @@ class PostponeNotificationFragment : ReminderDialogFragment() {
 
         animatorSetDayOne = AnimatorSet()
         animatorSetDayOne.playTogether(bgColorAnimatorDayOne, textColorAnimatorDayOne)
-        animatorSetDayOne.duration = 500 // 500мс
+        animatorSetDayOne.duration = Constants.DEFAULT_DURATION
 
         val bgColorAnimatorTomorrow9 = ValueAnimator.ofObject(
             ArgbEvaluator(),
@@ -416,7 +427,7 @@ class PostponeNotificationFragment : ReminderDialogFragment() {
 
         animatorSetTomorrow9 = AnimatorSet()
         animatorSetTomorrow9.playTogether(bgColorAnimatorTomorrow9, textColorAnimatorTomorrow9)
-        animatorSetTomorrow9.duration = 500 // 500мс
+        animatorSetTomorrow9.duration = Constants.DEFAULT_DURATION
 
         val bgColorAnimatorTomorrow13 = ValueAnimator.ofObject(
             ArgbEvaluator(),
@@ -441,7 +452,7 @@ class PostponeNotificationFragment : ReminderDialogFragment() {
 
         animatorSetTomorrow13 = AnimatorSet()
         animatorSetTomorrow13.playTogether(bgColorAnimatorTomorrow13, textColorAnimatorTomorrow13)
-        animatorSetTomorrow13.duration = 500 // 500мс
+        animatorSetTomorrow13.duration = Constants.DEFAULT_DURATION
 
         val bgColorAnimatorTomorrow18 = ValueAnimator.ofObject(
             ArgbEvaluator(),
@@ -466,7 +477,7 @@ class PostponeNotificationFragment : ReminderDialogFragment() {
 
         animatorSetTomorrow18 = AnimatorSet()
         animatorSetTomorrow18.playTogether(bgColorAnimatorTomorrow18, textColorAnimatorTomorrow18)
-        animatorSetTomorrow18.duration = 500 // 500мс
+        animatorSetTomorrow18.duration = Constants.DEFAULT_DURATION
 
         val bgColorAnimatorTomorrow21 = ValueAnimator.ofObject(
             ArgbEvaluator(),
@@ -491,7 +502,7 @@ class PostponeNotificationFragment : ReminderDialogFragment() {
 
         animatorSetTomorrow21 = AnimatorSet()
         animatorSetTomorrow21.playTogether(bgColorAnimatorTomorrow21, textColorAnimatorTomorrow21)
-        animatorSetTomorrow21.duration = 500 // 500мс
+        animatorSetTomorrow21.duration = Constants.DEFAULT_DURATION
 
         val bgColorAnimatorNewDate = ValueAnimator.ofObject(
             ArgbEvaluator(),
@@ -516,7 +527,7 @@ class PostponeNotificationFragment : ReminderDialogFragment() {
 
         animatorSetNewDate = AnimatorSet()
         animatorSetNewDate.playTogether(bgColorAnimatorNewDate, textColorAnimatorNewDate)
-        animatorSetNewDate.duration = 500 // 500мс
+        animatorSetNewDate.duration = Constants.DEFAULT_DURATION
 
     }
 

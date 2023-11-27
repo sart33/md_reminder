@@ -38,6 +38,7 @@ import solutions.mobiledev.reminder.domain.entity.ReminderItem
 import solutions.mobiledev.reminder.domain.entity.SaveContactItem
 import solutions.mobiledev.reminder.domain.entity.SmsItem
 import solutions.mobiledev.reminder.presentation.BaseFragment
+import solutions.mobiledev.reminder.presentation.Constants
 import solutions.mobiledev.reminder.presentation.notification.ReminderItemNotificationFragment.Companion.UNDEFINED_ID
 import solutions.mobiledev.reminder.presentation.reminder.ReminderViewModel
 import solutions.mobiledev.reminder.presentation.reminder.fragment.ReminderEditFragment
@@ -198,127 +199,127 @@ class ReminderItemNotificationFragment : BaseFragment<FragmentReminderItemNotifi
 
         animatorSetContactOne = ObjectAnimator.ofInt(clContactOne, "backgroundColor", startColor, endColor)
         animatorSetContactOne.setEvaluator(ArgbEvaluator())
-        animatorSetContactOne.duration = 500 // 500мс
+        animatorSetContactOne.duration = Constants.DEFAULT_DURATION
 
         animatorSetContactTwo = ObjectAnimator.ofInt(clContactTwo, "backgroundColor", startColor, endColor)
         animatorSetContactTwo.setEvaluator(ArgbEvaluator())
-        animatorSetContactTwo.duration = 500 // 500мс
+        animatorSetContactTwo.duration = Constants.DEFAULT_DURATION
 
         animatorSetContactThree = ObjectAnimator.ofInt(clContactThree, "backgroundColor", startColor, endColor)
         animatorSetContactThree.setEvaluator(ArgbEvaluator())
-        animatorSetContactThree.duration = 500 // 500мс
+        animatorSetContactThree.duration = Constants.DEFAULT_DURATION
 
         animatorSetContactFour = ObjectAnimator.ofInt(clContactFour, "backgroundColor", startColor, endColor)
         animatorSetContactFour.setEvaluator(ArgbEvaluator())
-        animatorSetContactFour.duration = 500 // 500мс
+        animatorSetContactFour.duration = Constants.DEFAULT_DURATION
 
         animatorSetContactFive = ObjectAnimator.ofInt(clContactFive, "backgroundColor", startColor, endColor)
         animatorSetContactFive.setEvaluator(ArgbEvaluator())
-        animatorSetContactFive.duration = 500 // 500мс
+        animatorSetContactFive.duration = Constants.DEFAULT_DURATION
 
         animatorSetContactSix = ObjectAnimator.ofInt(clContactSix, "backgroundColor", startColor, endColor)
         animatorSetContactSix.setEvaluator(ArgbEvaluator())
-        animatorSetContactSix.duration = 500 // 500мс
+        animatorSetContactSix.duration = Constants.DEFAULT_DURATION
 
 
         animatorSetMessageOne = ObjectAnimator.ofInt(clMessageOne, "backgroundColor", startColor, endColor)
         animatorSetMessageOne.setEvaluator(ArgbEvaluator())
-        animatorSetMessageOne.duration = 500 // 500мс
+        animatorSetMessageOne.duration = Constants.DEFAULT_DURATION
 
         animatorSetMessageTwo = ObjectAnimator.ofInt(clMessageTwo, "backgroundColor", startColor, endColor)
         animatorSetMessageTwo.setEvaluator(ArgbEvaluator())
-        animatorSetMessageTwo.duration = 500 // 500мс
+        animatorSetMessageTwo.duration = Constants.DEFAULT_DURATION
 
         animatorSetMessageThree = ObjectAnimator.ofInt(clMessageThree, "backgroundColor", startColor, endColor)
         animatorSetMessageThree.setEvaluator(ArgbEvaluator())
-        animatorSetMessageThree.duration = 500 // 500мс
+        animatorSetMessageThree.duration = Constants.DEFAULT_DURATION
 
         animatorSetMessageFour = ObjectAnimator.ofInt(clMessageFour, "backgroundColor", startColor, endColor)
         animatorSetMessageFour.setEvaluator(ArgbEvaluator())
-        animatorSetMessageFour.duration = 500 // 500мс
+        animatorSetMessageFour.duration = Constants.DEFAULT_DURATION
 
         animatorSetMessageFive = ObjectAnimator.ofInt(clMessageFive, "backgroundColor", startColor, endColor)
         animatorSetMessageFive.setEvaluator(ArgbEvaluator())
-        animatorSetMessageFive.duration = 500 // 500мс
+        animatorSetMessageFive.duration = Constants.DEFAULT_DURATION
 
         animatorSetMessageSix = ObjectAnimator.ofInt(clMessageSix, "backgroundColor", startColor, endColor)
         animatorSetMessageSix.setEvaluator(ArgbEvaluator())
-        animatorSetMessageSix.duration = 500 // 500мс
+        animatorSetMessageSix.duration = Constants.DEFAULT_DURATION
 
 
         animatorSetMailOne = ObjectAnimator.ofInt(clMailOne, "backgroundColor", startColor, endColor)
         animatorSetMailOne.setEvaluator(ArgbEvaluator())
-        animatorSetMailOne.duration = 500 // 500мс
+        animatorSetMailOne.duration = Constants.DEFAULT_DURATION
 
         animatorSetMailTwo = ObjectAnimator.ofInt(clMailTwo, "backgroundColor", startColor, endColor)
         animatorSetMailTwo.setEvaluator(ArgbEvaluator())
-        animatorSetMailTwo.duration = 500 // 500мс
+        animatorSetMailTwo.duration = Constants.DEFAULT_DURATION
 
         animatorSetMailThree = ObjectAnimator.ofInt(clMailThree, "backgroundColor", startColor, endColor)
         animatorSetMailThree.setEvaluator(ArgbEvaluator())
-        animatorSetMailThree.duration = 500 // 500мс
+        animatorSetMailThree.duration = Constants.DEFAULT_DURATION
 
         animatorSetMailFour = ObjectAnimator.ofInt(clMailFour, "backgroundColor", startColor, endColor)
         animatorSetMailFour.setEvaluator(ArgbEvaluator())
-        animatorSetMailFour.duration = 500 // 500мс
+        animatorSetMailFour.duration = Constants.DEFAULT_DURATION
 
         animatorSetMailFive = ObjectAnimator.ofInt(clMailFive, "backgroundColor", startColor, endColor)
         animatorSetMailFive.setEvaluator(ArgbEvaluator())
-        animatorSetMailFive.duration = 500 // 500мс
+        animatorSetMailFive.duration = Constants.DEFAULT_DURATION
 
         animatorSetMailSix = ObjectAnimator.ofInt(clMailSix, "backgroundColor", startColor, endColor)
         animatorSetMailSix.setEvaluator(ArgbEvaluator())
-        animatorSetMailSix.duration = 500 // 500мс
+        animatorSetMailSix.duration = Constants.DEFAULT_DURATION
 
 
         animatorSetPhoneOne = ObjectAnimator.ofInt(clPhoneOne, "backgroundColor", startColor, endColor)
         animatorSetPhoneOne.setEvaluator(ArgbEvaluator())
-        animatorSetPhoneOne.duration = 500 // 500мс
+        animatorSetPhoneOne.duration = Constants.DEFAULT_DURATION
 
         animatorSetPhoneTwo = ObjectAnimator.ofInt(clPhoneTwo, "backgroundColor", startColor, endColor)
         animatorSetPhoneTwo.setEvaluator(ArgbEvaluator())
-        animatorSetPhoneTwo.duration = 500 // 500мс
+        animatorSetPhoneTwo.duration = Constants.DEFAULT_DURATION
 
         animatorSetPhoneThree = ObjectAnimator.ofInt(clPhoneThree, "backgroundColor", startColor, endColor)
         animatorSetPhoneThree.setEvaluator(ArgbEvaluator())
-        animatorSetPhoneThree.duration = 500 // 500мс
+        animatorSetPhoneThree.duration = Constants.DEFAULT_DURATION
 
         animatorSetPhoneFour = ObjectAnimator.ofInt(clPhoneFour, "backgroundColor", startColor, endColor)
         animatorSetPhoneFour.setEvaluator(ArgbEvaluator())
-        animatorSetPhoneFour.duration = 500 // 500мс
+        animatorSetPhoneFour.duration = Constants.DEFAULT_DURATION
 
         animatorSetPhoneFive = ObjectAnimator.ofInt(clPhoneFive, "backgroundColor", startColor, endColor)
         animatorSetPhoneFive.setEvaluator(ArgbEvaluator())
-        animatorSetPhoneFive.duration = 500 // 500мс
+        animatorSetPhoneFive.duration = Constants.DEFAULT_DURATION
 
         animatorSetPhoneSix = ObjectAnimator.ofInt(clPhoneSix, "backgroundColor", startColor, endColor)
         animatorSetPhoneSix.setEvaluator(ArgbEvaluator())
-        animatorSetPhoneSix.duration = 500 // 500мс
+        animatorSetPhoneSix.duration = Constants.DEFAULT_DURATION
 
         
         animatorSetStop = ObjectAnimator.ofInt(ivStop, "backgroundColor", startColor, endColor)
         animatorSetStop.setEvaluator(ArgbEvaluator())
-        animatorSetStop.duration = 500 // 500мс
+        animatorSetStop.duration = Constants.DEFAULT_DURATION
 
         animatorSetEdit = ObjectAnimator.ofInt(ivEdit, "backgroundColor", startColor, endColor)
         animatorSetEdit.setEvaluator(ArgbEvaluator())
-        animatorSetEdit.duration = 500 // 500мс
+        animatorSetEdit.duration = Constants.DEFAULT_DURATION
 
         animatorSetSnooze = ObjectAnimator.ofInt(ivSnooze, "backgroundColor", startColor, endColor)
         animatorSetSnooze.setEvaluator(ArgbEvaluator())
-        animatorSetSnooze.duration = 500 // 500мс
+        animatorSetSnooze.duration = Constants.DEFAULT_DURATION
 
         animatorSetTrash = ObjectAnimator.ofInt(ivTrash, "backgroundColor", startColor, endColor)
         animatorSetTrash.setEvaluator(ArgbEvaluator())
-        animatorSetTrash.duration = 500 // 500мс
+        animatorSetTrash.duration = Constants.DEFAULT_DURATION
 
         animatorSetCheck = ObjectAnimator.ofInt(ivCheck, "backgroundColor", startColor, endColor)
         animatorSetCheck.setEvaluator(ArgbEvaluator())
-        animatorSetCheck.duration = 500 // 500мс
+        animatorSetCheck.duration = Constants.DEFAULT_DURATION
 
         animatorSetFile = ObjectAnimator.ofInt(llAddFile, "backgroundColor", startColor, endColor)
         animatorSetFile.setEvaluator(ArgbEvaluator())
-        animatorSetFile.duration = 500 // 500мс
+        animatorSetFile.duration = Constants.DEFAULT_DURATION
     }
 
     private fun openFile(name: String) {
