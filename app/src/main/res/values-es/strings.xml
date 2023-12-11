@@ -337,5 +337,8 @@
     <string name="notification_visibility_settings">Configuración de visibilidad de notificaciones</string>
     <string name="select_default_sound">Seleccionar sonido predeterminado</string>
     <string name="select_default_background">Seleccionar fondo predeterminado</string>
+    <string name="notification_receive_settings">&lt;h4&gt;Configuración de recepción de notificaciones&lt;/h4&gt;</string>
+    <string name="disable_batery_optimization">"Para recibir notificaciones cuando la aplicación está inactiva, debes hacer lo siguiente:     &lt;br&gt;&lt;br&gt;     &lt;b&gt;1&lt;/b&gt;. Haz clic en el botón &lt;b&gt;'Configuración de detalles de la aplicación'&lt;/b&gt;.     &lt;br&gt;&lt;br&gt;     &lt;b&gt;2&lt;/b&gt;. Dirígete a la sección &lt;b&gt;'Batería'&lt;/b&gt; (o &lt;b&gt;'Ahorro de bataría'&lt;/b&gt;) en la configuración de la aplicación.&lt;br&gt;&lt;br&gt;     &lt;b&gt;3&lt;/b&gt;. Luego, selecciona la opción &lt;b&gt;'Sin restricciones'&lt;/b&gt; (o &lt;b&gt;'No restringido'&lt;/b&gt;). "</string>
+    <string name="application_details_settings">Configuración de detalles de la aplicación</string>
 
 </resources>

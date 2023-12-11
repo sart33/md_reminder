@@ -25,12 +25,13 @@
             android:padding="@dimen/item_contact_padding">
 
             <CheckBox
-                android:id="@+id/ch_contact"
-                android:layout_width="@dimen/checkbox_width"
-                android:layout_height="@dimen/checkbox_height"
-                android:layout_marginTop="@dimen/checkbox_margin_top"
-                android:textColorLink="@color/white"
-                android:visibility="visible" />
+                    android:id="@+id/ch_contact"
+                    android:layout_width="@dimen/checkbox_width"
+                    android:layout_height="@dimen/checkbox_height"
+                    android:layout_marginTop="@dimen/checkbox_margin_top"
+                    android:clickable="false"
+                    android:textColorLink="@color/white"
+                    android:visibility="visible" />
 
             <ImageView
                 android:id="@+id/iv_avatar"

@@ -335,4 +335,8 @@
     <string name="notification_visibility_settings">Paramètres de visibilité des notifications</string>
     <string name="select_default_sound">Sélectionner le son par défaut</string>
     <string name="select_default_background">Sélectionner l`arrière-plan par défaut</string>
+    <string name="application_details_settings">Paramètres des détails de l\'application</string>
+    <string name="notification_receive_settings">&lt;h4&gt;Paramètres de réception des notifications&lt;/h4&gt;</string>
+    <string name="disable_batery_optimization">Pour recevoir des notifications lorsque l\'application est inactive, vous devez effectuer les étapes suivantes :     &lt;br&gt;&lt;br&gt;     &lt;b&gt;1&lt;/b&gt;. Cliquez sur le bouton &lt;b&gt;\'Paramètres des détails de l\'application\'&lt;/b&gt;.     &lt;br&gt;&lt;br&gt;     &lt;b&gt;2&lt;/b&gt;. Accédez à la section &lt;b&gt;\'Batterie\'&lt;/b&gt; (ou &lt;b&gt;\'Utilization de la batterie\'&lt;/b&gt;) dans les paramètres de l\'application.&lt;br&gt;&lt;br&gt;     &lt;b&gt;3&lt;/b&gt;. Ensuite, sélectionnez l\'option &lt;b&gt;\'Non restreint\'&lt;/b&gt; (ou &lt;b&gt;\'Sans restriction\'&lt;/b&gt;).</string>
+
 </resources>

@@ -334,4 +334,7 @@
     <string name="notification_visibility_settings">Benachrichtigung Sichtbarkeitseinstellungen</string>
     <string name="select_default_sound">Standardklang auswählen</string>
     <string name="select_default_background">Standardhintergrund auswählen</string>
+    <string name="notification_receive_settings">&lt;h4&gt;Einstellungen für den Empfang von Benachrichtigungen&lt;/h4&gt;</string>
+    <string name="disable_batery_optimization">"Um Benachrichtigungen zu erhalten, wenn die App inaktiv ist, führen Sie bitte folgende Schritte aus:     &lt;br&gt;&lt;br&gt;     &lt;b&gt;1&lt;/b&gt;. Klicken Sie auf die Schaltfläche &lt;b&gt;'Anwendungsdetails-Einstellungen'&lt;/b&gt;.     &lt;br&gt;&lt;br&gt;     &lt;b&gt;2&lt;/b&gt;. Navigieren Sie zum Abschnitt &lt;b&gt;'Akku'&lt;/b&gt; (oder &lt;b&gt;'Energiasparmodus'&lt;/b&gt;) in den App-Einstellungen.&lt;br&gt;&lt;br&gt;     &lt;b&gt;3&lt;/b&gt;. Wählen Sie dann die Option &lt;b&gt;'Uneingeschränkt'&lt;/b&gt; (oder &lt;b&gt;'Nicht eingeschränkt'&lt;/b&gt;). "</string>
+    <string name="application_details_settings">Anwendungsdetails-Einstellungen</string>
 </resources>

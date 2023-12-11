@@ -513,6 +513,8 @@
     <string name="notification_visibility_settings">Notification visibility settings</string>
     <string name="select_default_sound">Select default sound</string>
     <string name="select_default_background">Select default background</string>
-
+    <string name="application_details_settings">Application Details Settings</string>
+    <string name="notification_receive_settings">&lt;h4&gt;Receive notification settings&lt;/h4&gt;</string>
+    <string name="disable_batery_optimization">To receive notifications even when the app is inactive, you\'ll need to:     &lt;br&gt;&lt;br&gt;     &lt;b&gt;1&lt;/b&gt;. Press the &lt;b&gt;\'Application Details Settings\'&lt;/b&gt; button. &lt;br&gt;&lt;br&gt; &lt;b&gt;2&lt;/b&gt;. Navigate to the &lt;b&gt;\'Battery Usage\'&lt;/b&gt; (or &lt;b&gt;\'Battery\'&lt;/b&gt;) section within the app settings. &lt;br&gt;&lt;br&gt; &lt;b&gt;3&lt;/b&gt;. Select the &lt;b&gt;\'Unrestricted\'&lt;/b&gt; option (or &lt;b&gt;\'Allow background activity\'&lt;/b&gt;).</string>
 
 </resources>

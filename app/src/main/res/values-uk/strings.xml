@@ -336,9 +336,12 @@
 
     <string name="background_image">Зображення фону</string>
     <string name="back">Назад</string>
-    <string name="notification_visibility_settings">Налаштування видимості сповіщень</string>
-    <string name="select_default_sound">Обрати стандартний звук</string>
-    <string name="select_default_background">Обрати стандартний фон</string>
+    <string name="notification_visibility_settings">Налаштування показу сповіщень</string>
+    <string name="select_default_sound">Обрати звук за замовчуванням</string>
+    <string name="select_default_background">Обрати фон за замовчуванням</string>
+    <string name="disable_batery_optimization">Щоб отримувати сповіщення, навіть коли додаток неактивний, вам потрібно:&lt;br&gt;&lt;br&gt; &lt;b&gt;1&lt;/b&gt;. Натиснути кнопку &lt;b&gt;\'Детальні налаштування додатку\'&lt;/b&gt;.  &lt;br&gt;&lt;br&gt; &lt;b&gt;2&lt;/b&gt;. Перейти до розділу &lt;b&gt;\'Використання батареї\'&lt;/b&gt; (або &lt;b&gt;\'Контроль фонової активності\'&lt;/b&gt;) в налаштуваннях додатка. &lt;br&gt;&lt;br&gt; &lt;b&gt;3&lt;/b&gt;. Вибрати опцію &lt;b&gt;\'Дозволити роботу у фоновому режимі\'&lt;/b&gt; (або &lt;b&gt;\'Немає обмежень\'&lt;/b&gt;).</string>
+    <string name="application_details_settings">Детальні налаштування додатку</string>
+    <string name="notification_receive_settings">&lt;h4&gt;Налаштування отримання сповіщень&lt;/h4&gt;</string>
 
 
 </resources>
